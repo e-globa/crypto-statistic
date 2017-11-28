@@ -1,0 +1,5490 @@
+
+module.exports = {
+    coinListObj
+};
+
+function fetchJSON (url) {
+    return fetch(url)
+        .then(res => res.json())
+        .then(body => {
+            if (body.Response === 'Error') throw body.Message
+            return body
+        })
+}
+
+function coinListObj() {
+    let url = `https://www.cryptocompare.com/api/data/coinlist`;
+    return fetchJSON(url)
+        .then(obj => {
+            let data = obj.Data;
+            let keys = Object.keys(data);
+            let res = {};
+            keys.forEach(i => {
+                res[i] = 'https://www.cryptocompare.com' + data[i].ImageUrl;
+            });
+            return res;
+        });
+}
+/*
+
+const IMAGES ={ 1ST
+    :
+    "/media/351524/1st.png",
+2BACCO
+    :
+    "/media/351869/2bacco.png",
+2GIVE
+    :
+    "/media/350986/2give.png",
+3DES
+    :
+    "/media/12318014/3des.png",
+4CHN
+    :
+    "/media/1383831/chan2.png",
+007
+:
+"/media/350595/007.png",
+8BIT
+    :
+    "/media/20176/8bit.png",
+8BT
+    :
+    "/media/1383698/8bt.png",
+8S
+    :
+    "/media/12318091/8s.png",
+32BIT
+    :
+    "/media/351763/32bit.png",
+42
+:
+"/media/12318415/42.png",
+365
+:
+"/media/352070/365.png",
+404
+:
+"/media/351001/404.png",
+611
+:
+"/media/350985/611.png",
+808
+:
+"/media/351513/808.png",
+888
+:
+"/media/351639/888.png",
+1337
+:
+"/media/350976/1337.png",
+2015
+:
+"/media/20180/2015.png",
+ABC
+    :
+    "/media/12318006/bac.png",
+ABT
+    :
+    "/media/14913683/abt.png",
+ABY
+    :
+    "/media/1383379/aby.png",
+AC
+    :
+    "/media/19593/ac.png",
+ACC
+    :
+    "/media/9350776/acc.jpg"
+ACE
+    :
+    "/media/11999076/ace.png",
+ACES
+    :
+    "/media/1382661/aces.png",
+ACID
+    :
+    "/media/1382237/acid.png",
+ACN
+    :
+    "/media/352310/acn.png",
+ACOIN
+    :
+    "/media/20079/acoin.png",
+ACP
+    :
+    "/media/351019/acp.png",
+ACT
+    :
+    "/media/1383700/act.png",
+ADA
+    :
+    "/media/12318177/ada.png",
+ADC
+    :
+    "/media/350880/adc.png",
+ADCN
+    :
+    "/media/350983/adcn.png",
+ADL
+    :
+    "/media/1383544/adl.png",
+ADN
+    :
+    "/media/350993/adn.png",
+ADST
+    :
+    "/media/1383846/adst.png",
+ADT
+    :
+    "/media/1383829/adt.png",
+ADX
+    :
+    "/media/1383667/adx1.png",
+ADZ
+    :
+    "/media/351424/adz1.jpg"
+AE
+    :
+    "/media/1383836/ae.png",
+AEC
+    :
+    "/media/350991/aec.png",
+AEON
+    :
+    "/media/350955/aeon.png",
+AERO
+    :
+    "/media/19594/aero.png",
+AGRS
+    :
+    "/media/1383839/agrs.png",
+AGS
+    :
+    "/media/19595/ags.png",
+AHT
+    :
+    "/media/1383688/ahc.png",
+AHT*
+:
+"/media/1383796/aht.png",
+AIB
+    :
+    "/media/350971/aib.png",
+AID
+    :
+    "/media/14913433/aidcoin.png",
+AIR
+    :
+    "/media/12318291/air.png",
+AIR*
+:
+"/media/351740/air.png",
+ALC
+    :
+    "/media/352022/alc.png",
+ALEX
+    :
+    "/media/1382657/alex.png",
+ALF
+    :
+    "/media/19600/alf.png",
+ALIS
+    :
+    "/media/12318247/alis.png",
+ALN
+    :
+    "/media/20080/aln.png",
+ALQO
+    :
+    "/media/16404849/alqo.png",
+ALTCOM
+    :
+    "/media/14913436/altcom.png",
+ALTOCAR
+    :
+    "/media/9350746/altc.png",
+AM
+    :
+    "/media/20191/am.png",
+AMB
+    :
+    "/media/9350739/amb.png",
+AMBER
+    :
+    "/media/20187/amber.png",
+AMC
+    :
+    "/media/19601/amc.png",
+AMIS
+    :
+    "/media/1382862/amis.png",
+AMMO
+    :
+    "/media/1383778/ammo.png",
+AMP
+    :
+    "/media/350825/amp.png",
+AMS
+    :
+    "/media/350562/ams.png",
+AMT
+    :
+    "/media/9350756/amt.jpg"
+AMY
+    :
+    "/media/1382935/amy.jpg"
+ANAL
+    :
+    "/media/1381991/anal.jpg"
+ANC
+    :
+    "/media/19598/anc.png",
+ANCP
+    :
+    "/media/1383863/ancp.png",
+AND
+    :
+    "/media/351797/and.png",
+ANNC
+    :
+    "/media/19598/anc.png",
+ANT
+    :
+    "/media/1383244/ant.png",
+ANTC
+    :
+    "/media/351690/antc.png",
+ANTI
+    :
+    "/media/350972/anti.png",
+APC
+    :
+    "/media/350956/apc.png",
+APEX
+    :
+    "/media/19599/apex.png",
+APPC
+    :
+    "/media/12318370/app.png",
+APT
+    :
+    "/media/1382945/apt.png",
+APX
+    :
+    "/media/1383235/apx.png",
+AR*
+:
+"/media/14913465/ar.png",
+ARB
+    :
+    "/media/20645/arb.png",
+ARBI
+    :
+    "/media/12318258/arbi.png",
+ARC
+    :
+    "/media/1383824/arc.png",
+ARCH
+    :
+    "/media/20085/arch.png",
+ARCO
+    :
+    "/media/352134/arco.png",
+ARDR
+    :
+    "/media/351736/ardr.png",
+ARENA
+    :
+    "/media/12318225/arena.png",
+ARG
+    :
+    "/media/19602/arg.png",
+ARGUS
+    :
+    "/media/1383149/argus.png",
+ARI
+    :
+    "/media/20082/ari.png",
+ARI*
+:
+"/media/9350704/ari.png",
+ARK
+    :
+    "/media/351931/ark.png",
+ARM
+    :
+    "/media/351545/arm.png",
+ARN
+    :
+    "/media/12318261/arn.png",
+ARNA*
+:
+"/media/12318005/arna.png",
+ARPA
+    :
+    "/media/1382966/arpa.png",
+ART
+    :
+    "/media/12318097/art.png",
+ASAFE2
+    :
+    "/media/1382096/allsafe.jpg"
+ASN
+    :
+    "/media/20192/asn.png",
+AST
+    :
+    "/media/12318279/ast.png",
+AST*
+:
+"/media/1382170/ast.png",
+ASTRO
+    :
+    "/media/14913641/astro.png",
+ATB
+    :
+    "/media/1383689/atb.png",
+ATCC
+    :
+    "/media/12318294/atcc.png",
+ATFS
+    :
+    "/media/14913545/atfs.png",
+ATKN
+    :
+    "/media/12318083/atkn.png",
+ATL
+    :
+    "/media/9350703/atlant.png",
+ATM
+    :
+    "/media/14913430/atm.png",
+ATMS
+    :
+    "/media/1383003/atms.png",
+ATOM
+    :
+    "/media/351685/atom.png",
+ATOM*
+:
+"/media/1383901/cosmos.jpg"
+ATS
+    :
+    "/media/12318356/ats.png",
+ATX
+    :
+    "/media/352084/atx.png",
+AUR
+    :
+    "/media/19608/aur.png",
+AURS
+    :
+    "/media/12318345/aurs.png",
+AUT
+    :
+    "/media/1383956/aut.png",
+AUTH
+    :
+    "/media/1384019/auth.png",
+AV
+    :
+    "/media/1382048/av.png",
+AVA
+    :
+    "/media/9350772/ava.png",
+AVE
+    :
+    "/media/14761937/ave.png",
+AVT
+    :
+    "/media/1383599/avt.png",
+AXIOM
+    :
+    "/media/20686/axiom.png",
+AXR
+    :
+    "/media/20086/axr.png",
+AXT
+    :
+    "/media/14913467/axt.png",
+B3
+    :
+    "/media/12318367/b3.png",
+B@
+:
+"/media/1382804/b.png",
+BAC
+    :
+    "/media/350913/bac.png",
+BAC*
+:
+"/media/12318229/bac.png",
+BAN
+    :
+    "/media/1382466/ban.png",
+BAR
+    :
+    "/media/14543951/bar.png",
+BASH
+    :
+    "/media/352004/bash.png",
+BAT
+    :
+    "/media/1383370/bat.png",
+BAY
+    :
+    "/media/1383137/bay1.png",
+BBCC
+    :
+    "/media/351658/bbcc.png",
+BBR
+    :
+    "/media/19609/bbr.png",
+BBT
+    :
+    "/media/1383883/bbt.png",
+BBT*
+:
+"/media/15887410/bbt.png",
+BCAP
+    :
+    "/media/1383948/bcap1.png",
+BCCOIN
+    :
+    "/media/9350709/bccoin1.png",
+BCD
+    :
+    "/media/16404872/bcd.png",
+BCF
+    :
+    "/media/352189/btf.png",
+BCH
+    :
+    "/media/1383919/bch.jpg"
+BCN
+    :
+    "/media/12318404/bcn.png",
+BCPT
+    :
+    "/media/14913537/cpt.png",
+BCR
+    :
+    "/media/20198/bcr.png",
+BCX
+    :
+    "/media/19620/bcx.png",
+BCY
+    :
+    "/media/350903/bcy.png",
+BDL
+    :
+    "/media/14913539/bdl.png",
+BDR
+    :
+    "/media/14913485/bdr.png",
+BELA
+    :
+    "/media/351933/bela.jpg"
+BEN
+    :
+    "/media/19617/ben.png",
+BENJI
+    :
+    "/media/1383163/benji.png",
+BERN
+    :
+    "/media/350973/bern.png",
+BEST
+    :
+    "/media/1382805/best.jpg"
+BET
+    :
+    "/media/19621/bet.png",
+BET*
+:
+"/media/1383729/bet.png",
+BFX
+    :
+    "/media/19554/bitfinex.png",
+BHC
+    :
+    "/media/351660/bhc.png",
+BHC*
+:
+"/media/14913434/bhc.png",
+BIC
+    :
+    "/media/1382337/bic.png",
+BIGUP
+    :
+    "/media/350980/bigup.png",
+BIOB
+    :
+    "/media/1382739/biob.png",
+BIOS
+    :
+    "/media/350894/bios.png",
+BIP
+    :
+    "/media/352108/bip.png",
+BIS
+    :
+    "/media/12318191/bis.png",
+BIT16
+    :
+    "/media/20181/16bit.png",
+BITB
+    :
+    "/media/350879/bitb.png",
+BITCNY
+    :
+    "/media/351490/bitcny.png",
+BITOK
+    :
+    "/media/1383282/bitok.jpg"
+BITS
+    :
+    "/media/19622/bits.png",
+BITSD
+    :
+    "/media/1383878/bitsd.png",
+BITUSD
+    :
+    "/media/351491/bitusd.png",
+BITZ
+    :
+    "/media/20654/bitz.png",
+BKX
+    :
+    "/media/14913571/bkx.png",
+BLAS
+    :
+    "/media/9350785/blas.png",
+BLAZR
+    :
+    "/media/1382946/blazr.png",
+BLC
+    :
+    "/media/19623/blc.png",
+BLITZ
+    :
+    "/media/350612/blitz.png",
+BLK
+    :
+    "/media/351795/blk.png",
+BLOCK
+    :
+    "/media/20204/block.png",
+BLOCKPAY
+    :
+    "/media/351508/blockpay.png",
+BLRY
+    :
+    "/media/350908/blry.png",
+BLU
+    :
+    "/media/19624/blu.png",
+BLUE
+    :
+    "/media/12318407/blue.png",
+BLX
+    :
+    "/media/9350748/blx.png",
+BM
+    :
+    "/media/351311/bm.png",
+BM*
+:
+"/media/12318361/bm.png",
+BMC
+    :
+    "/media/12318008/bmc.png",
+BMXT
+    :
+    "/media/1383984/bmxt.png",
+BNB
+    :
+    "/media/1383947/bnb.png",
+BNB*
+:
+"/media/1382967/bnb.png",
+BNC
+    :
+    "/media/1383991/bnc.png",
+BNK
+    :
+    "/media/14913602/bnk.png",
+BNT
+    :
+    "/media/1383549/bnt.jpg"
+BNX
+    :
+    "/media/1382853/bnx.png",
+BOAT
+    :
+    "/media/1382866/boat.png",
+BOB
+    :
+    "/media/20207/bob.png",
+BOG
+    :
+    "/media/1383826/bog.png",
+BOLI
+    :
+    "/media/351008/boli.png",
+BOMB
+    :
+    "/media/1382384/bomb.png",
+BON
+    :
+    "/media/351045/bon_1.png",
+BON*
+:
+"/media/12318368/bon.png",
+BOOM
+    :
+    "/media/20208/boom.png",
+BOS
+    :
+    "/media/1383521/bos.png",
+BOSON
+    :
+    "/media/352083/boson.png",
+BOSS
+    :
+    "/media/1382289/boss.png",
+BOST
+    :
+    "/media/19626/bost.png",
+BOTS
+    :
+    "/media/351499/bot.png",
+BOU
+    :
+    "/media/9350750/bou.jpg"
+BPL
+    :
+    "/media/14913604/bpl.png",
+BQ
+    :
+    "/media/12318325/bq.png",
+BQC
+    :
+    "/media/19631/bqc.png",
+BQX
+    :
+    "/media/16404851/ethos.png",
+BRAIN
+    :
+    "/media/351753/brain.png",
+BRAT
+    :
+    "/media/14761895/brat.png",
+BRDD
+    :
+    "/media/352086/brdd.png",
+BRIT
+    :
+    "/media/1383777/brit.png",
+BRK
+    :
+    "/media/350981/brk.png",
+BRO
+    :
+    "/media/9350701/bro.png",
+BRONZ
+    :
+    "/media/351566/bronz.png",
+BRX
+    :
+    "/media/12317960/brx.png",
+BS
+    :
+    "/media/351737/bs.png",
+BSC
+    :
+    "/media/20601/bsc.png",
+BSD
+    :
+    "/media/351086/bsd.png",
+BST
+    :
+    "/media/350558/bst.png",
+BSTAR
+    :
+    "/media/352250/bstar.png",
+BSTK
+    :
+    "/media/1382858/bstk.png",
+BSTY
+    :
+    "/media/19808/mrs.png",
+BT
+    :
+    "/media/9350775/bt.png",
+BT1
+    :
+    "/media/19633/btc.png",
+BT2
+    :
+    "/media/19633/btc.png",
+BTA
+    :
+    "/media/1383113/bta1.png",
+BTB
+    :
+    "/media/20083/bitb.png",
+BTC
+    :
+    "/media/19633/btc.png",
+BTCD
+    :
+    "/media/19630/btcd_1.png",
+BTCL
+    :
+    "/media/351633/btlc.png",
+BTCR
+    :
+    "/media/351554/btr.png",
+BTCRED
+    :
+    "/media/14913463/btcred.png",
+BTCRY
+    :
+    "/media/20210/btcry.png",
+BTCS
+    :
+    "/media/1383158/btcs.png",
+BTCZ
+    :
+    "/media/12318408/btcz.png",
+BTD
+    :
+    "/media/351498/btd.png",
+BTDX
+    :
+    "/media/14761939/btdx.png",
+BTE
+    :
+    "/media/19632/bte.png",
+BTG
+    :
+    "/media/12318377/btg.png",
+BTG*
+:
+"/media/19634/btg.png",
+BTLC
+    :
+    "/media/352054/btlc.png",
+BTM
+    :
+    "/media/20084/btm.png",
+BTM*
+:
+"/media/1383996/btm.png",
+BTMI
+    :
+    "/media/20213/btmi.png",
+BTPL
+    :
+    "/media/1383774/btpl.png",
+BTQ
+    :
+    "/media/19638/btq.png",
+BTS
+    :
+    "/media/20705/bts.png",
+BTTF
+    :
+    "/media/352111/bttf.png",
+BTX
+    :
+    "/media/1383895/btx.png",
+BTX*
+:
+"/media/20215/btx.png",
+BTZ
+    :
+    "/media/1382433/btz.png",
+BUCKS
+    :
+    "/media/1383089/bucks.png",
+BUCKS*
+:
+"/media/20602/bucks.png",
+BUK
+    :
+    "/media/19637/buk.png",
+BULLS
+    :
+    "/media/352295/bulls.png",
+BURST
+    :
+    "/media/1383375/burstcoin_logo.png",
+BUZZ
+    :
+    "/media/15887419/buzz.png",
+BVC
+    :
+    "/media/1382711/bvc.png",
+BXC
+    :
+    "/media/1382649/bxc.jpg"
+BXT
+    :
+    "/media/351509/bxt.png",
+BYC
+    :
+    "/media/20217/byc.png",
+BamitCoin
+    :
+    "/media/352236/bam.png",
+C2
+    :
+    "/media/19640/c2.png",
+C20
+    :
+    "/media/12318302/c20.png",
+CAB
+    :
+    "/media/350896/cab.png",
+CABS
+    :
+    "/media/1383869/cabs.png",
+CABS*
+:
+"/media/14761917/ctst.png",
+CACH
+    :
+    "/media/19642/cach.png",
+CAG
+    :
+    "/media/12318346/cag.png",
+CAIX
+    :
+    "/media/20226/caix.png",
+CALC
+    :
+    "/media/351712/calc.png",
+CAM
+    :
+    "/media/20220/cam.png",
+CAN*
+:
+"/media/12318218/canya.png",
+CANN
+    :
+    "/media/20015/cann.png",
+CAP
+    :
+    "/media/20017/cap.png",
+CAPP
+    :
+    "/media/15887416/capp.png",
+CARBON
+    :
+    "/media/351017/carbon.png",
+CAS
+    :
+    "/media/12318148/cas.png",
+CASH
+    :
+    "/media/20016/cash.png",
+CASH*
+:
+"/media/1384020/cpp.png",
+CAT
+    :
+    "/media/1383848/bcat1.png",
+CAT*
+:
+"/media/1383791/cat1.png",
+CAV
+    :
+    "/media/12318328/cav.png",
+CBD
+    :
+    "/media/351990/cbd.png",
+CBX
+    :
+    "/media/20697/cbx.png",
+CC
+    :
+    "/media/20225/cc.png",
+CCC
+    :
+    "/media/1383980/ccc.png",
+CCN
+    :
+    "/media/19643/ccn.png",
+CCRB
+    :
+    "/media/352294/ccrb.png",
+CCT*
+:
+"/media/12317979/cct1.png",
+CCX
+    :
+    "/media/352188/ccx.png",
+CDN
+    :
+    "/media/1382763/cdn.png",
+CDT
+    :
+    "/media/1383699/cdt.png",
+CDX
+    :
+    "/media/351404/cdx.png",
+CELL
+    :
+    "/media/20227/cell.png",
+CESC
+    :
+    "/media/350786/cesc.png",
+CETI
+    :
+    "/media/20228/ceti.png",
+CF
+    :
+    "/media/351730/cf.png",
+CFC
+    :
+    "/media/351732/cfc.png",
+CFD
+    :
+    "/media/14913552/cfd.png",
+CFI
+    :
+    "/media/1383567/cfi.png",
+CFT
+    :
+    "/media/1383769/cft.png",
+CFT*
+:
+"/media/9350747/credo.jpg"
+CGA
+    :
+    "/media/350988/cga.png",
+CHA
+    :
+    "/media/19986/a3c.png",
+CHAO
+    :
+    "/media/1382371/chao.png",
+CHASH
+    :
+    "/media/20231/chash.png",
+CHAT
+    :
+    "/media/1382762/chat.png",
+CHC
+    :
+    "/media/1383907/chc.png",
+CHESS
+    :
+    "/media/351094/chess.jpg"
+CHIEF
+    :
+    "/media/1381988/chief.png",
+CHILD
+    :
+    "/media/20233/child.png",
+CHIP
+    :
+    "/media/20685/chip.png",
+CHOOF
+    :
+    "/media/351876/choof.png",
+CIN
+    :
+    "/media/20698/cinder.png",
+CINNI
+    :
+    "/media/19651/cinni.jpeg"
+CIR
+    :
+    "/media/1382506/cir.png",
+CIRC
+    :
+    "/media/20603/circ.png",
+CIX
+    :
+    "/media/12318222/cnxasterisco.png",
+CJ
+    :
+    "/media/351234/cj.png",
+CJC
+    :
+    "/media/1382887/cjc.png",
+CJT
+    :
+    "/media/14913575/cjt.png",
+CKC
+    :
+    "/media/351068/ckc.png",
+CLAM
+    :
+    "/media/20020/clam.png",
+CLD
+    :
+    "/media/14913452/cld.png",
+CLICK
+    :
+    "/media/1382399/click.png",
+CLINT
+    :
+    "/media/351067/clint.png",
+CLOAK
+    :
+    "/media/19994/cloak.png",
+CLOUT
+    :
+    "/media/12318329/clout.png",
+CLR
+    :
+    "/media/19657/clr.png",
+CLUB
+    :
+    "/media/350609/club.png",
+CLUD
+    :
+    "/media/351027/clud.png",
+CLV
+    :
+    "/media/20727/clv.png",
+CMC
+    :
+    "/media/20019/cmc.png",
+CMP
+    :
+    "/media/1383692/compcoin.png",
+CMPCO
+    :
+    "/media/1384036/cmpo.png",
+CMS
+    :
+    "/media/14913540/comsa.png",
+CMT
+    :
+    "/media/351090/cmt.png",
+CNC
+    :
+    "/media/20021/cnc.png",
+CND
+    :
+    "/media/12318283/cnd.png",
+CND*
+:
+"/media/1381997/cnd.png",
+CNL
+    :
+    "/media/20024/cnl.png",
+CNMT
+    :
+    "/media/351396/cnmt.png",
+CNO
+    :
+    "/media/1382391/coino.png",
+CNT
+    :
+    "/media/1383150/cnt.png",
+CNX
+    :
+    "/media/11417632/cnx.png",
+COB
+    :
+    "/media/9350700/cobin.png",
+COC
+    :
+    "/media/351872/coc.png",
+COE
+    :
+    "/media/1383911/coe.png",
+COIN
+    :
+    "/media/14913606/coin.png",
+COIN*
+:
+"/media/350950/coin.png",
+COLX
+    :
+    "/media/12318297/colx.png",
+COMM
+    :
+    "/media/19661/comm.png",
+CON
+    :
+    "/media/20717/con_.png",
+COOL
+    :
+    "/media/19658/cool.png",
+COR
+    :
+    "/media/1383753/cor.png",
+CORAL
+    :
+    "/media/352225/coral.png",
+CORE
+    :
+    "/media/1383950/core.png",
+COSS
+    :
+    "/media/1383802/coss.png",
+COV
+    :
+    "/media/12318288/cov.png",
+COV*
+:
+"/media/351503/cov.png",
+COVAL
+    :
+    "/media/351519/coval.png",
+COX
+    :
+    "/media/351083/cox.png",
+CPAY
+    :
+    "/media/12318303/cpay.png",
+CPC
+    :
+    "/media/350560/cpc.png",
+CQST
+    :
+    "/media/1381983/cqst.png",
+CRAB
+    :
+    "/media/351739/crab.png",
+CRACK
+    :
+    "/media/20023/crack.png",
+CRAFT
+    :
+    "/media/351681/craft.png",
+CRAIG
+    :
+    "/media/20022/craig.png",
+CRAVE
+    :
+    "/media/20242/crave.png",
+CRB
+    :
+    "/media/1382904/crbit1.png",
+CRC
+    :
+    "/media/19665/crc.png",
+CRDS
+    :
+    "/media/14913675/crds.png",
+CRE
+    :
+    "/media/20683/cre.png",
+CREA
+    :
+    "/media/1382709/crea.png",
+CREDO
+    :
+    "/media/14913573/credo-1.png",
+CREVA
+    :
+    "/media/20571/creva.png",
+CRM
+    :
+    "/media/1383915/cream.png",
+CRNK
+    :
+    "/media/351731/crnk.png",
+CRPS
+    :
+    "/media/1382338/crps.png",
+CRTM
+    :
+    "/media/9350790/crtm.jpg"
+CRW
+    :
+    "/media/1383378/crw1.png",
+CRX
+    :
+    "/media/351388/crx.png",
+CRYPT
+    :
+    "/media/19664/crypt.png",
+CS
+    :
+    "/media/352292/cs.png",
+CSC
+    :
+    "/media/19667/csc.png",
+CSH
+    :
+    "/media/351877/csh.png",
+CSMIC
+    :
+    "/media/352115/csmic.png",
+CSNO
+    :
+    "/media/1383922/csno.png",
+CSTL
+    :
+    "/media/15887421/cstl.png",
+CTC
+    :
+    "/media/351496/ctc.png",
+CTIC
+    :
+    "/media/1383267/ctic.png",
+CTO
+    :
+    "/media/19808/mrs.png",
+CTR
+    :
+    "/media/1384029/ctr.png",
+CTT
+    :
+    "/media/1383957/ctt.png",
+CTX
+    :
+    "/media/12318075/ctx1.png",
+CUBE
+    :
+    "/media/350948/cube.png",
+CURE
+    :
+    "/media/1383812/cure.png",
+CVC
+    :
+    "/media/1383611/cvc.png",
+CVCOIN
+    :
+    "/media/1383821/cvcoin.png",
+CWXT
+    :
+    "/media/1382470/cwxt.png",
+CXC
+    :
+    "/media/20246/cxc.png",
+CXT
+    :
+    "/media/1383080/cxt.png",
+CYC
+    :
+    "/media/19671/cyc.png",
+CYG
+    :
+    "/media/350997/cygnus.png",
+CYP
+    :
+    "/media/20248/cyp.png",
+CYT
+    :
+    "/media/351024/cyt.png",
+CZC
+    :
+    "/media/12318215/czc.png",
+DANK
+    :
+    "/media/20247/dank.png",
+DAR
+    :
+    "/media/351930/dar.png",
+DARK
+    :
+    "/media/1382995/dark.png",
+DAS
+    :
+    "/media/14543970/das.png",
+DASH
+    :
+    "/media/20626/imageedit_27_4355944719.png",
+DAT
+    :
+    "/media/12318265/dat.png",
+DATA
+    :
+    "/media/14913438/data.png",
+DAY
+    :
+    "/media/12318271/day.png",
+DB
+    :
+    "/media/19808/mrs.png",
+DBET
+    :
+    "/media/14913561/dbet.png",
+DBG
+    :
+    "/media/351047/dbg.png",
+DBIC
+    :
+    "/media/350891/dbic.png",
+DBIX
+    :
+    "/media/1382860/dbix.png",
+DBR
+    :
+    "/media/14913687/dbr.png",
+DBTC
+    :
+    "/media/350953/dbtc.png",
+DCC
+    :
+    "/media/19808/mrs.png",
+DCK
+    :
+    "/media/351516/dck.png",
+DCN
+    :
+    "/media/1383999/dcn.png",
+DCR
+    :
+    "/media/1382607/decred.png",
+DCRE
+    :
+    "/media/352128/dcre.png",
+DCS.
+:
+"/media/351407/cloud.png",
+DCT
+    :
+    "/media/351389/dct.png",
+DCY
+    :
+    "/media/1383767/dcy.png",
+DDF
+    :
+    "/media/1383760/ddf.png",
+DEA
+    :
+    "/media/1383264/dea.png",
+DEB
+    :
+    "/media/16404861/deb.png",
+DEEP
+    :
+    "/media/12317976/deep.png",
+DEM
+    :
+    "/media/20028/dem.png",
+DENT
+    :
+    "/media/1383613/dent.png",
+DES
+    :
+    "/media/351087/des.png",
+DETH
+    :
+    "/media/1382252/deth.png",
+DEUR
+    :
+    "/media/351018/deur.png",
+DFBT
+    :
+    "/media/1383890/dfbt.png",
+DFT
+    :
+    "/media/9350712/dft.png",
+DGB
+    :
+    "/media/12318264/7638-nty_400x400.jpg"
+DGC
+    :
+    "/media/19676/dgc.png",
+DGD
+    :
+    "/media/350851/dgd.png",
+DGDC
+    :
+    "/media/351520/dgd.png",
+DGMS
+    :
+    "/media/352132/dgms.png",
+DGORE
+    :
+    "/media/351697/dgore.png",
+DGPT
+    :
+    "/media/1383920/dgt.png",
+DICE
+    :
+    "/media/1383361/dice.png",
+DIEM
+    :
+    "/media/20260/diem_1.png",
+DIGS
+    :
+    "/media/20706/digs.png",
+DIM
+    :
+    "/media/1383761/dim.png",
+DIME
+    :
+    "/media/351012/dime.png",
+DISK
+    :
+    "/media/351023/disk.png",
+DKC
+    :
+    "/media/351870/dkc.png",
+DLC
+    :
+    "/media/351559/dlc.png",
+DLISK
+    :
+    "/media/351237/dlisk.png",
+DLR
+    :
+    "/media/352114/dollarcoin.png",
+DLT
+    :
+    "/media/1384001/delta.png",
+DMD
+    :
+    "/media/19680/dmd.png",
+DMT
+    :
+    "/media/1383841/dmarket.png",
+DNA
+    :
+    "/media/1383763/dna.png",
+DNET
+    :
+    "/media/350912/dnet.png",
+DNR
+    :
+    "/media/1383770/dnr.png",
+DNT
+    :
+    "/media/1383701/dnt.png",
+DOGE
+    :
+    "/media/19684/doge.png",
+DOGED
+    :
+    "/media/20029/doged.png",
+DOGETH
+    :
+    "/media/352023/dogeth-2.png",
+DON
+    :
+    "/media/1382995/don.png",
+DOPE
+    :
+    "/media/351526/dope.png",
+DOT
+    :
+    "/media/350909/dot.png",
+DOVU
+    :
+    "/media/14761916/dovu.png",
+DP
+    :
+    "/media/1383772/dp.png",
+DPAY
+    :
+    "/media/351684/dpay.png",
+DRA
+    :
+    "/media/1382095/dra.png",
+DRACO
+    :
+    "/media/351390/dt-token.png",
+DRC
+    :
+    "/media/11417638/drp.png",
+DRGN
+    :
+    "/media/14543974/drgn.jpg"
+DRKC
+    :
+    "/media/20027/drkc.png",
+DRKT
+    :
+    "/media/20604/drkt.png",
+DRM8
+    :
+    "/media/352055/drm8.png",
+DROP
+    :
+    "/media/351555/drop.png",
+DRP
+    :
+    "/media/1383822/drp.png",
+DRS
+    :
+    "/media/352072/drs.png",
+DRT
+    :
+    "/media/12318099/drt.png",
+DRXNE
+    :
+    "/media/14913608/drxne.png",
+DRZ
+    :
+    "/media/20605/drz.png",
+DSB
+    :
+    "/media/20034/dsb.png",
+DSH
+    :
+    "/media/20026/dash.png",
+DT
+    :
+    "/media/20031/dt.png",
+DTB
+    :
+    "/media/1382791/dtb.png",
+DTC
+    :
+    "/media/14913440/dtc.png",
+DTC*
+:
+"/media/19688/dtc.png",
+DTCT
+    :
+    "/media/1384025/dtct.png",
+DTR
+    :
+    "/media/14761903/dtr.png",
+DTT
+    :
+    "/media/12318109/dtt.png",
+DTT*
+:
+"/media/14761941/dtt1.png",
+DUB
+    :
+    "/media/19986/a3c.png",
+DUCK
+    :
+    "/media/1382852/duckduckcoin.png",
+DUO
+    :
+    "/media/1383196/duo.png",
+DUTCH
+    :
+    "/media/14913487/dutch.png",
+DUX
+    :
+    "/media/1383364/dux.png",
+DVC
+    :
+    "/media/20563/dvc.png",
+DYN
+    :
+    "/media/1383557/dyn.png",
+EA
+    :
+    "/media/1382685/ea.png",
+EAC
+    :
+    "/media/19690/eac.png",
+EAGS
+    :
+    "/media/19808/mrs.png",
+EARTH
+    :
+    "/media/12318190/earth.png",
+EB3
+    :
+    "/media/1382938/eb3.png",
+EBCH
+    :
+    "/media/14913464/ebch.png",
+EBET
+    :
+    "/media/12318358/ebet.png",
+EBS
+    :
+    "/media/20267/ebs.png",
+EBST
+    :
+    "/media/14913431/ebst.png",
+EBTC
+    :
+    "/media/12318175/ebtc.png",
+EBZ
+    :
+    "/media/352069/ebz.png",
+EC
+    :
+    "/media/351750/ec.jpg"
+ECA
+    :
+    "/media/16404869/eca.png",
+ECASH
+    :
+    "/media/14543971/ecash.png",
+ECC
+    :
+    "/media/1383546/ecc.png",
+ECHT
+    :
+    "/media/12318352/echt.png",
+ECO
+    :
+    "/media/1382993/eco.png",
+ECOB
+    :
+    "/media/1383670/ecob.png",
+EDC
+    :
+    "/media/351066/edc.png",
+EDDIE
+    :
+    "/media/12318382/eddie.png",
+EDG
+    :
+    "/media/1382799/edg.jpg"
+EDGE
+    :
+    "/media/20556/edge.png",
+EDO
+    :
+    "/media/12318082/eiboo.png",
+EDR
+    :
+    "/media/351430/edc.png",
+EDRC
+    :
+    "/media/350858/edrc.jpg"
+EFL
+    :
+    "/media/19692/efl.png",
+EFYT
+    :
+    "/media/1383646/efyt.png",
+EGC
+    :
+    "/media/350614/egc.png",
+EGG
+    :
+    "/media/20269/egg.png",
+EGO
+    :
+    "/media/351632/ego.png",
+EKN
+    :
+    "/media/20270/ekn.png",
+EKO
+    :
+    "/media/351085/eko.png",
+ELC
+    :
+    "/media/19694/elc.png",
+ELE
+    :
+    "/media/351793/ele.png",
+ELITE
+    :
+    "/media/14761914/elite.png",
+ELIX
+    :
+    "/media/12318172/elix.png",
+ELLA
+    :
+    "/media/14913603/ella.png",
+ELM
+    :
+    "/media/12318308/elm.png",
+ELS
+    :
+    "/media/1382400/els.png",
+ELT
+    :
+    "/media/12318259/elt.png",
+ELTC2
+    :
+    "/media/12318300/eltc2.png",
+EMB
+    :
+    "/media/352110/emb.png",
+EMC
+    :
+    "/media/350611/emc.png",
+EMC2
+    :
+    "/media/20033/emc2.png",
+EMD
+    :
+    "/media/20278/emd.png",
+EMIGR
+    :
+    "/media/351659/emirg.png",
+EMPC
+    :
+    "/media/1383081/empc.png",
+EMT
+    :
+    "/media/9350765/emt.png",
+ENE
+    :
+    "/media/351506/ene.png",
+ENG
+    :
+    "/media/12318287/eng.png",
+ENJ
+    :
+    "/media/11417639/enjt.png",
+ENRG
+    :
+    "/media/19697/enrg.png",
+ENT
+    :
+    "/media/352157/ent.jpg"
+ENTER
+    :
+    "/media/351305/enter.png",
+ENV
+    :
+    "/media/14913587/env.png",
+EOC
+    :
+    "/media/1382628/eoc.png",
+EON
+    :
+    "/media/9350791/eon.jpg"
+EOS
+    :
+    "/media/1383652/eos_1.png",
+EPY
+    :
+    "/media/20628/epy.png",
+EPY*
+:
+"/media/14913643/epy.png",
+EQ
+    :
+    "/media/1383891/eq.png",
+EQB
+    :
+    "/media/1383816/eqb.png",
+EQM
+    :
+    "/media/19808/mrs.png",
+EQT
+    :
+    "/media/1383366/eqt.png",
+EQUAL
+    :
+    "/media/351867/equal.png",
+ERB
+    :
+    "/media/351550/erb.png",
+ERC
+    :
+    "/media/350960/erc.png",
+ERR
+    :
+    "/media/1382624/err.png",
+ERT
+    :
+    "/media/12318226/ert.png",
+ERY
+    :
+    "/media/1382403/ely2.png",
+ESC*
+:
+"/media/14913585/esc.png",
+ESP
+    :
+    "/media/14761907/esp.png",
+ETBS
+    :
+    "/media/12318348/etbs.png",
+ETC
+    :
+    "/media/20275/etc2.png",
+ETG
+    :
+    "/media/12318378/etg.png",
+ETH
+    :
+    "/media/20646/eth_logo.png",
+ETHD
+    :
+    "/media/12318087/ethd.png",
+ETHS
+    :
+    "/media/350910/eths.png",
+ETK
+    :
+    "/media/14913635/etk.png",
+ETN
+    :
+    "/media/14761932/electroneum.png",
+ETP
+    :
+    "/media/12318223/etp.png",
+ETT
+    :
+    "/media/1383046/ett.png",
+EUC
+    :
+    "/media/1382471/euc.png",
+EVC
+    :
+    "/media/12318064/evc.png",
+EVENT
+    :
+    "/media/20277/event.png",
+EVIL
+    :
+    "/media/351080/evil.png",
+EVR
+    :
+    "/media/12318332/evr.png",
+EVX
+    :
+    "/media/1383850/evx.png",
+EXB
+    :
+    "/media/351401/exb.png",
+EXCL
+    :
+    "/media/20035/excl.png",
+EXE
+    :
+    "/media/19700/exe.png",
+EXIT
+    :
+    "/media/351065/exit.png",
+EXN
+    :
+    "/media/14913459/exn.png",
+EXP
+    :
+    "/media/20707/exp.png",
+EXY
+    :
+    "/media/14913645/exy.png",
+EZC
+    :
+    "/media/19702/ezc.png",
+EZM
+    :
+    "/media/12318143/ezm.png",
+F16
+    :
+    "/media/1383372/f16.png",
+FAIR
+    :
+    "/media/20287/fair.png",
+FAME
+    :
+    "/media/352006/fame.png",
+FAZZ
+    :
+    "/media/1382944/fazz.png",
+FC
+    :
+    "/media/12318045/fc.png",
+FC2
+    :
+    "/media/19719/fuel.png",
+FCN
+    :
+    "/media/20282/fcn.png",
+FCS
+    :
+    "/media/19808/mrs.png",
+FCT
+    :
+    "/media/1382863/fct1.png",
+FDC
+    :
+    "/media/12318125/fdc.jpg"
+FFC
+    :
+    "/media/19706/ffc.png",
+FGZ
+    :
+    "/media/352082/fgz.png",
+FIBRE
+    :
+    "/media/20030/fibre.png",
+FIL
+    :
+    "/media/1383987/fil.png",
+FIND
+    :
+    "/media/1382713/find.png",
+FIRE
+    :
+    "/media/351625/fire.png",
+FIRST
+    :
+    "/media/352116/first.png",
+FIST
+    :
+    "/media/352056/fist.png",
+FIT
+    :
+    "/media/351618/fit.png",
+FJC
+    :
+    "/media/351702/fjc.png",
+FLAP
+    :
+    "/media/20032/flap.png",
+FLASH
+    :
+    "/media/12318206/flash.png",
+FLDC
+    :
+    "/media/20284/fldc.png",
+FLIK
+    :
+    "/media/12318230/flik.png",
+FLIXX
+    :
+    "/media/16404862/flixx.png",
+FLLW
+    :
+    "/media/12318412/fllw.png",
+FLO
+    :
+    "/media/1383331/flo1.png",
+FLP
+    :
+    "/media/12318280/flip.png",
+FLT
+    :
+    "/media/19709/flt.png",
+FLVR
+    :
+    "/media/351046/2flav.png",
+FLX
+    :
+    "/media/351007/flx.png",
+FLY
+    :
+    "/media/351013/fly.png",
+FND
+    :
+    "/media/1383765/fnd.png",
+FONZ
+    :
+    "/media/351553/fonz.png",
+FOREX
+    :
+    "/media/351748/forex.png",
+FRAC
+    :
+    "/media/19710/frac.png",
+FRAZ
+    :
+    "/media/9350764/fraz.png",
+FRC
+    :
+    "/media/1382629/frc.png",
+FRE
+    :
+    "/media/352129/fre.png",
+FRK
+    :
+    "/media/19712/frk.png",
+FRN
+    :
+    "/media/350992/frn.png",
+FRST
+    :
+    "/media/1382654/first.png",
+FRWC
+    :
+    "/media/351361/frwc.png",
+FSC2
+    :
+    "/media/19717/fsc.png",
+FSN
+    :
+    "/media/351495/fsn.png",
+FST
+    :
+    "/media/19720/fst.png",
+FTC
+    :
+    "/media/19718/ftc.png",
+FTP
+    :
+    "/media/351501/ftp.png",
+FUCK
+    :
+    "/media/1384043/fuck.png",
+FUEL
+    :
+    "/media/11999072/fuel.png",
+FUN
+    :
+    "/media/1383738/fun.png",
+FUNC
+    :
+    "/media/1383739/func.png",
+FUTC
+    :
+    "/media/20558/futc.png",
+FUZZ
+    :
+    "/media/351025/fuzz.png",
+FX
+    :
+    "/media/351527/fx.png",
+FYN
+    :
+    "/media/1383764/fyn.png",
+GAIA
+    :
+    "/media/20290/gaia.png",
+GAKH
+    :
+    "/media/1382090/gakh.png",
+GAM
+    :
+    "/media/20293/gam.png",
+GAME
+    :
+    "/media/350887/game.png",
+GAP
+    :
+    "/media/350943/gap.png",
+GAS
+    :
+    "/media/1383858/neo.jpg"
+GAT
+    :
+    "/media/12318390/gat.png",
+GAY
+    :
+    "/media/351531/gay.png",
+GB
+    :
+    "/media/351411/db.png",
+GBIT
+    :
+    "/media/1382382/gbit.jpg"
+GBRC
+    :
+    "/media/351637/gbrc.png",
+GBT
+    :
+    "/media/350897/gbt.png",
+GBX
+    :
+    "/media/15887411/gbx.png",
+GBYTE
+    :
+    "/media/351835/bytes.png",
+GCC
+    :
+    "/media/351796/gcc.jpg"
+GCN
+    :
+    "/media/1383899/gcn.png",
+GCR
+    :
+    "/media/20708/gcr.png",
+GDC
+    :
+    "/media/20054/gdc.png",
+GEMZ
+    :
+    "/media/19710/frac.png",
+GEN
+    :
+    "/media/20640/gen.png",
+GEO
+    :
+    "/media/20292/geo.png",
+GES
+    :
+    "/media/14913547/ges.png",
+GFT
+    :
+    "/media/14913686/gft.jpg"
+GGS
+    :
+    "/media/1383762/ggs.png",
+GHC
+    :
+    "/media/19721/ghc.png",
+GHOUL
+    :
+    "/media/20701/ghoul.png",
+GHS
+    :
+    "/media/19565/cexio.png",
+GIFT
+    :
+    "/media/1382171/gift.png",
+GIG
+    :
+    "/media/20294/gig.png",
+GIM
+    :
+    "/media/9350754/gim.png",
+GIVE
+    :
+    "/media/20297/give.png",
+GIZ
+    :
+    "/media/351015/giz.png",
+GJC
+    :
+    "/media/12318166/gjc.png",
+GLA
+    :
+    "/media/12318141/gla.png",
+GLC
+    :
+    "/media/19724/glc.png",
+GLD
+    :
+    "/media/19723/gld.png",
+GLOBE
+    :
+    "/media/20564/globe.png",
+GLX
+    :
+    "/media/19728/glx.png",
+GLYPH
+    :
+    "/media/19725/glyph.png",
+GMC
+    :
+    "/media/20299/gmc.png",
+GML
+    :
+    "/media/19726/gml.png",
+GMT
+    :
+    "/media/14913642/gmt.png",
+GMX
+    :
+    "/media/351762/gmx.jpg"
+GNJ
+    :
+    "/media/351789/gnj.png",
+GNO
+    :
+    "/media/1383083/gnosis-logo.png",
+GNT
+    :
+    "/media/351995/golem_logo.png",
+GOAT
+    :
+    "/media/1381990/goat.png",
+GOLOS
+    :
+    "/media/1382246/golos.png",
+GOOD
+    :
+    "/media/9350786/good.png",
+GOON
+    :
+    "/media/351512/goon.png",
+GOT
+    :
+    "/media/1383079/got.png",
+GOTX
+    :
+    "/media/351071/gotx.png",
+GP
+    :
+    "/media/20656/gp.png",
+GPL
+    :
+    "/media/351525/gpl.png",
+GPU
+    :
+    "/media/350939/gpu.png",
+GRAM
+    :
+    "/media/20688/gram.png",
+GRAV
+    :
+    "/media/20659/grav.png",
+GRC
+    :
+    "/media/20307/grc.png",
+GRE
+    :
+    "/media/1382396/grn.png",
+GREXIT
+    :
+    "/media/351016/grexit.png",
+GRF
+    :
+    "/media/12318208/grf.png",
+GRID
+    :
+    "/media/14913632/grid.png",
+GRID*
+:
+"/media/20313/grid.png",
+GRM
+    :
+    "/media/20642/grm.png",
+GROW
+    :
+    "/media/350934/grow.png",
+GRS
+    :
+    "/media/20309/grs.png",
+GRT
+    :
+    "/media/20310/grt.png",
+GRW
+    :
+    "/media/1383234/grw.png",
+GRWI
+    :
+    "/media/1383971/grwi.png",
+GSM
+    :
+    "/media/20316/gsm.png",
+GSX
+    :
+    "/media/20314/gsxjpeg.png",
+GSY
+    :
+    "/media/351103/gsy.png",
+GUE
+    :
+    "/media/19732/gue.png",
+GUESS
+    :
+    "/media/12318217/guess.png",
+GUNS
+    :
+    "/media/1383789/guns.png",
+GUP
+    :
+    "/media/1383107/gup.png",
+GVT
+    :
+    "/media/14913634/gvt.png",
+GXC
+    :
+    "/media/9350766/gxc.png",
+GXC*
+:
+"/media/12318306/gxc.png",
+H2O
+    :
+    "/media/12318092/h2o.png",
+HAC
+    :
+    "/media/12318176/hac.jpg"
+HAL
+    :
+    "/media/20036/hal.png",
+HALLO
+    :
+    "/media/351657/hallo.png",
+HAMS
+    :
+    "/media/1383381/hams.png",
+HAZE
+    :
+    "/media/1382595/haze.png",
+HBN
+    :
+    "/media/19735/hbn.png",
+HBT
+    :
+    "/media/9350768/hbt.png",
+HCC
+    :
+    "/media/351752/hcc.png",
+HDG
+    :
+    "/media/9350726/hdg.png",
+HEAT
+    :
+    "/media/351399/heat.png",
+HEDG
+    :
+    "/media/20663/hedg.png",
+HEEL
+    :
+    "/media/1382051/heel.png",
+HGT
+    :
+    "/media/9350692/hgt.jpg"
+HILL
+    :
+    "/media/351747/hill.png",
+HIRE
+    :
+    "/media/1383882/hite.png",
+HIRE*
+:
+"/media/350613/hire.png",
+HKG
+    :
+    "/media/351689/hkg.jpg"
+HMP
+    :
+    "/media/350941/hmp.png",
+HMQ
+    :
+    "/media/1383174/hmq.png",
+HNC
+    :
+    "/media/20702/hnc.png",
+HNC*
+:
+"/media/14913529/hnc.png",
+HODL
+    :
+    "/media/350840/hodl.png",
+HOLD
+    :
+    "/media/14913647/hold.png",
+HONEY
+    :
+    "/media/1382937/honey1.png",
+HPC
+    :
+    "/media/1383046/hpc.png",
+HRB
+    :
+    "/media/1383695/hrb.png",
+HSP
+    :
+    "/media/352251/hsp.png",
+HSR
+    :
+    "/media/12318137/hsr.png",
+HST
+    :
+    "/media/14913538/hst.png",
+HTC
+    :
+    "/media/350888/htc.png",
+HTML5
+    :
+    "/media/1383327/html5.png",
+HUC
+    :
+    "/media/20037/hun.png",
+HUGE
+    :
+    "/media/20318/huge.png",
+HUSH
+    :
+    "/media/1383138/thehush_300x300.png",
+HVC
+    :
+    "/media/19745/hvc.png",
+HVCO
+    :
+    "/media/351014/hvco.png",
+HVN
+    :
+    "/media/1383745/hvt.png",
+HXT
+    :
+    "/media/12318282/hxt.png",
+HXX
+    :
+    "/media/1382348/hexx.jpg"
+HYP
+    :
+    "/media/20624/hyp.png",
+HYPER
+    :
+    "/media/19744/hyper.png",
+HZ
+    :
+    "/media/20320/hz.png",
+HZT
+    :
+    "/media/352291/hzt.png",
+I0C
+    :
+    "/media/350691/i0c.png",
+IBANK
+    :
+    "/media/351238/ibank.png",
+ICASH
+    :
+    "/media/20319/icash.png",
+ICB
+    :
+    "/media/19747/icb.png",
+ICC
+    :
+    "/media/15887424/icc.png",
+ICE
+    :
+    "/media/1383896/46b-uaba_400x400.jpg"
+ICN
+    :
+    "/media/351400/icn.png",
+ICOB
+    :
+    "/media/352133/icb.png",
+ICON
+    :
+    "/media/352297/icon.png",
+ICOO
+    :
+    "/media/1383904/icoo.jpg"
+ICOS
+    :
+    "/media/1383968/icos1.png",
+ICX
+    :
+    "/media/12318192/icx.png",
+IEC
+    :
+    "/media/1383144/wsx.png",
+IFC
+    :
+    "/media/19754/ifc.png",
+IFLT
+    :
+    "/media/351934/iflt.png",
+IFT
+    :
+    "/media/12318127/ift.png",
+IGNIS
+    :
+    "/media/1384046/ignis.png",
+ILC
+    :
+    "/media/1383238/ilc.png",
+ILCT
+    :
+    "/media/12318299/ilct.png",
+IML
+    :
+    "/media/1383783/iml.png",
+IMPCH
+    :
+    "/media/1382606/impch.png",
+IMPS
+    :
+    "/media/1381984/imps.jpg"
+IMS
+    :
+    "/media/1383145/ims.png",
+IMX
+    :
+    "/media/1382891/imx.png",
+IN
+    :
+    "/media/1381987/in.png",
+INC
+    :
+    "/media/1382173/inc.png",
+INCNT
+    :
+    "/media/352296/incnt.png",
+INCP
+    :
+    "/media/351078/incp.png",
+IND
+    :
+    "/media/1383794/ind.png",
+INDI
+    :
+    "/media/12318419/indi.png",
+INF8
+    :
+    "/media/1383326/inf8.png",
+INFX
+    :
+    "/media/350919/infx.png",
+INN
+    :
+    "/media/14913536/inn.png",
+INPAY
+    :
+    "/media/1383004/inpay.png",
+INS
+    :
+    "/media/14913458/ins.png",
+INSANE
+    :
+    "/media/351993/insane.png",
+INSN
+    :
+    "/media/1383366/insn.png",
+INV
+    :
+    "/media/351682/inv.png",
+INXT
+    :
+    "/media/12318355/inxt.png",
+IOC
+    :
+    "/media/20042/ioc.png",
+ION
+    :
+    "/media/350933/ion.jpg"
+IOP
+    :
+    "/media/12318262/iop.png",
+IOT
+    :
+    "/media/1383540/iota_logo.png",
+IOU
+    :
+    "/media/1383241/iou1.png",
+IPC
+    :
+    "/media/1383776/ipc.png",
+ISL
+    :
+    "/media/19808/mrs.png",
+ITT
+    :
+    "/media/1384050/itt.png",
+IVZ
+    :
+    "/media/350944/ivz.png",
+IW
+    :
+    "/media/352121/iw.png",
+IWT
+    :
+    "/media/1384048/iwt.png",
+IXC
+    :
+    "/media/19761/ixc.png",
+IXT
+    :
+    "/media/1383612/ixt.png",
+J
+    :
+    "/media/20350/j.png",
+JANE
+    :
+    "/media/1382640/jane.png",
+JBS
+    :
+    "/media/20044/jbs.png",
+JCR
+    :
+    "/media/14761952/jcr.png",
+JDC
+    :
+    "/media/1384049/jdc.png",
+JIF
+    :
+    "/media/351738/jif.png",
+JIO
+    :
+    "/media/352120/jio.png",
+JKC
+    :
+    "/media/19757/jkc.png",
+JNS
+    :
+    "/media/352126/jns.png",
+JNT
+    :
+    "/media/15887422/jnt.jpg"
+JOBS
+    :
+    "/media/351691/jobs.png",
+JOK
+    :
+    "/media/1382381/jok.png",
+JPC
+    :
+    "/media/19759/jpc.png",
+JPC*
+:
+"/media/14913466/jpc.png",
+JUDGE
+    :
+    "/media/20038/judge.png",
+JVY
+    :
+    "/media/12318244/jvy.png",
+JWL
+    :
+    "/media/351432/jwl.png",
+KAPU
+    :
+    "/media/12318035/logo_500x500.png",
+KARM
+    :
+    "/media/350693/karm.png",
+KAT
+    :
+    "/media/351028/katz.png",
+KAYI
+    :
+    "/media/1382863/kayi.png",
+KC
+    :
+    "/media/352224/kc.png",
+KCN
+    :
+    "/media/1383953/kencoin.png",
+KCS
+    :
+    "/media/12318389/kcs.png",
+KDC
+    :
+    "/media/19766/kdc.png",
+KED
+    :
+    "/media/1382390/ked.png",
+KEK
+    :
+    "/media/14913432/kek.png",
+KEX
+    :
+    "/media/9350699/kex.png",
+KEY
+    :
+    "/media/20331/key.png",
+KEY*
+:
+"/media/14761912/key.png",
+KGC
+    :
+    "/media/19763/kgc.png",
+KICK
+    :
+    "/media/1383929/kick.png",
+KIN
+    :
+    "/media/1383731/kin.png",
+KING
+    :
+    "/media/1383862/king.png",
+KLC
+    :
+    "/media/352024/klc.png",
+KMD
+    :
+    "/media/351408/kmd.png",
+KNC
+    :
+    "/media/12318084/knc.png",
+KNC*
+:
+"/media/350895/knc.png",
+KNC**
+:
+"/media/16404850/knc.png",
+KOBO
+    :
+    "/media/20329/kobo.png",
+KOLION
+    :
+    "/media/12318295/kolion.png",
+KORE
+    :
+    "/media/14543972/kore.png",
+KR
+    :
+    "/media/350974/kr.png",
+KRAK
+    :
+    "/media/351236/krak.png",
+KRB
+    :
+    "/media/351504/krb.jpg"
+KRC
+    :
+    "/media/351755/krc.png",
+KRONE
+    :
+    "/media/9350770/krone.png",
+KTK
+    :
+    "/media/19771/ktk.png",
+KUBO
+    :
+    "/media/351077/kubo.png",
+KURT
+    :
+    "/media/352155/kurt.png",
+KUSH
+    :
+    "/media/1382401/kush.png",
+LA
+    :
+    "/media/1383782/lato.png",
+LAB
+    :
+    "/media/16404858/lab.png",
+LAB*
+:
+"/media/20040/lab.png",
+LANA
+    :
+    "/media/351792/lana.png",
+LAT
+    :
+    "/media/9350724/lat.png",
+LAZ
+    :
+    "/media/351552/laz.png",
+LBC
+    :
+    "/media/351211/lbc.png",
+LBTC
+    :
+    "/media/9350763/lbtc.png",
+LC
+    :
+    "/media/351398/lc.png",
+LCASH
+    :
+    "/media/14913550/lcash.png",
+LDM
+    :
+    "/media/16404870/ldm.png",
+LDOGE
+    :
+    "/media/20332/ldoge.png",
+LEA
+    :
+    "/media/351729/lea.png",
+LEMON
+    :
+    "/media/351021/lemon.png",
+LENIN
+    :
+    "/media/1382270/lenin.png",
+LEO
+    :
+    "/media/351988/leo.png",
+LEPEN
+    :
+    "/media/1382507/lepen.png",
+LEV
+    :
+    "/media/12318249/lev.png",
+LFC
+    :
+    "/media/351757/lfc.png",
+LGBTQ
+    :
+    "/media/350996/lgbtq.png",
+LGD
+    :
+    "/media/1383085/lgd.png",
+LGD*
+:
+"/media/19770/lgd.png",
+LIFE
+    :
+    "/media/14913568/life.png",
+LIMX
+    :
+    "/media/19769/limx.png",
+LINDA
+    :
+    "/media/1383860/linda.png",
+LINK
+    :
+    "/media/12318078/link.png",
+LINX
+    :
+    "/media/9350783/linx.png",
+LIR
+    :
+    "/media/351208/lir.png",
+LIV
+    :
+    "/media/352007/liv.png",
+LK7
+    :
+    "/media/19776/lk7.png",
+LKK
+    :
+    "/media/1383553/lkk.png",
+LKY
+    :
+    "/media/19774/lky.png",
+LMC
+    :
+    "/media/1383139/lmc.png",
+LNK
+    :
+    "/media/9350738/lnk.png",
+LOAN*
+:
+"/media/14761940/loan.png",
+LOC
+    :
+    "/media/1381971/loc.png",
+LOCI
+    :
+    "/media/16404856/loci.png",
+LOG
+    :
+    "/media/20335/log.png",
+LOOK
+    :
+    "/media/1381970/look.png",
+LQD
+    :
+    "/media/351097/lqd.png",
+LRC
+    :
+    "/media/12318135/lrc.png",
+LSD
+    :
+    "/media/20041/lsd.png",
+LSK
+    :
+    "/media/352246/lsk.png",
+LTA
+    :
+    "/media/9350693/lta.png",
+LTB
+    :
+    "/media/20336/ltb.png",
+LTBC
+    :
+    "/media/20336/ltb.png",
+LTC
+    :
+    "/media/19782/litecoin-logo.png",
+LTCD
+    :
+    "/media/20043/ltcd.png",
+LTCR
+    :
+    "/media/1382097/ltcr.png",
+LTCX
+    :
+    "/media/19779/ltcx.png",
+LTD
+    :
+    "/media/1382049/ltd.png",
+LTG
+    :
+    "/media/16404871/ltg.png",
+LTH
+    :
+    "/media/351565/lth.png",
+LTS
+    :
+    "/media/20644/lts.png",
+LUCKY
+    :
+    "/media/351946/lucky.png",
+LUN
+    :
+    "/media/1383112/lunyr-logo.png",
+LUX
+    :
+    "/media/12318422/lux.png",
+LUX*
+:
+"/media/20557/lux.png",
+LVG
+    :
+    "/media/1382094/lvg.png",
+LXC
+    :
+    "/media/20045/lxc.png",
+LYB
+    :
+    "/media/20339/lyb.png",
+LYC
+    :
+    "/media/19785/lyc.png",
+M1
+    :
+    "/media/19808/mrs.png",
+MAC
+    :
+    "/media/1382368/mac.png",
+MAD
+    :
+    "/media/1383556/mad.png",
+MAG
+    :
+    "/media/16404853/mag.png",
+MAG*
+:
+"/media/9350711/mag.png",
+MAID
+    :
+    "/media/352247/maid.png",
+MANA
+    :
+    "/media/1383903/mana.png",
+MAPC
+    :
+    "/media/20710/mapc.png",
+MAR
+    :
+    "/media/1382577/mar.png",
+MARS
+    :
+    "/media/19808/mrs.png",
+MARV
+    :
+    "/media/351099/marv.png",
+MARX
+    :
+    "/media/1382578/marx.png",
+MARYJ
+    :
+    "/media/20343/maryj.png",
+MASS
+    :
+    "/media/1383781/mass.png",
+MAT
+    :
+    "/media/12318162/mat.png",
+MAT*
+:
+"/media/1383371/mat.png",
+MAX
+    :
+    "/media/19786/max.png",
+MAY
+    :
+    "/media/12318380/may.png",
+MBI
+    :
+    "/media/1383759/mbi.png",
+MBIT
+    :
+    "/media/1382793/mbit.png",
+MBRS
+    :
+    "/media/1384010/mbrs.png",
+MBT
+    :
+    "/media/12318238/mbt.png",
+MC
+    :
+    "/media/351428/mc.png",
+MCAP
+    :
+    "/media/1383559/mcap.png",
+MCAR
+    :
+    "/media/1382659/mcar.png",
+MCI
+    :
+    "/media/12318289/mci.png",
+MCN
+    :
+    "/media/20346/mcn.png",
+MCO
+    :
+    "/media/1383653/mco.jpg"
+MCRN
+    :
+    "/media/1383111/mcrn.png",
+MDA
+    :
+    "/media/12318340/mda.png",
+MDC
+    :
+    "/media/351500/mdc.png",
+MDC*
+:
+"/media/14913531/mdc.png",
+MDL
+    :
+    "/media/14913435/mdl-ico.png",
+MDT
+    :
+    "/media/351989/mdt.png",
+MEC
+    :
+    "/media/19789/mec.png",
+MED
+    :
+    "/media/20046/med.png",
+MEDI
+    :
+    "/media/1384051/medi.png",
+MEGA
+    :
+    "/media/352020/mega.png",
+MEME
+    :
+    "/media/1383050/pepecoin-512.png",
+MER
+    :
+    "/media/14913628/mer.png",
+MET
+    :
+    "/media/1384013/met1.png",
+METAL
+    :
+    "/media/20359/metal.png",
+MG
+    :
+    "/media/351588/mg.png",
+MGO
+    :
+    "/media/1382798/mgo.png",
+MI
+    :
+    "/media/20711/mi.png",
+MIL
+    :
+    "/media/20354/mil.png",
+MILO
+    :
+    "/media/1383236/milo.png",
+MIN
+    :
+    "/media/19793/min.png",
+MINE
+    :
+    "/media/20356/mine.png",
+MINEX
+    :
+    "/media/9350702/minex.png",
+MINT
+    :
+    "/media/19797/mint.png",
+MIS
+    :
+    "/media/1381981/mis.png",
+MIV
+    :
+    "/media/1383728/miv.png",
+MKR
+    :
+    "/media/1382296/mkr.png",
+MLITE
+    :
+    "/media/1382725/mlite.png",
+MLN
+    :
+    "/media/1382653/mln.png",
+MLS
+    :
+    "/media/9350696/mls.png",
+MM
+    :
+    "/media/1382642/mm.jpg"
+MMC
+    :
+    "/media/19795/mmc.png",
+MMNXT
+    :
+    "/media/351209/nxtasset.png",
+MMXIV
+    :
+    "/media/19798/mmxiv.png",
+MMXVI
+    :
+    "/media/1381972/mmxvi.png",
+MN
+    :
+    "/media/19796/mn1.png",
+MNC
+    :
+    "/media/19805/mincoin.png",
+MND
+    :
+    "/media/350616/mnd.png",
+MNE
+    :
+    "/media/1383328/mne.png",
+MNM
+    :
+    "/media/350982/mnm.png",
+MNT
+    :
+    "/media/9350745/mntp.png",
+MNX
+    :
+    "/media/14913648/mnx.png",
+MNY
+    :
+    "/media/1383973/mny.png",
+MNZ
+    :
+    "/media/12318336/mnz.png",
+MOBI
+    :
+    "/media/1383921/mobi.png",
+MOD
+    :
+    "/media/12318362/mod.png",
+MOIN
+    :
+    "/media/350959/moin.png",
+MOJO
+    :
+    "/media/351003/mojo.png",
+MONA
+    :
+    "/media/19801/mona.png",
+MONETA
+    :
+    "/media/351749/moneta.png",
+MONEY
+    :
+    "/media/352249/money.png",
+MOON
+    :
+    "/media/19802/moon.png",
+MOOND
+    :
+    "/media/351558/moond.png",
+MOTO
+    :
+    "/media/1382339/moto.png",
+MPRO
+    :
+    "/media/350999/mpro.jpg"
+MRP
+    :
+    "/media/20357/mrp.png",
+MRS
+    :
+    "/media/19808/mrs.png",
+MRSA
+    :
+    "/media/1382287/msra.png",
+MRT
+    :
+    "/media/350884/waves_1.png",
+MRV
+    :
+    "/media/1384009/mrv.png",
+MRY
+    :
+    "/media/19807/mry.jpg"
+MSC
+    :
+    "/media/19814/mst.png",
+MSP
+    :
+    "/media/1383881/c9fobrlr_400x400.jpg"
+MSR
+    :
+    "/media/14913574/msr.png",
+MST
+    :
+    "/media/351529/mst1.png",
+MT
+    :
+    "/media/19453/mycelium.png",
+MTH
+    :
+    "/media/1383976/mth.png",
+MTK
+    :
+    "/media/12318149/mtk.png",
+MTL
+    :
+    "/media/1383743/mtl.png",
+MTLM3
+    :
+    "/media/352183/mtmc3.png",
+MTN
+    :
+    "/media/12318118/mtn.png",
+MTR
+    :
+    "/media/19710/frac.png",
+MTX
+    :
+    "/media/9350793/mtx.png",
+MUDRA
+    :
+    "/media/351394/mudra.png",
+MUE
+    :
+    "/media/351084/mue.png",
+MUSIC
+    :
+    "/media/1382783/music.png",
+MUU
+    :
+    "/media/1383325/muu.png",
+MWC
+    :
+    "/media/19808/mrs.png",
+MXT
+    :
+    "/media/1382782/mxt.jpg"
+MYB
+    :
+    "/media/1383746/myb.png",
+MYC
+    :
+    "/media/350947/myc.png",
+MYST
+    :
+    "/media/1383561/myst.png",
+MYST*
+:
+"/media/20053/myst.png",
+MZC
+    :
+    "/media/19816/mzc.png",
+N7
+    :
+    "/media/350995/n7.jpg"
+NAMO
+    :
+    "/media/12318384/namo.png",
+NAN
+    :
+    "/media/19821/nan.png",
+NANAS
+    :
+    "/media/20575/nanas.png",
+NAS2
+    :
+    "/media/350776/nas2.png",
+NAUT
+    :
+    "/media/19822/naut.png",
+NAV
+    :
+    "/media/351431/nav.png",
+NBIT
+    :
+    "/media/351928/nbit.png",
+NBL
+    :
+    "/media/19825/nbl.png",
+NBT
+    :
+    "/media/20363/nbt.png",
+NDC
+    :
+    "/media/1383827/ndc.png",
+NDOGE
+    :
+    "/media/1382650/ndoge.png",
+NEBL
+    :
+    "/media/1384016/nebl.png",
+NEBU
+    :
+    "/media/350990/nebu.png",
+NEC
+    :
+    "/media/19824/nec.png",
+NEF
+    :
+    "/media/1383383/nef.png",
+NEO
+    :
+    "/media/1383858/neo.jpg"
+NEOG
+    :
+    "/media/14913457/neog.png",
+NEOS
+    :
+    "/media/1382788/neos1.png",
+NET
+    :
+    "/media/19826/net.png",
+NET*
+:
+"/media/1383697/net1.png",
+NETC
+    :
+    "/media/350938/netc.png",
+NETKO
+    :
+    "/media/1382771/netko.png",
+NEU
+    :
+    "/media/20721/neu.png",
+NEU*
+:
+"/media/14913483/neu.png",
+NEVA
+    :
+    "/media/351026/neva.png",
+NEWB
+    :
+    "/media/14913564/newb.png",
+NIC
+    :
+    "/media/352309/nic.png",
+NICE
+    :
+    "/media/1382467/nice.png",
+NIMFA
+    :
+    "/media/9350694/nimfa.jpg"
+NKA
+    :
+    "/media/20367/nka.png",
+NKC
+    :
+    "/media/351041/nkc.png",
+NKT
+    :
+    "/media/20371/nkt.png",
+NLC
+    :
+    "/media/351591/nlc.png",
+NLC2
+    :
+    "/media/1383855/nlc21.png",
+NLG
+    :
+    "/media/19828/nlg.png",
+NMB
+    :
+    "/media/20049/nmb.png",
+NMC
+    :
+    "/media/19830/nmc.png",
+NMR
+    :
+    "/media/1383655/nmr.png",
+NOBL
+    :
+    "/media/19833/nobl.png",
+NODE
+    :
+    "/media/20373/node.png",
+NOO
+    :
+    "/media/1382370/noo.png",
+NOTE
+    :
+    "/media/19832/note.png",
+NPC
+    :
+    "/media/352130/npc.png",
+NPX
+    :
+    "/media/12318066/npx.png",
+NRB
+    :
+    "/media/19839/nrb.png",
+NRC
+    :
+    "/media/1382604/nrc.png",
+NRN
+    :
+    "/media/12318047/nrn.png",
+NRS
+    :
+    "/media/19834/nrs.png",
+NSR
+    :
+    "/media/20378/nsr.png",
+NTC
+    :
+    "/media/351631/ntc.png",
+NTCC
+    :
+    "/media/1382346/ntcc.png",
+NTM
+    :
+    "/media/12318286/ntm.png",
+NTO
+    :
+    "/media/12318293/nto.png",
+NTRN
+    :
+    "/media/12318281/ntrn.png",
+NUBIS
+    :
+    "/media/351759/nubis.png",
+NUKE
+    :
+    "/media/1382626/nuke.png",
+NULS
+    :
+    "/media/14913548/nuls.png",
+NUM
+    :
+    "/media/350932/num.png",
+NVC
+    :
+    "/media/20713/nvc.png",
+NVST
+    :
+    "/media/1383732/nvst.png",
+NXC
+    :
+    "/media/352248/nxc.png",
+NXE
+    :
+    "/media/351070/nxe.png",
+NXS
+    :
+    "/media/1382387/nexus.jpg"
+NXT
+    :
+    "/media/20627/nxt.png",
+NXTI
+    :
+    "/media/20376/nxti.png",
+NXTTY
+    :
+    "/media/20379/nxtty.png",
+NYAN
+    :
+    "/media/19842/nyan.png",
+NYC
+    :
+    "/media/9350762/nyc.png",
+NZC
+    :
+    "/media/351366/nzc.png",
+OAX
+    :
+    "/media/1383756/oax.png",
+OBITS
+    :
+    "/media/350565/obits.png",
+OBS
+    :
+    "/media/351064/obs.png",
+OC
+    :
+    "/media/19843/oc.png",
+OCL
+    :
+    "/media/1383989/ocl.png",
+OCTO
+    :
+    "/media/19983/888.png",
+ODMC
+    :
+    "/media/14761889/odmcoin.png",
+ODN
+    :
+    "/media/12318145/odn.png",
+ODNT
+    :
+    "/media/352186/odnt.png",
+OK
+    :
+    "/media/350819/ok.png",
+OLDSF
+    :
+    "/media/350936/oldsf.png",
+OLV
+    :
+    "/media/1383239/xvs.png",
+OLYMP
+    :
+    "/media/351683/olymp.png",
+OMA
+    :
+    "/media/20386/oma.png",
+OMC
+    :
+    "/media/1381967/omc.png",
+OMG
+    :
+    "/media/1383814/omisego.png",
+OMNI
+    :
+    "/media/351102/omni.png",
+ONION
+    :
+    "/media/1383894/onion.png",
+ONX
+    :
+    "/media/1383910/onx.png",
+OPAL
+    :
+    "/media/20050/opal.png",
+OPES
+    :
+    "/media/1382434/opes.png",
+OPP
+    :
+    "/media/12318188/opp.png",
+OPT
+    :
+    "/media/1383873/opt.png",
+OPTION
+    :
+    "/media/1381998/option.png",
+ORB
+    :
+    "/media/19845/orb.png",
+ORLY
+    :
+    "/media/351076/orly.png",
+ORME
+    :
+    "/media/12317975/omes.png",
+ORO
+    :
+    "/media/1382656/oro.png",
+OROC
+    :
+    "/media/1383755/oroc.png",
+OS76
+    :
+    "/media/1382288/os76.png",
+OSC
+    :
+    "/media/19847/osc.png",
+OTN
+    :
+    "/media/14913453/otn.png",
+OTX
+    :
+    "/media/1383817/1qrfuod6_400x400.jpg"
+OXY
+    :
+    "/media/9350753/oxy.png",
+PAC
+    :
+    "/media/1382605/pac.png",
+PAK
+    :
+    "/media/350788/pak.png",
+PARA
+    :
+    "/media/1382641/para.png",
+PART
+    :
+    "/media/1383838/part.png",
+PASC
+    :
+    "/media/1382247/pasc.png",
+PASL
+    :
+    "/media/1382741/pasl.png",
+PAY
+    :
+    "/media/1383687/pay.png",
+PAYP
+    :
+    "/media/1382251/payp.png",
+PBC
+    :
+    "/media/351062/pbc.png",
+PBL
+    :
+    "/media/16404866/pbl.png",
+PBT
+    :
+    "/media/1383324/pbt.png",
+PCM
+    :
+    "/media/352223/pcm.png",
+PCS
+    :
+    "/media/351927/pabyosi.png",
+PDC
+    :
+    "/media/351088/pdc.png",
+PEC
+    :
+    "/media/351761/pec.png",
+PEN
+    :
+    "/media/20384/pen.png",
+PEPECASH
+    :
+    "/media/1382397/pepecash.png",
+PEX
+    :
+    "/media/351992/pex.png",
+PFR
+    :
+    "/media/16404867/pfr.png",
+PGL
+    :
+    "/media/1384018/pgl.png",
+PHR
+    :
+    "/media/1383243/phr.jpg"
+PHR*
+:
+"/media/14913549/phr.png",
+PHS
+    :
+    "/media/19857/phs.png",
+PIE
+    :
+    "/media/1382686/pie.png",
+PIGGY
+    :
+    "/media/19854/piggy.png",
+PING
+    :
+    "/media/1383706/ping1.png",
+PINK
+    :
+    "/media/350588/pinkcoin-logo.png",
+PINKX
+    :
+    "/media/351624/pinkx.png",
+PIO
+    :
+    "/media/351528/pio.png",
+PIRL
+    :
+    "/media/14543968/pirl.png",
+PIVX
+    :
+    "/media/1382389/pivx.png",
+PIX
+    :
+    "/media/1384024/pix.png",
+PIZZA
+    :
+    "/media/351397/pizza.png",
+PKB
+    :
+    "/media/20694/pkb.png",
+PKT
+    :
+    "/media/12318349/playkey.png",
+PLANET
+    :
+    "/media/1382851/planet.png",
+PLAY
+    :
+    "/media/14913441/play.png",
+PLBT
+    :
+    "/media/1383671/polybius.png",
+PLM
+    :
+    "/media/12318124/plm.jpg"
+PLNC
+    :
+    "/media/352131/plnc.png",
+PLR
+    :
+    "/media/1383786/plr.png",
+PLU
+    :
+    "/media/1382431/plu.png",
+PNC
+    :
+    "/media/352085/pnc.png",
+PND
+    :
+    "/media/12318184/pnd.png",
+PNK
+    :
+    "/media/351557/pnk.png",
+POE
+    :
+    "/media/1383828/poe.png",
+POINTS
+    :
+    "/media/19863/points.png",
+POLL
+    :
+    "/media/12318144/poll.png",
+POLY
+    :
+    "/media/20631/poly.png",
+POS
+    :
+    "/media/14913455/pos.png",
+POST
+    :
+    "/media/350917/post.png",
+POSW
+    :
+    "/media/1382902/posw.png",
+POT
+    :
+    "/media/19865/pot.png",
+POWR
+    :
+    "/media/12318301/powr.png",
+PPC
+    :
+    "/media/19864/peercoin-logo.png",
+PPP
+    :
+    "/media/12318216/ppp.png",
+PPT
+    :
+    "/media/1383747/ppt.png",
+PPY
+    :
+    "/media/351630/peerplays.png",
+PQT
+    :
+    "/media/1383741/pqt.png",
+PRC
+    :
+    "/media/20393/prc.png",
+PRE
+    :
+    "/media/351711/pre.png",
+PRE*
+:
+"/media/1383801/pst.png",
+PRES
+    :
+    "/media/1382432/pres.png",
+PRG
+    :
+    "/media/1384033/prg.png",
+PRIME
+    :
+    "/media/350979/prime.png",
+PRIX
+    :
+    "/media/9350797/prix.png",
+PRM
+    :
+    "/media/350906/prm.png",
+PRO
+    :
+    "/media/1383792/pro.png",
+PROC
+    :
+    "/media/1383159/proc.png",
+PRP
+    :
+    "/media/12318007/prp.png",
+PRX
+    :
+    "/media/1382603/prx.png",
+PSB
+    :
+    "/media/351594/psb.jpg"
+PSEUD
+    :
+    "/media/20052/pseud.png",
+PSI
+    :
+    "/media/351589/psi.png",
+PST
+    :
+    "/media/9350792/pst.jpg"
+PSY
+    :
+    "/media/351362/psy.png",
+PTA
+    :
+    "/media/1382236/pta.png",
+PTC
+    :
+    "/media/19868/ptc.png",
+PTC*
+:
+"/media/14913426/ptc.png",
+PTOY
+    :
+    "/media/1383547/ptoy.png",
+PTS*
+:
+"/media/19869/pts.png",
+PULSE
+    :
+    "/media/350994/pulse.jpg"
+PUPA
+    :
+    "/media/1383245/pupa.png",
+PURA
+    :
+    "/media/14913533/pura.png",
+PURE
+    :
+    "/media/14913451/pure.png",
+PUT
+    :
+    "/media/1383668/put1.png",
+PWR
+    :
+    "/media/350899/pwr.png",
+PX
+    :
+    "/media/1381994/px.png",
+PXC
+    :
+    "/media/20058/pxc.png",
+PXI
+    :
+    "/media/350559/pxi.png",
+PXL
+    :
+    "/media/350930/pxl.png",
+PYC
+    :
+    "/media/19878/pyc.png",
+PYN
+    :
+    "/media/12318033/pyn.png",
+PZM
+    :
+    "/media/1383242/pzm.jpg"
+QASH
+    :
+    "/media/15887431/qash.png",
+QAU
+    :
+    "/media/1383669/qau.png",
+QBC
+    :
+    "/media/19874/qbc.png",
+QBK
+    :
+    "/media/20400/qbk.png",
+QBT
+    :
+    "/media/1382936/qbt.png",
+QCN
+    :
+    "/media/19877/qcn.png",
+QORA
+    :
+    "/media/19876/qora.png",
+QRK
+    :
+    "/media/19882/qrk.png",
+QRL
+    :
+    "/media/1383543/qrl.png",
+QSLV
+    :
+    "/media/20404/qslv.png",
+QSP
+    :
+    "/media/15887408/qsp.png",
+QTL
+    :
+    "/media/19879/qtl.png",
+QTUM
+    :
+    "/media/1383382/qtum.png",
+QTZ
+    :
+    "/media/20643/qtz.png",
+QVT
+    :
+    "/media/1383954/qvt.png",
+QWARK
+    :
+    "/media/1383522/qwark.png",
+R
+    :
+    "/media/12318360/r.png",
+RADI
+    :
+    "/media/1382239/rad.png",
+RADS
+    :
+    "/media/350610/rads.png",
+RAIN
+    :
+    "/media/1383114/rain.png",
+RATIO
+    :
+    "/media/1382442/ratio.png",
+RBIES
+    :
+    "/media/350904/rbies.png",
+RBIT
+    :
+    "/media/351405/rbit.png",
+RBR
+    :
+    "/media/20408/rbr.png",
+RBT
+    :
+    "/media/20407/rbt.png",
+RBX
+    :
+    "/media/1383197/rbx.png",
+RBY
+    :
+    "/media/351279/rby.png",
+RC
+    :
+    "/media/1381992/rc.png",
+RCC
+    :
+    "/media/1383864/rcc.png",
+RCN
+    :
+    "/media/12318046/rnc.png",
+RCN*
+:
+"/media/351634/rcn.png",
+RCX
+    :
+    "/media/350902/rcx.png",
+RDD
+    :
+    "/media/19887/rdd.png",
+RDN
+    :
+    "/media/19808/mrs.png",
+RDN*
+:
+"/media/14913482/rdn.png",
+REA
+    :
+    "/media/14761934/rea.png",
+REAL
+    :
+    "/media/1383884/rise.png",
+REBL
+    :
+    "/media/14913454/rebl.png",
+REC
+    :
+    "/media/12318179/rec.png",
+RED
+    :
+    "/media/1383265/red.png",
+REE
+    :
+    "/media/351096/ree.png",
+REP
+    :
+    "/media/350815/augur-logo.png",
+REQ
+    :
+    "/media/12318260/req.png",
+REV
+    :
+    "/media/351061/rev.png",
+REX
+    :
+    "/media/12318086/rex.png",
+RGC
+    :
+    "/media/12318357/rgc.png",
+RHEA
+    :
+    "/media/12318096/rhea.png",
+RIC
+    :
+    "/media/19888/ric.jpg"
+RICE
+    :
+    "/media/1383245/rice.png",
+RIDE
+    :
+    "/media/1382388/ride.png",
+RING
+    :
+    "/media/351546/ring.png",
+RIPO
+    :
+    "/media/20051/ripo.png",
+RIPT
+    :
+    "/media/15887409/ript.png",
+RISE
+    :
+    "/media/351059/rise.png",
+RIYA
+    :
+    "/media/9350737/riya.png",
+RKC
+    :
+    "/media/1383852/rkc.png",
+RLC
+    :
+    "/media/12318418/rlc.png",
+RMS
+    :
+    "/media/351701/rms.png",
+RNC
+    :
+    "/media/1382240/rnc.png",
+RNDR
+    :
+    "/media/12318381/rndr.png",
+RNS
+    :
+    "/media/1382859/rns.png",
+ROCK
+    :
+    "/media/12318189/rock.png",
+ROCK*
+:
+"/media/14913607/rock1.png",
+ROK
+    :
+    "/media/12318268/rok.png",
+ROOT
+    :
+    "/media/351523/root.png",
+ROOTS
+    :
+    "/media/1383851/roots.png",
+ROS
+    :
+    undefined
+ROUND
+    :
+    "/media/1382508/round.png",
+ROYAL
+    :
+    "/media/351756/royal.png",
+RPC
+    :
+    "/media/19895/rpc-2.png",
+RPX
+    :
+    "/media/12318339/rpx.png",
+RRT
+    :
+    "/media/19554/bitfinex.png",
+RT2
+    :
+    "/media/19896/rt2.png",
+RUBIT
+    :
+    "/media/351751/rubit.png",
+RUP
+    :
+    "/media/12318363/rup.jpg"
+RUPX
+    :
+    "/media/14913484/rupx.png",
+RUST
+    :
+    "/media/351365/rust.png",
+RUSTBITS
+    :
+    "/media/12318085/rustbits.png",
+RVT
+    :
+    "/media/1383694/rvt.png",
+RYC
+    :
+    "/media/19898/ryc.png",
+RYCN
+    :
+    "/media/351756/royal.png",
+RZR
+    :
+    "/media/20055/rzr.png",
+S8C
+    :
+    "/media/1382093/s8c.png",
+SAFEX
+    :
+    "/media/1383986/safex.png",
+SAK
+    :
+    "/media/351079/sak.png",
+SALT
+    :
+    "/media/9350744/salt.jpg"
+SAN
+    :
+    "/media/1383730/san.png",
+SAND
+    :
+    "/media/1383825/beach.png",
+SANDG
+    :
+    "/media/351556/sandt.png",
+SAR
+    :
+    "/media/350901/sar.png",
+SAT2
+    :
+    "/media/19897/sat2.png",
+SBC
+    :
+    "/media/19900/sbc.png",
+SBD
+    :
+    "/media/350907/steem.png",
+SC
+    :
+    "/media/20726/siacon-logo.png",
+SCASH
+    :
+    "/media/352117/scash.png",
+SCL
+    :
+    "/media/9350788/scl.png",
+SCN
+    :
+    "/media/351563/scn.png",
+SCOR
+    :
+    "/media/9350695/scor.jpg"
+SCORE
+    :
+    "/media/1383813/score.png",
+SCOT
+    :
+    "/media/20416/scot_1.png",
+SCR
+    :
+    "/media/14913681/scr.png",
+SCRPT
+    :
+    "/media/351210/scrpt.png",
+SCRT
+    :
+    "/media/351031/scrt.png",
+SCT
+    :
+    "/media/351791/sct.png",
+SCT*
+:
+"/media/12318383/sct.png",
+SDAO
+    :
+    "/media/1383933/sdao.png",
+SDC
+    :
+    "/media/20419/sdc.png",
+SDP
+    :
+    "/media/351709/sdp.jpg"
+SEEDS
+    :
+    "/media/352190/seeds.png",
+SEL
+    :
+    "/media/1382369/sel.png",
+SEN
+    :
+    "/media/351560/sen.png",
+SENSE
+    :
+    "/media/12318034/sense.png",
+SEQ
+    :
+    "/media/1383558/seq.png",
+SFC
+    :
+    "/media/1382639/sfc.png",
+SFE
+    :
+    "/media/351735/sfe.png",
+SFR
+    :
+    "/media/19903/sfr.png",
+SH
+    :
+    "/media/351567/sh.png",
+SHADE
+    :
+    "/media/20056/shade.png",
+SHIFT
+    :
+    "/media/1382125/shift.png",
+SHLD
+    :
+    "/media/19904/shld.png",
+SHORTY
+    :
+    "/media/352222/shorty.png",
+SHP
+    :
+    "/media/14761950/shp.png",
+SIB
+    :
+    "/media/350958/sib.png",
+SIFT
+    :
+    "/media/1384045/sift.jpg"
+SIGT
+    :
+    "/media/9350710/sigt.png",
+SIGU
+    :
+    "/media/19808/mrs.png",
+SILK
+    :
+    "/media/20057/silk.png",
+SJCX
+    :
+    "/media/20422/sjcx.png",
+SKB
+    :
+    "/media/19808/mrs.png",
+SKIN
+    :
+    "/media/1383880/dsb_amky_400x400.jpg"
+SKR
+    :
+    "/media/14913631/skr.png",
+SKR*
+:
+"/media/12318013/skr.png",
+SKY
+    :
+    "/media/1383565/sky.png",
+SLG
+    :
+    "/media/20428/slg.png",
+SLING
+    :
+    "/media/20425/sling.png",
+SLM
+    :
+    "/media/20426/slm.png",
+SLR
+    :
+    "/media/20699/slr.png",
+SLS
+    :
+    "/media/350946/sls.png",
+SMAC
+    :
+    "/media/20427/smac.png",
+SMART
+    :
+    "/media/1383906/smart.png",
+SMC
+    :
+    "/media/20059/smc.png",
+SMF
+    :
+    "/media/1382468/xmf.png",
+SMLY
+    :
+    "/media/20429/smly.png",
+SMNX
+    :
+    "/media/1383998/sx.png",
+SMSR
+    :
+    "/media/351543/smsr.png",
+SMT
+    :
+    "/media/12318350/smt.png",
+SNC
+    :
+    "/media/1383748/snc.png",
+SND
+    :
+    "/media/12318128/snd.png",
+SNGLS
+    :
+    "/media/351368/sngls.png",
+SNK
+    :
+    "/media/1383865/snk.png",
+SNM
+    :
+    "/media/1383564/snm.png",
+SNOV
+    :
+    "/media/12318100/snov.png",
+SNRG
+    :
+    "/media/20700/snrg.png",
+SNS
+    :
+    "/media/351494/sns.png",
+SNT
+    :
+    "/media/1383568/snt.png",
+SOAR
+    :
+    "/media/14913644/soar.png",
+SOCC
+    :
+    "/media/1383779/socc.png",
+SOIL
+    :
+    "/media/350949/soil.png",
+SOJ
+    :
+    "/media/9350725/soj.png",
+SOLE
+    :
+    "/media/20431/sole.png",
+SONG
+    :
+    "/media/20432/song.png",
+SOON
+    :
+    "/media/20436/soon.png",
+SOUL
+    :
+    "/media/350930/pxl.png",
+SP
+    :
+    "/media/352018/sp.png",
+SPA
+    :
+    "/media/19911/spa.png",
+SPACE
+    :
+    "/media/351095/space.png",
+SPC
+    :
+    "/media/20655/spc.png",
+SPEC
+    :
+    "/media/20689/spec.png",
+SPHR
+    :
+    "/media/19808/mrs.png",
+SPHTX
+    :
+    "/media/14913551/sphtx.png",
+SPKTR
+    :
+    "/media/1382349/spkr.png",
+SPM
+    :
+    "/media/351002/sup.png",
+SPN
+    :
+    "/media/1383861/spn.png",
+SPORT
+    :
+    "/media/351627/sports.png",
+SPOTS
+    :
+    "/media/350893/spots.png",
+SPR
+    :
+    "/media/20438/spr.png",
+SPRTS
+    :
+    "/media/20692/sprts.png",
+SPT
+    :
+    "/media/19917/spt.png",
+SPX
+    :
+    "/media/351212/spx.png",
+SQL
+    :
+    "/media/20441/sql.png",
+SQP
+    :
+    "/media/9350728/sqp.png",
+SRC
+    :
+    "/media/19918/src.png",
+SRC*
+:
+"/media/1382936/src1.png",
+SRN
+    :
+    "/media/14913556/srn.png",
+SRT
+    :
+    "/media/9350771/srt.png",
+SSD
+    :
+    "/media/20443/ssd.png",
+SSTC
+    :
+    "/media/350937/ssc.png",
+SSV
+    :
+    "/media/20060/ssv.png",
+ST
+    :
+    "/media/14913437/st.png",
+STA
+    :
+    "/media/1383620/crs.png",
+STA*
+:
+"/media/351063/sta.png",
+STALIN
+    :
+    "/media/1382726/stalin.png",
+STAR
+    :
+    "/media/1383750/star1.png",
+STAR*
+:
+"/media/351043/star.jpg"
+START
+    :
+    "/media/19916/start.png",
+STC
+    :
+    "/media/15887405/sct.png",
+STCN
+    :
+    "/media/9350727/stcn.png",
+STEEM
+    :
+    "/media/350907/steem.png",
+STEPS
+    :
+    "/media/350952/steps.png",
+STEX
+    :
+    "/media/16404854/stex.png",
+STHR
+    :
+    "/media/351042/sthr.png",
+STO
+    :
+    "/media/351493/sto.png",
+STOCKBET
+    :
+    "/media/12318119/stockbet.png",
+STORJ
+    :
+    "/media/20422/sjcx.png",
+STORM
+    :
+    "/media/1383803/storm.jpg"
+STR*
+:
+"/media/19920/str.png",
+STRAT
+    :
+    "/media/351303/stratis-logo.png",
+STS
+    :
+    "/media/351022/sts.png",
+STU
+    :
+    "/media/1383785/stu.png",
+STV
+    :
+    "/media/20444/stv.png",
+STX
+    :
+    "/media/1383946/stx.png",
+SUB
+    :
+    "/media/1384011/sub1.png",
+SUB*
+:
+"/media/1383362/sub.png",
+SUMO
+    :
+    "/media/12318088/sumo.png",
+SUP
+    :
+    "/media/20442/sup.png",
+SUPER
+    :
+    "/media/20061/super.png",
+SUR
+    :
+    "/media/1383696/sur.png",
+SWARM
+    :
+    "/media/20445/swarm.png",
+SWEET
+    :
+    "/media/351868/sweet.png",
+SWIFT
+    :
+    "/media/20446/swift.png",
+SWING
+    :
+    "/media/350987/swing.png",
+SWT
+    :
+    "/media/1382740/swt.jpg"
+SXC
+    :
+    "/media/19924/sxc.png",
+SYC
+    :
+    "/media/1383793/syc.png",
+SYNC
+    :
+    "/media/19922/sync.png",
+SYNX
+    :
+    "/media/15887426/synx.png",
+SYS
+    :
+    "/media/20062/sys.png",
+TAAS
+    :
+    "/media/1383085/taas.png",
+TAB
+    :
+    "/media/351488/tab.png",
+TAG
+    :
+    "/media/19925/tag.png",
+TAGR
+    :
+    "/media/350940/tagr.png",
+TAJ
+    :
+    "/media/1382867/taj.png",
+TAK
+    :
+    "/media/19928/tak.png",
+TAM
+    :
+    "/media/20565/tam.png",
+TAP
+    :
+    "/media/1383283/tap.png",
+TAT
+    :
+    "/media/1382594/tat.png",
+TAU
+    :
+    "/media/16404857/lamden.png",
+TBCX
+    :
+    "/media/1382658/tbcx.png",
+TCR
+    :
+    "/media/350918/tcr.png",
+TDFB
+    :
+    "/media/351507/tdfb.png",
+TEAM
+    :
+    "/media/351790/team.png",
+TEC
+    :
+    "/media/1382383/tecoin.png",
+TECH
+    :
+    "/media/1382505/tech.png",
+TEK
+    :
+    "/media/19929/tek.png",
+TELL
+    :
+    "/media/351505/tell.png",
+TENNET
+    :
+    "/media/351760/tennet.png",
+TER
+    :
+    "/media/12318324/ter.png",
+TES
+    :
+    "/media/19927/tes.png",
+TESLA
+    :
+    "/media/351945/tesla.png",
+TFL
+    :
+    "/media/1383621/tfl.png",
+TGC
+    :
+    "/media/19930/tgc.png",
+THC
+    :
+    "/media/351699/thc.png",
+THNX
+    :
+    "/media/1384039/thnx.jpg"
+THS
+    :
+    "/media/1382660/ths.png",
+TIA
+    :
+    "/media/351636/tia.png",
+TIC
+    :
+    "/media/1382625/tic.png",
+TIE
+    :
+    "/media/1383955/tie.png",
+TIME
+    :
+    "/media/352105/time.png",
+TIO
+    :
+    "/media/14913488/tio.png",
+TIT
+    :
+    "/media/20069/tit.png",
+TIX
+    :
+    "/media/1383690/tix.png",
+TKN
+    :
+    "/media/1383157/tkn.png",
+TKN*
+:
+"/media/351104/tkn.png",
+TKR
+    :
+    "/media/14761909/tkr.png",
+TKS
+    :
+    "/media/352207/tks.jpg"
+TKT
+    :
+    "/media/12318093/tkt.png",
+TMC
+    :
+    "/media/20451/tmc.png",
+TME
+    :
+    "/media/1383905/tme.png",
+TMT
+    :
+    "/media/12317977/tmt.png",
+TNT
+    :
+    "/media/1383800/tnt.png",
+TOA
+    :
+    "/media/12318334/toacoin.png",
+TODAY
+    :
+    "/media/351521/today.png",
+TOM
+    :
+    "/media/1383992/tom.png",
+TOR
+    :
+    "/media/19934/tor.png",
+TOT
+    :
+    undefined
+TPAY
+    :
+    "/media/1382770/tpay.png",
+TPG
+    :
+    "/media/351948/tpg.png",
+TRA
+    :
+    "/media/351700/tra.png",
+TRC
+    :
+    "/media/19938/terracoin.png",
+TRCT
+    :
+    "/media/14913462/trct.png",
+TRI
+    :
+    "/media/350568/tri.png",
+TRIA
+    :
+    "/media/16404852/tria.png",
+TRIBE
+    :
+    "/media/1383797/tribe.jpg"
+TRICK
+    :
+    "/media/352127/trick.png",
+TRIG
+    :
+    "/media/351489/trg.png",
+TRIP
+    :
+    "/media/12318231/trip.png",
+TRK
+    :
+    "/media/20460/trk.png",
+TRON
+    :
+    "/media/20459/tron.png",
+TRST
+    :
+    "/media/1381975/trst.png",
+TRUMP
+    :
+    "/media/350905/trump.png",
+TRUST
+    :
+    "/media/19935/trust.png",
+TRV
+    :
+    "/media/9350789/trv.png",
+TRX
+    :
+    "/media/12318089/trx.png",
+TSE
+    :
+    "/media/1382790/tato1.png",
+TTC
+    :
+    "/media/20064/ttc.png",
+TTT
+    :
+    "/media/9350755/ttt.jpg"
+TUR
+    :
+    "/media/351020/tur.png",
+TWIST
+    :
+    "/media/1382250/twist1.png",
+TWLV
+    :
+    "/media/20472/viral.png",
+TX
+    :
+    "/media/20722/tx.png",
+TZC
+    :
+    "/media/12318285/tzc.png",
+U
+    :
+    "/media/351629/u.jpg"
+UAEC
+    :
+    "/media/1382684/uaec.png",
+UBIQ
+    :
+    "/media/351544/ubiq.png",
+UBQ
+    :
+    "/media/1382441/ubq.png",
+UET
+    :
+    "/media/1383837/uet.png",
+UFO
+    :
+    "/media/12318167/ufo1.png",
+UFR
+    :
+    "/media/16404855/ufr.png",
+UGT
+    :
+    "/media/14913439/ugt.png",
+UIS
+    :
+    "/media/20455/uis.png",
+UKG
+    :
+    "/media/14913456/ukg.png",
+ULTC
+    :
+    "/media/20063/ultc.png",
+UMC
+    :
+    "/media/1383983/umb.png",
+UNAT
+    :
+    "/media/20456/unat.png",
+UNB
+    :
+    "/media/19940/unb.png",
+UNC
+    :
+    "/media/20693/unc.png",
+UNF
+    :
+    "/media/351626/unf.png",
+UNI
+    :
+    "/media/1382968/uni.png",
+UNIFY
+    :
+    "/media/1383775/unify.png",
+UNIKRN
+    :
+    "/media/1383805/unikr.png",
+UNIQ
+    :
+    "/media/351387/uniq.png",
+UNIT
+    :
+    "/media/350954/unit.png",
+UNITS
+    :
+    "/media/1382050/units.png",
+UNITY
+    :
+    "/media/350935/unity_1.png",
+UNO
+    :
+    "/media/20065/uno.png",
+UP
+    :
+    "/media/12318374/up.png",
+UR
+    :
+    "/media/352182/ur.jpg"
+URO
+    :
+    "/media/19937/uro.png",
+USC
+    :
+    "/media/1383363/usc.png",
+USDE
+    :
+    "/media/20465/usde.png",
+USDT
+    :
+    "/media/1383672/usdt.png",
+UTC
+    :
+    "/media/19942/utc.png",
+UTH
+    :
+    "/media/350998/uth.png",
+UTIL
+    :
+    "/media/20067/util.png",
+UTK
+    :
+    "/media/9350717/utrust.png",
+VAPOR
+    :
+    "/media/351708/vapor.png",
+VDO
+    :
+    "/media/20066/vdo.png",
+VEC2
+    :
+    "/media/351101/vec2.png",
+VEE
+    :
+    "/media/12318044/vee.png",
+VEG
+    :
+    "/media/1382792/veg.png",
+VEN
+    :
+    "/media/12318129/ven.png",
+VERI
+    :
+    "/media/1383562/veri.png",
+VERSA
+    :
+    "/media/20629/versa.png",
+VIA
+    :
+    "/media/20070/via.png",
+VIB
+    :
+    "/media/1383893/vib.png",
+VIBE
+    :
+    "/media/12318267/vibe.png",
+VIDZ
+    :
+    "/media/1382172/vidz.png",
+VIOR
+    :
+    "/media/20469/viorjpeg.png",
+VIP
+    :
+    "/media/351069/vip.png",
+VIRAL
+    :
+    "/media/20472/viral.png",
+VISIO
+    :
+    "/media/1383047/visio.png",
+VIU
+    :
+    "/media/14913680/viu.png",
+VIVO
+    :
+    "/media/12318337/vivo.png",
+VLT
+    :
+    "/media/351514/vlt.png",
+VLTC
+    :
+    "/media/1382738/vltc.png",
+VMC
+    :
+    "/media/19943/vmc.png",
+VNT
+    :
+    "/media/1384015/vent.png",
+VOISE
+    :
+    "/media/12318263/voise.png",
+VOLT
+    :
+    "/media/1382794/volt.png",
+VOOT
+    :
+    "/media/19946/voot.png",
+VOX
+    :
+    "/media/350824/vox.png",
+VOYA
+    :
+    "/media/351304/voya.png",
+VPRC
+    :
+    "/media/350951/vpc.png",
+VRC
+    :
+    "/media/20068/vrc.png",
+VRM
+    :
+    "/media/351522/vrm.png",
+VRP*
+:
+"/media/12318284/vrt.png",
+VRS
+    :
+    "/media/352021/vrs.png",
+VSL
+    :
+    "/media/352113/d5a4e4f0366d3ae8cdbc45ad097f664c2557a55f0c237c1710-pimgpsh_fullsize_distr.jpg"
+VSX
+    :
+    "/media/12318194/vsx.png",
+VTA
+    :
+    "/media/350945/vta.png",
+VTC
+    :
+    "/media/19945/vtc.png",
+VTR
+    :
+    "/media/20471/vtr.png",
+VTX
+    :
+    "/media/351754/vertex.png",
+VTY
+    :
+    "/media/351733/vty.png",
+VUC
+    :
+    "/media/1383773/vuc.png",
+VZT
+    :
+    "/media/12318414/vzt.png",
+WABI
+    :
+    "/media/12318331/wabi.png",
+WAN
+    :
+    "/media/9350742/wan.jpg"
+WAND
+    :
+    "/media/12318182/wandxlogo_new1.png",
+WARP
+    :
+    "/media/351395/warp.png",
+WASH
+    :
+    "/media/351944/wash.png",
+WAVES
+    :
+    "/media/350884/waves_1.png",
+WAX
+    :
+    "/media/12318290/wax.png",
+WAY
+    :
+    "/media/351433/way.png",
+WBB
+    :
+    "/media/20477/wbb.png",
+WBTC
+    :
+    "/media/1383045/wbtc.png",
+WC
+    :
+    "/media/19948/wc.png",
+WCT
+    :
+    "/media/350884/waves_1.png",
+WDC
+    :
+    "/media/19949/wdc.png",
+WEALTH
+    :
+    "/media/1382392/wealth.png",
+WEB
+    :
+    "/media/12318169/web.png",
+WEX
+    :
+    "/media/351564/wex.jpg"
+WGC
+    :
+    "/media/351310/wgc.png",
+WGO
+    :
+    "/media/1382998/wgo.png",
+WGR
+    :
+    "/media/1383736/wgr.png",
+WHL
+    :
+    "/media/12318372/whl.png",
+WIC
+    :
+    "/media/12318168/ocfkmb0t_400x400.jpg"
+WILD
+    :
+    "/media/12318298/wild.png",
+WINE
+    :
+    "/media/351929/wine.png",
+WINGS
+    :
+    "/media/1382758/1wings.png",
+WINK
+    :
+    "/media/1383913/wink.png",
+WISC
+    :
+    "/media/1382710/wisc.jpg"
+WISH
+    :
+    "/media/12317980/wish.png",
+WIZ
+    :
+    "/media/12318081/wiz.png",
+WMC
+    :
+    "/media/351044/wmc.png",
+WNET
+    :
+    "/media/1383982/wnet1.png",
+WOLF
+    :
+    "/media/20559/wolf.png",
+WOLK
+    :
+    "/media/1383892/wolk.png",
+WOMEN
+    :
+    "/media/12318379/women.png",
+WOP
+    :
+    "/media/1381982/wop.png",
+WORM
+    :
+    "/media/1384040/worm.png",
+WPR
+    :
+    "/media/14543969/wpr.png",
+WRC
+    :
+    "/media/11999078/wrc.png",
+WRC*
+:
+"/media/1383162/wrc.png",
+WRT
+    :
+    "/media/12317963/wrt.png",
+WSC
+    :
+    "/media/14913560/wsc.png",
+WSX
+    :
+    "/media/1383144/wsx.png",
+WTC
+    :
+    "/media/12317959/wtc.png",
+WTT
+    :
+    "/media/1383742/wtt.png",
+WYR
+    :
+    "/media/12318413/wyr.png",
+X2
+    :
+    "/media/351635/x2.png",
+XAI
+    :
+    "/media/20071/xai.png",
+XAI*
+:
+"/media/1383840/xai.png",
+XAS
+    :
+    "/media/1383997/xas.png",
+XAU
+    :
+    "/media/20479/xau.png",
+XAUR
+    :
+    "/media/351382/xaur.png",
+XBC
+    :
+    "/media/20488/xbc.png",
+XBL
+    :
+    "/media/14913541/xbl.png",
+XBOT
+    :
+    "/media/20073/xbot.png",
+XBS
+    :
+    "/media/351060/xbs_1.png",
+XBTS
+    :
+    "/media/351617/beats.png",
+XBY
+    :
+    "/media/1383439/xby1.png",
+XC
+    :
+    "/media/19956/xc.png",
+XCASH
+    :
+    "/media/20075/xcash.png",
+XCE
+    :
+    "/media/20573/xce.png",
+XCI
+    :
+    "/media/352312/xci.png",
+XCJ
+    :
+    "/media/1383849/xcj.png",
+XCN
+    :
+    "/media/20483/xcn.png",
+XCO
+    :
+    "/media/20486/xco.png",
+XCP
+    :
+    "/media/19960/xcp.png",
+XCR
+    :
+    "/media/19710/frac.png",
+XCRE
+    :
+    "/media/352156/xcre.png",
+XCS
+    :
+    "/media/12318323/xcs.png",
+XCT
+    :
+    "/media/1383246/xct.png",
+XCXT
+    :
+    "/media/9350784/xcxt.png",
+XDB
+    :
+    "/media/350977/xdb.png",
+XDE2
+    :
+    "/media/351100/xde2.png",
+XDN
+    :
+    "/media/19957/xdn.jpg"
+XDP
+    :
+    "/media/20560/xdp.png",
+XDQ
+    :
+    "/media/19959/xdq.png",
+XEL
+    :
+    "/media/1383737/xel.png",
+XEM
+    :
+    "/media/20490/xem.png",
+XEN
+    :
+    "/media/352119/xen.jpg"
+XFC
+    :
+    "/media/20574/xfc.png",
+XG
+    :
+    "/media/20156/xg.png",
+XGB
+    :
+    "/media/1382372/xgb.png",
+XGR
+    :
+    "/media/1383161/xgr.png",
+XHI
+    :
+    "/media/350892/xhi.png",
+XID
+    :
+    "/media/1383898/xid.jpg"
+XID*
+:
+"/media/350916/xid.png",
+XIN
+    :
+    "/media/14913486/xin.png",
+XIOS
+    :
+    "/media/14761915/xios.png",
+XJO
+    :
+    "/media/19962/xjo.png",
+XLB
+    :
+    "/media/19966/xlb.png",
+XLC
+    :
+    "/media/1383879/ivetpxdq_400x400.jpg"
+XLM
+    :
+    "/media/20696/str.png",
+XLR
+    :
+    "/media/1382994/xlr.png",
+XMCC
+    :
+    "/media/1384017/mcc.png",
+XMG
+    :
+    "/media/20154/xmg.png",
+XMR
+    :
+    "/media/19969/xmr.png",
+XMS
+    :
+    "/media/19808/mrs.png",
+XMY
+    :
+    "/media/19815/myr.png",
+XNA
+    :
+    "/media/19808/mrs.png",
+XNC
+    :
+    "/media/352109/xnc.png",
+XNC*
+:
+"/media/1382347/xnc.png",
+XNG
+    :
+    "/media/352311/xng.png",
+XNN
+    :
+    "/media/14761938/xnn.png",
+XNX
+    :
+    "/media/351033/xnx.jpg"
+XP
+    :
+    "/media/12318134/xp.png",
+XPB
+    :
+    "/media/20158/xpb.png",
+XPD
+    :
+    "/media/20162/xpd.png",
+XPH
+    :
+    "/media/20641/xph.png",
+XPM
+    :
+    "/media/19970/xpm.png",
+XPO
+    :
+    "/media/351590/xpo.png",
+XPOKE
+    :
+    "/media/351393/xpoke.png",
+XPRO
+    :
+    "/media/1382098/xpro.png",
+XPS
+    :
+    "/media/1383365/xps.png",
+XPTX
+    :
+    "/media/14913633/xptx.png",
+XPY
+    :
+    "/media/20076/xpy_1.png",
+XQN
+    :
+    "/media/12318067/xqn.png",
+XRA
+    :
+    "/media/351032/xra.png",
+XRB
+    :
+    "/media/1383674/xrb.png",
+XRE
+    :
+    "/media/350975/xre.jpg"
+XRED
+    :
+    "/media/12318269/xred.png",
+XRL
+    :
+    "/media/1383754/xrl.png",
+XRP
+    :
+    "/media/19972/ripple.png",
+XSB
+    :
+    "/media/14761953/xbs.png",
+XSEED
+    :
+    "/media/20163/xseed.png",
+XSI
+    :
+    "/media/20165/xsi.png",
+XSP
+    :
+    "/media/352293/xsp.png",
+XSPEC
+    :
+    "/media/1382395/xspec.png",
+XST
+    :
+    "/media/20077/xst.png",
+XT
+    :
+    "/media/351364/xt.png",
+XTC
+    :
+    "/media/20167/xtc.png",
+XTZ
+    :
+    "/media/1383651/xbt.png",
+XUC
+    :
+    "/media/1383784/xuc.png",
+XUC*
+:
+"/media/12317962/xuc.png",
+XUP
+    :
+    "/media/351638/xup.png",
+XVC
+    :
+    "/media/350813/xvc.png",
+XVE
+    :
+    "/media/1382937/xve.png",
+XVG
+    :
+    "/media/12318032/xvg.png",
+XVP
+    :
+    "/media/1382865/xvp.png",
+XWC
+    :
+    "/media/350911/xwc_1.png",
+XWT
+    :
+    "/media/19808/mrs.png",
+XXX
+    :
+    "/media/350617/xxx.png",
+XZC
+    :
+    "/media/1382780/xzc1.png",
+YAC
+    :
+    "/media/19976/yac.png",
+YAY
+    :
+    "/media/1382253/yay.png",
+YBC
+    :
+    "/media/19975/ybc.png",
+YES
+    :
+    "/media/1382269/yes.png",
+YMC
+    :
+    "/media/1382380/ymc.png",
+YOC
+    :
+    "/media/350957/yoc.png",
+YOVI
+    :
+    "/media/351073/yovi.png",
+YOYOW
+    :
+    "/media/12318178/yoyow.png",
+Z2
+    :
+    "/media/9350780/z2.png",
+ZAB
+    :
+    "/media/14761946/zab.png",
+ZBC
+    :
+    "/media/1382652/zbc.png",
+ZCC
+    :
+    "/media/19979/zcc.png",
+ZCL
+    :
+    "/media/351926/zcl.png",
+ZEC
+    :
+    "/media/351360/zec.png",
+ZECD
+    :
+    "/media/351935/zecd.png",
+ZED
+    :
+    "/media/19981/zed.png",
+ZEIT
+    :
+    "/media/350984/zeit.png",
+ZEN
+    :
+    "/media/1383502/zen.png",
+ZENI
+    :
+    "/media/1382807/zen.png",
+ZEPH
+    :
+    "/media/14913542/zeph.png",
+ZER
+    :
+    "/media/1382761/zer.png",
+ZET
+    :
+    "/media/19993/zet.png",
+ZET2
+    :
+    "/media/351502/zet2.png",
+ZLQ
+    :
+    "/media/1382238/zlq.png",
+ZNA
+    :
+    "/media/12318142/zna.png",
+ZNE
+    :
+    "/media/351515/zne.jpg"
+ZNT
+    :
+    "/media/1383875/znt.png",
+ZNY
+    :
+    "/media/20691/zny.png",
+ZOI
+    :
+    "/media/1382772/zoin.png",
+ZOOM
+    :
+    "/media/351081/zoom.png",
+ZRC
+    :
+    "/media/1383548/xzc.png",
+ZRC*
+:
+"/media/20078/zrc.png",
+ZRX
+    :
+    "/media/1383799/zrx.png",
+ZSC
+    :
+    "/media/12318341/zsc.png",
+ZSE
+    :
+    "/media/1383266/zse.png",
+ZUR
+    :
+    "/media/351758/zur.png",
+ZXT
+    :
+    "/media/351936/zxt.png",
+ZYD
+    :
+    "/media/351510/zyd.png",
+xGOx
+    :
+    "/media/14913685/xgox.png",}
+*/
