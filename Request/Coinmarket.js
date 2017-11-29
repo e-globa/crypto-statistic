@@ -1,6 +1,7 @@
 module.exports = {
     getCoinList
 };
+import {IMGS} from './Cryptocompare';
 
 function fetchJSON (url) {
     return fetch(url)
@@ -32,6 +33,15 @@ function getCoinList() {
     }*/
 
     // https://www.cryptocompare.com/media/20646/eth_logo.png
+    //?start=0&limit=100
 
-    return fetchJSON('https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100');
+    return fetchJSON('https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100')
+        .then(arr => {
+            return arr.map(i => {
+
+                // i["imgUrl"] = IMGS[i["symbol"]];
+                // i["isFavorite"] = false;
+                return i;
+            })
+        });
 }

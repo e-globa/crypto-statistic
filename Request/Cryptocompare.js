@@ -1,6 +1,7 @@
 
 module.exports = {
-    coinListObj
+    coinListObj,
+    IMGS
 };
 
 function fetchJSON (url) {
@@ -25,5466 +26,1836 @@ function coinListObj() {
             return res;
         });
 }
-/*
 
-const IMAGES ={ 1ST
-    :
-    "/media/351524/1st.png",
-2BACCO
-    :
-    "/media/351869/2bacco.png",
-2GIVE
-    :
-    "/media/350986/2give.png",
-3DES
-    :
-    "/media/12318014/3des.png",
-4CHN
-    :
-    "/media/1383831/chan2.png",
-007
-:
-"/media/350595/007.png",
-8BIT
-    :
-    "/media/20176/8bit.png",
-8BT
-    :
-    "/media/1383698/8bt.png",
-8S
-    :
-    "/media/12318091/8s.png",
-32BIT
-    :
-    "/media/351763/32bit.png",
-42
-:
-"/media/12318415/42.png",
-365
-:
-"/media/352070/365.png",
-404
-:
-"/media/351001/404.png",
-611
-:
-"/media/350985/611.png",
-808
-:
-"/media/351513/808.png",
-888
-:
-"/media/351639/888.png",
-1337
-:
-"/media/350976/1337.png",
-2015
-:
-"/media/20180/2015.png",
-ABC
-    :
-    "/media/12318006/bac.png",
-ABT
-    :
-    "/media/14913683/abt.png",
-ABY
-    :
-    "/media/1383379/aby.png",
-AC
-    :
-    "/media/19593/ac.png",
-ACC
-    :
-    "/media/9350776/acc.jpg"
-ACE
-    :
-    "/media/11999076/ace.png",
-ACES
-    :
-    "/media/1382661/aces.png",
-ACID
-    :
-    "/media/1382237/acid.png",
-ACN
-    :
-    "/media/352310/acn.png",
-ACOIN
-    :
-    "/media/20079/acoin.png",
-ACP
-    :
-    "/media/351019/acp.png",
-ACT
-    :
-    "/media/1383700/act.png",
-ADA
-    :
-    "/media/12318177/ada.png",
-ADC
-    :
-    "/media/350880/adc.png",
-ADCN
-    :
-    "/media/350983/adcn.png",
-ADL
-    :
-    "/media/1383544/adl.png",
-ADN
-    :
-    "/media/350993/adn.png",
-ADST
-    :
-    "/media/1383846/adst.png",
-ADT
-    :
-    "/media/1383829/adt.png",
-ADX
-    :
-    "/media/1383667/adx1.png",
-ADZ
-    :
-    "/media/351424/adz1.jpg"
-AE
-    :
-    "/media/1383836/ae.png",
-AEC
-    :
-    "/media/350991/aec.png",
-AEON
-    :
-    "/media/350955/aeon.png",
-AERO
-    :
-    "/media/19594/aero.png",
-AGRS
-    :
-    "/media/1383839/agrs.png",
-AGS
-    :
-    "/media/19595/ags.png",
-AHT
-    :
-    "/media/1383688/ahc.png",
-AHT*
-:
-"/media/1383796/aht.png",
-AIB
-    :
-    "/media/350971/aib.png",
-AID
-    :
-    "/media/14913433/aidcoin.png",
-AIR
-    :
-    "/media/12318291/air.png",
-AIR*
-:
-"/media/351740/air.png",
-ALC
-    :
-    "/media/352022/alc.png",
-ALEX
-    :
-    "/media/1382657/alex.png",
-ALF
-    :
-    "/media/19600/alf.png",
-ALIS
-    :
-    "/media/12318247/alis.png",
-ALN
-    :
-    "/media/20080/aln.png",
-ALQO
-    :
-    "/media/16404849/alqo.png",
-ALTCOM
-    :
-    "/media/14913436/altcom.png",
-ALTOCAR
-    :
-    "/media/9350746/altc.png",
-AM
-    :
-    "/media/20191/am.png",
-AMB
-    :
-    "/media/9350739/amb.png",
-AMBER
-    :
-    "/media/20187/amber.png",
-AMC
-    :
-    "/media/19601/amc.png",
-AMIS
-    :
-    "/media/1382862/amis.png",
-AMMO
-    :
-    "/media/1383778/ammo.png",
-AMP
-    :
-    "/media/350825/amp.png",
-AMS
-    :
-    "/media/350562/ams.png",
-AMT
-    :
-    "/media/9350756/amt.jpg"
-AMY
-    :
-    "/media/1382935/amy.jpg"
-ANAL
-    :
-    "/media/1381991/anal.jpg"
-ANC
-    :
-    "/media/19598/anc.png",
-ANCP
-    :
-    "/media/1383863/ancp.png",
-AND
-    :
-    "/media/351797/and.png",
-ANNC
-    :
-    "/media/19598/anc.png",
-ANT
-    :
-    "/media/1383244/ant.png",
-ANTC
-    :
-    "/media/351690/antc.png",
-ANTI
-    :
-    "/media/350972/anti.png",
-APC
-    :
-    "/media/350956/apc.png",
-APEX
-    :
-    "/media/19599/apex.png",
-APPC
-    :
-    "/media/12318370/app.png",
-APT
-    :
-    "/media/1382945/apt.png",
-APX
-    :
-    "/media/1383235/apx.png",
-AR*
-:
-"/media/14913465/ar.png",
-ARB
-    :
-    "/media/20645/arb.png",
-ARBI
-    :
-    "/media/12318258/arbi.png",
-ARC
-    :
-    "/media/1383824/arc.png",
-ARCH
-    :
-    "/media/20085/arch.png",
-ARCO
-    :
-    "/media/352134/arco.png",
-ARDR
-    :
-    "/media/351736/ardr.png",
-ARENA
-    :
-    "/media/12318225/arena.png",
-ARG
-    :
-    "/media/19602/arg.png",
-ARGUS
-    :
-    "/media/1383149/argus.png",
-ARI
-    :
-    "/media/20082/ari.png",
-ARI*
-:
-"/media/9350704/ari.png",
-ARK
-    :
-    "/media/351931/ark.png",
-ARM
-    :
-    "/media/351545/arm.png",
-ARN
-    :
-    "/media/12318261/arn.png",
-ARNA*
-:
-"/media/12318005/arna.png",
-ARPA
-    :
-    "/media/1382966/arpa.png",
-ART
-    :
-    "/media/12318097/art.png",
-ASAFE2
-    :
-    "/media/1382096/allsafe.jpg"
-ASN
-    :
-    "/media/20192/asn.png",
-AST
-    :
-    "/media/12318279/ast.png",
-AST*
-:
-"/media/1382170/ast.png",
-ASTRO
-    :
-    "/media/14913641/astro.png",
-ATB
-    :
-    "/media/1383689/atb.png",
-ATCC
-    :
-    "/media/12318294/atcc.png",
-ATFS
-    :
-    "/media/14913545/atfs.png",
-ATKN
-    :
-    "/media/12318083/atkn.png",
-ATL
-    :
-    "/media/9350703/atlant.png",
-ATM
-    :
-    "/media/14913430/atm.png",
-ATMS
-    :
-    "/media/1383003/atms.png",
-ATOM
-    :
-    "/media/351685/atom.png",
-ATOM*
-:
-"/media/1383901/cosmos.jpg"
-ATS
-    :
-    "/media/12318356/ats.png",
-ATX
-    :
-    "/media/352084/atx.png",
-AUR
-    :
-    "/media/19608/aur.png",
-AURS
-    :
-    "/media/12318345/aurs.png",
-AUT
-    :
-    "/media/1383956/aut.png",
-AUTH
-    :
-    "/media/1384019/auth.png",
-AV
-    :
-    "/media/1382048/av.png",
-AVA
-    :
-    "/media/9350772/ava.png",
-AVE
-    :
-    "/media/14761937/ave.png",
-AVT
-    :
-    "/media/1383599/avt.png",
-AXIOM
-    :
-    "/media/20686/axiom.png",
-AXR
-    :
-    "/media/20086/axr.png",
-AXT
-    :
-    "/media/14913467/axt.png",
-B3
-    :
-    "/media/12318367/b3.png",
-B@
-:
-"/media/1382804/b.png",
-BAC
-    :
-    "/media/350913/bac.png",
-BAC*
-:
-"/media/12318229/bac.png",
-BAN
-    :
-    "/media/1382466/ban.png",
-BAR
-    :
-    "/media/14543951/bar.png",
-BASH
-    :
-    "/media/352004/bash.png",
-BAT
-    :
-    "/media/1383370/bat.png",
-BAY
-    :
-    "/media/1383137/bay1.png",
-BBCC
-    :
-    "/media/351658/bbcc.png",
-BBR
-    :
-    "/media/19609/bbr.png",
-BBT
-    :
-    "/media/1383883/bbt.png",
-BBT*
-:
-"/media/15887410/bbt.png",
-BCAP
-    :
-    "/media/1383948/bcap1.png",
-BCCOIN
-    :
-    "/media/9350709/bccoin1.png",
-BCD
-    :
-    "/media/16404872/bcd.png",
-BCF
-    :
-    "/media/352189/btf.png",
-BCH
-    :
-    "/media/1383919/bch.jpg"
-BCN
-    :
-    "/media/12318404/bcn.png",
-BCPT
-    :
-    "/media/14913537/cpt.png",
-BCR
-    :
-    "/media/20198/bcr.png",
-BCX
-    :
-    "/media/19620/bcx.png",
-BCY
-    :
-    "/media/350903/bcy.png",
-BDL
-    :
-    "/media/14913539/bdl.png",
-BDR
-    :
-    "/media/14913485/bdr.png",
-BELA
-    :
-    "/media/351933/bela.jpg"
-BEN
-    :
-    "/media/19617/ben.png",
-BENJI
-    :
-    "/media/1383163/benji.png",
-BERN
-    :
-    "/media/350973/bern.png",
-BEST
-    :
-    "/media/1382805/best.jpg"
-BET
-    :
-    "/media/19621/bet.png",
-BET*
-:
-"/media/1383729/bet.png",
-BFX
-    :
-    "/media/19554/bitfinex.png",
-BHC
-    :
-    "/media/351660/bhc.png",
-BHC*
-:
-"/media/14913434/bhc.png",
-BIC
-    :
-    "/media/1382337/bic.png",
-BIGUP
-    :
-    "/media/350980/bigup.png",
-BIOB
-    :
-    "/media/1382739/biob.png",
-BIOS
-    :
-    "/media/350894/bios.png",
-BIP
-    :
-    "/media/352108/bip.png",
-BIS
-    :
-    "/media/12318191/bis.png",
-BIT16
-    :
-    "/media/20181/16bit.png",
-BITB
-    :
-    "/media/350879/bitb.png",
-BITCNY
-    :
-    "/media/351490/bitcny.png",
-BITOK
-    :
-    "/media/1383282/bitok.jpg"
-BITS
-    :
-    "/media/19622/bits.png",
-BITSD
-    :
-    "/media/1383878/bitsd.png",
-BITUSD
-    :
-    "/media/351491/bitusd.png",
-BITZ
-    :
-    "/media/20654/bitz.png",
-BKX
-    :
-    "/media/14913571/bkx.png",
-BLAS
-    :
-    "/media/9350785/blas.png",
-BLAZR
-    :
-    "/media/1382946/blazr.png",
-BLC
-    :
-    "/media/19623/blc.png",
-BLITZ
-    :
-    "/media/350612/blitz.png",
-BLK
-    :
-    "/media/351795/blk.png",
-BLOCK
-    :
-    "/media/20204/block.png",
-BLOCKPAY
-    :
-    "/media/351508/blockpay.png",
-BLRY
-    :
-    "/media/350908/blry.png",
-BLU
-    :
-    "/media/19624/blu.png",
-BLUE
-    :
-    "/media/12318407/blue.png",
-BLX
-    :
-    "/media/9350748/blx.png",
-BM
-    :
-    "/media/351311/bm.png",
-BM*
-:
-"/media/12318361/bm.png",
-BMC
-    :
-    "/media/12318008/bmc.png",
-BMXT
-    :
-    "/media/1383984/bmxt.png",
-BNB
-    :
-    "/media/1383947/bnb.png",
-BNB*
-:
-"/media/1382967/bnb.png",
-BNC
-    :
-    "/media/1383991/bnc.png",
-BNK
-    :
-    "/media/14913602/bnk.png",
-BNT
-    :
-    "/media/1383549/bnt.jpg"
-BNX
-    :
-    "/media/1382853/bnx.png",
-BOAT
-    :
-    "/media/1382866/boat.png",
-BOB
-    :
-    "/media/20207/bob.png",
-BOG
-    :
-    "/media/1383826/bog.png",
-BOLI
-    :
-    "/media/351008/boli.png",
-BOMB
-    :
-    "/media/1382384/bomb.png",
-BON
-    :
-    "/media/351045/bon_1.png",
-BON*
-:
-"/media/12318368/bon.png",
-BOOM
-    :
-    "/media/20208/boom.png",
-BOS
-    :
-    "/media/1383521/bos.png",
-BOSON
-    :
-    "/media/352083/boson.png",
-BOSS
-    :
-    "/media/1382289/boss.png",
-BOST
-    :
-    "/media/19626/bost.png",
-BOTS
-    :
-    "/media/351499/bot.png",
-BOU
-    :
-    "/media/9350750/bou.jpg"
-BPL
-    :
-    "/media/14913604/bpl.png",
-BQ
-    :
-    "/media/12318325/bq.png",
-BQC
-    :
-    "/media/19631/bqc.png",
-BQX
-    :
-    "/media/16404851/ethos.png",
-BRAIN
-    :
-    "/media/351753/brain.png",
-BRAT
-    :
-    "/media/14761895/brat.png",
-BRDD
-    :
-    "/media/352086/brdd.png",
-BRIT
-    :
-    "/media/1383777/brit.png",
-BRK
-    :
-    "/media/350981/brk.png",
-BRO
-    :
-    "/media/9350701/bro.png",
-BRONZ
-    :
-    "/media/351566/bronz.png",
-BRX
-    :
-    "/media/12317960/brx.png",
-BS
-    :
-    "/media/351737/bs.png",
-BSC
-    :
-    "/media/20601/bsc.png",
-BSD
-    :
-    "/media/351086/bsd.png",
-BST
-    :
-    "/media/350558/bst.png",
-BSTAR
-    :
-    "/media/352250/bstar.png",
-BSTK
-    :
-    "/media/1382858/bstk.png",
-BSTY
-    :
-    "/media/19808/mrs.png",
-BT
-    :
-    "/media/9350775/bt.png",
-BT1
-    :
-    "/media/19633/btc.png",
-BT2
-    :
-    "/media/19633/btc.png",
-BTA
-    :
-    "/media/1383113/bta1.png",
-BTB
-    :
-    "/media/20083/bitb.png",
-BTC
-    :
-    "/media/19633/btc.png",
-BTCD
-    :
-    "/media/19630/btcd_1.png",
-BTCL
-    :
-    "/media/351633/btlc.png",
-BTCR
-    :
-    "/media/351554/btr.png",
-BTCRED
-    :
-    "/media/14913463/btcred.png",
-BTCRY
-    :
-    "/media/20210/btcry.png",
-BTCS
-    :
-    "/media/1383158/btcs.png",
-BTCZ
-    :
-    "/media/12318408/btcz.png",
-BTD
-    :
-    "/media/351498/btd.png",
-BTDX
-    :
-    "/media/14761939/btdx.png",
-BTE
-    :
-    "/media/19632/bte.png",
-BTG
-    :
-    "/media/12318377/btg.png",
-BTG*
-:
-"/media/19634/btg.png",
-BTLC
-    :
-    "/media/352054/btlc.png",
-BTM
-    :
-    "/media/20084/btm.png",
-BTM*
-:
-"/media/1383996/btm.png",
-BTMI
-    :
-    "/media/20213/btmi.png",
-BTPL
-    :
-    "/media/1383774/btpl.png",
-BTQ
-    :
-    "/media/19638/btq.png",
-BTS
-    :
-    "/media/20705/bts.png",
-BTTF
-    :
-    "/media/352111/bttf.png",
-BTX
-    :
-    "/media/1383895/btx.png",
-BTX*
-:
-"/media/20215/btx.png",
-BTZ
-    :
-    "/media/1382433/btz.png",
-BUCKS
-    :
-    "/media/1383089/bucks.png",
-BUCKS*
-:
-"/media/20602/bucks.png",
-BUK
-    :
-    "/media/19637/buk.png",
-BULLS
-    :
-    "/media/352295/bulls.png",
-BURST
-    :
-    "/media/1383375/burstcoin_logo.png",
-BUZZ
-    :
-    "/media/15887419/buzz.png",
-BVC
-    :
-    "/media/1382711/bvc.png",
-BXC
-    :
-    "/media/1382649/bxc.jpg"
-BXT
-    :
-    "/media/351509/bxt.png",
-BYC
-    :
-    "/media/20217/byc.png",
-BamitCoin
-    :
-    "/media/352236/bam.png",
-C2
-    :
-    "/media/19640/c2.png",
-C20
-    :
-    "/media/12318302/c20.png",
-CAB
-    :
-    "/media/350896/cab.png",
-CABS
-    :
-    "/media/1383869/cabs.png",
-CABS*
-:
-"/media/14761917/ctst.png",
-CACH
-    :
-    "/media/19642/cach.png",
-CAG
-    :
-    "/media/12318346/cag.png",
-CAIX
-    :
-    "/media/20226/caix.png",
-CALC
-    :
-    "/media/351712/calc.png",
-CAM
-    :
-    "/media/20220/cam.png",
-CAN*
-:
-"/media/12318218/canya.png",
-CANN
-    :
-    "/media/20015/cann.png",
-CAP
-    :
-    "/media/20017/cap.png",
-CAPP
-    :
-    "/media/15887416/capp.png",
-CARBON
-    :
-    "/media/351017/carbon.png",
-CAS
-    :
-    "/media/12318148/cas.png",
-CASH
-    :
-    "/media/20016/cash.png",
-CASH*
-:
-"/media/1384020/cpp.png",
-CAT
-    :
-    "/media/1383848/bcat1.png",
-CAT*
-:
-"/media/1383791/cat1.png",
-CAV
-    :
-    "/media/12318328/cav.png",
-CBD
-    :
-    "/media/351990/cbd.png",
-CBX
-    :
-    "/media/20697/cbx.png",
-CC
-    :
-    "/media/20225/cc.png",
-CCC
-    :
-    "/media/1383980/ccc.png",
-CCN
-    :
-    "/media/19643/ccn.png",
-CCRB
-    :
-    "/media/352294/ccrb.png",
-CCT*
-:
-"/media/12317979/cct1.png",
-CCX
-    :
-    "/media/352188/ccx.png",
-CDN
-    :
-    "/media/1382763/cdn.png",
-CDT
-    :
-    "/media/1383699/cdt.png",
-CDX
-    :
-    "/media/351404/cdx.png",
-CELL
-    :
-    "/media/20227/cell.png",
-CESC
-    :
-    "/media/350786/cesc.png",
-CETI
-    :
-    "/media/20228/ceti.png",
-CF
-    :
-    "/media/351730/cf.png",
-CFC
-    :
-    "/media/351732/cfc.png",
-CFD
-    :
-    "/media/14913552/cfd.png",
-CFI
-    :
-    "/media/1383567/cfi.png",
-CFT
-    :
-    "/media/1383769/cft.png",
-CFT*
-:
-"/media/9350747/credo.jpg"
-CGA
-    :
-    "/media/350988/cga.png",
-CHA
-    :
-    "/media/19986/a3c.png",
-CHAO
-    :
-    "/media/1382371/chao.png",
-CHASH
-    :
-    "/media/20231/chash.png",
-CHAT
-    :
-    "/media/1382762/chat.png",
-CHC
-    :
-    "/media/1383907/chc.png",
-CHESS
-    :
-    "/media/351094/chess.jpg"
-CHIEF
-    :
-    "/media/1381988/chief.png",
-CHILD
-    :
-    "/media/20233/child.png",
-CHIP
-    :
-    "/media/20685/chip.png",
-CHOOF
-    :
-    "/media/351876/choof.png",
-CIN
-    :
-    "/media/20698/cinder.png",
-CINNI
-    :
-    "/media/19651/cinni.jpeg"
-CIR
-    :
-    "/media/1382506/cir.png",
-CIRC
-    :
-    "/media/20603/circ.png",
-CIX
-    :
-    "/media/12318222/cnxasterisco.png",
-CJ
-    :
-    "/media/351234/cj.png",
-CJC
-    :
-    "/media/1382887/cjc.png",
-CJT
-    :
-    "/media/14913575/cjt.png",
-CKC
-    :
-    "/media/351068/ckc.png",
-CLAM
-    :
-    "/media/20020/clam.png",
-CLD
-    :
-    "/media/14913452/cld.png",
-CLICK
-    :
-    "/media/1382399/click.png",
-CLINT
-    :
-    "/media/351067/clint.png",
-CLOAK
-    :
-    "/media/19994/cloak.png",
-CLOUT
-    :
-    "/media/12318329/clout.png",
-CLR
-    :
-    "/media/19657/clr.png",
-CLUB
-    :
-    "/media/350609/club.png",
-CLUD
-    :
-    "/media/351027/clud.png",
-CLV
-    :
-    "/media/20727/clv.png",
-CMC
-    :
-    "/media/20019/cmc.png",
-CMP
-    :
-    "/media/1383692/compcoin.png",
-CMPCO
-    :
-    "/media/1384036/cmpo.png",
-CMS
-    :
-    "/media/14913540/comsa.png",
-CMT
-    :
-    "/media/351090/cmt.png",
-CNC
-    :
-    "/media/20021/cnc.png",
-CND
-    :
-    "/media/12318283/cnd.png",
-CND*
-:
-"/media/1381997/cnd.png",
-CNL
-    :
-    "/media/20024/cnl.png",
-CNMT
-    :
-    "/media/351396/cnmt.png",
-CNO
-    :
-    "/media/1382391/coino.png",
-CNT
-    :
-    "/media/1383150/cnt.png",
-CNX
-    :
-    "/media/11417632/cnx.png",
-COB
-    :
-    "/media/9350700/cobin.png",
-COC
-    :
-    "/media/351872/coc.png",
-COE
-    :
-    "/media/1383911/coe.png",
-COIN
-    :
-    "/media/14913606/coin.png",
-COIN*
-:
-"/media/350950/coin.png",
-COLX
-    :
-    "/media/12318297/colx.png",
-COMM
-    :
-    "/media/19661/comm.png",
-CON
-    :
-    "/media/20717/con_.png",
-COOL
-    :
-    "/media/19658/cool.png",
-COR
-    :
-    "/media/1383753/cor.png",
-CORAL
-    :
-    "/media/352225/coral.png",
-CORE
-    :
-    "/media/1383950/core.png",
-COSS
-    :
-    "/media/1383802/coss.png",
-COV
-    :
-    "/media/12318288/cov.png",
-COV*
-:
-"/media/351503/cov.png",
-COVAL
-    :
-    "/media/351519/coval.png",
-COX
-    :
-    "/media/351083/cox.png",
-CPAY
-    :
-    "/media/12318303/cpay.png",
-CPC
-    :
-    "/media/350560/cpc.png",
-CQST
-    :
-    "/media/1381983/cqst.png",
-CRAB
-    :
-    "/media/351739/crab.png",
-CRACK
-    :
-    "/media/20023/crack.png",
-CRAFT
-    :
-    "/media/351681/craft.png",
-CRAIG
-    :
-    "/media/20022/craig.png",
-CRAVE
-    :
-    "/media/20242/crave.png",
-CRB
-    :
-    "/media/1382904/crbit1.png",
-CRC
-    :
-    "/media/19665/crc.png",
-CRDS
-    :
-    "/media/14913675/crds.png",
-CRE
-    :
-    "/media/20683/cre.png",
-CREA
-    :
-    "/media/1382709/crea.png",
-CREDO
-    :
-    "/media/14913573/credo-1.png",
-CREVA
-    :
-    "/media/20571/creva.png",
-CRM
-    :
-    "/media/1383915/cream.png",
-CRNK
-    :
-    "/media/351731/crnk.png",
-CRPS
-    :
-    "/media/1382338/crps.png",
-CRTM
-    :
-    "/media/9350790/crtm.jpg"
-CRW
-    :
-    "/media/1383378/crw1.png",
-CRX
-    :
-    "/media/351388/crx.png",
-CRYPT
-    :
-    "/media/19664/crypt.png",
-CS
-    :
-    "/media/352292/cs.png",
-CSC
-    :
-    "/media/19667/csc.png",
-CSH
-    :
-    "/media/351877/csh.png",
-CSMIC
-    :
-    "/media/352115/csmic.png",
-CSNO
-    :
-    "/media/1383922/csno.png",
-CSTL
-    :
-    "/media/15887421/cstl.png",
-CTC
-    :
-    "/media/351496/ctc.png",
-CTIC
-    :
-    "/media/1383267/ctic.png",
-CTO
-    :
-    "/media/19808/mrs.png",
-CTR
-    :
-    "/media/1384029/ctr.png",
-CTT
-    :
-    "/media/1383957/ctt.png",
-CTX
-    :
-    "/media/12318075/ctx1.png",
-CUBE
-    :
-    "/media/350948/cube.png",
-CURE
-    :
-    "/media/1383812/cure.png",
-CVC
-    :
-    "/media/1383611/cvc.png",
-CVCOIN
-    :
-    "/media/1383821/cvcoin.png",
-CWXT
-    :
-    "/media/1382470/cwxt.png",
-CXC
-    :
-    "/media/20246/cxc.png",
-CXT
-    :
-    "/media/1383080/cxt.png",
-CYC
-    :
-    "/media/19671/cyc.png",
-CYG
-    :
-    "/media/350997/cygnus.png",
-CYP
-    :
-    "/media/20248/cyp.png",
-CYT
-    :
-    "/media/351024/cyt.png",
-CZC
-    :
-    "/media/12318215/czc.png",
-DANK
-    :
-    "/media/20247/dank.png",
-DAR
-    :
-    "/media/351930/dar.png",
-DARK
-    :
-    "/media/1382995/dark.png",
-DAS
-    :
-    "/media/14543970/das.png",
-DASH
-    :
-    "/media/20626/imageedit_27_4355944719.png",
-DAT
-    :
-    "/media/12318265/dat.png",
-DATA
-    :
-    "/media/14913438/data.png",
-DAY
-    :
-    "/media/12318271/day.png",
-DB
-    :
-    "/media/19808/mrs.png",
-DBET
-    :
-    "/media/14913561/dbet.png",
-DBG
-    :
-    "/media/351047/dbg.png",
-DBIC
-    :
-    "/media/350891/dbic.png",
-DBIX
-    :
-    "/media/1382860/dbix.png",
-DBR
-    :
-    "/media/14913687/dbr.png",
-DBTC
-    :
-    "/media/350953/dbtc.png",
-DCC
-    :
-    "/media/19808/mrs.png",
-DCK
-    :
-    "/media/351516/dck.png",
-DCN
-    :
-    "/media/1383999/dcn.png",
-DCR
-    :
-    "/media/1382607/decred.png",
-DCRE
-    :
-    "/media/352128/dcre.png",
-DCS.
-:
-"/media/351407/cloud.png",
-DCT
-    :
-    "/media/351389/dct.png",
-DCY
-    :
-    "/media/1383767/dcy.png",
-DDF
-    :
-    "/media/1383760/ddf.png",
-DEA
-    :
-    "/media/1383264/dea.png",
-DEB
-    :
-    "/media/16404861/deb.png",
-DEEP
-    :
-    "/media/12317976/deep.png",
-DEM
-    :
-    "/media/20028/dem.png",
-DENT
-    :
-    "/media/1383613/dent.png",
-DES
-    :
-    "/media/351087/des.png",
-DETH
-    :
-    "/media/1382252/deth.png",
-DEUR
-    :
-    "/media/351018/deur.png",
-DFBT
-    :
-    "/media/1383890/dfbt.png",
-DFT
-    :
-    "/media/9350712/dft.png",
-DGB
-    :
-    "/media/12318264/7638-nty_400x400.jpg"
-DGC
-    :
-    "/media/19676/dgc.png",
-DGD
-    :
-    "/media/350851/dgd.png",
-DGDC
-    :
-    "/media/351520/dgd.png",
-DGMS
-    :
-    "/media/352132/dgms.png",
-DGORE
-    :
-    "/media/351697/dgore.png",
-DGPT
-    :
-    "/media/1383920/dgt.png",
-DICE
-    :
-    "/media/1383361/dice.png",
-DIEM
-    :
-    "/media/20260/diem_1.png",
-DIGS
-    :
-    "/media/20706/digs.png",
-DIM
-    :
-    "/media/1383761/dim.png",
-DIME
-    :
-    "/media/351012/dime.png",
-DISK
-    :
-    "/media/351023/disk.png",
-DKC
-    :
-    "/media/351870/dkc.png",
-DLC
-    :
-    "/media/351559/dlc.png",
-DLISK
-    :
-    "/media/351237/dlisk.png",
-DLR
-    :
-    "/media/352114/dollarcoin.png",
-DLT
-    :
-    "/media/1384001/delta.png",
-DMD
-    :
-    "/media/19680/dmd.png",
-DMT
-    :
-    "/media/1383841/dmarket.png",
-DNA
-    :
-    "/media/1383763/dna.png",
-DNET
-    :
-    "/media/350912/dnet.png",
-DNR
-    :
-    "/media/1383770/dnr.png",
-DNT
-    :
-    "/media/1383701/dnt.png",
-DOGE
-    :
-    "/media/19684/doge.png",
-DOGED
-    :
-    "/media/20029/doged.png",
-DOGETH
-    :
-    "/media/352023/dogeth-2.png",
-DON
-    :
-    "/media/1382995/don.png",
-DOPE
-    :
-    "/media/351526/dope.png",
-DOT
-    :
-    "/media/350909/dot.png",
-DOVU
-    :
-    "/media/14761916/dovu.png",
-DP
-    :
-    "/media/1383772/dp.png",
-DPAY
-    :
-    "/media/351684/dpay.png",
-DRA
-    :
-    "/media/1382095/dra.png",
-DRACO
-    :
-    "/media/351390/dt-token.png",
-DRC
-    :
-    "/media/11417638/drp.png",
-DRGN
-    :
-    "/media/14543974/drgn.jpg"
-DRKC
-    :
-    "/media/20027/drkc.png",
-DRKT
-    :
-    "/media/20604/drkt.png",
-DRM8
-    :
-    "/media/352055/drm8.png",
-DROP
-    :
-    "/media/351555/drop.png",
-DRP
-    :
-    "/media/1383822/drp.png",
-DRS
-    :
-    "/media/352072/drs.png",
-DRT
-    :
-    "/media/12318099/drt.png",
-DRXNE
-    :
-    "/media/14913608/drxne.png",
-DRZ
-    :
-    "/media/20605/drz.png",
-DSB
-    :
-    "/media/20034/dsb.png",
-DSH
-    :
-    "/media/20026/dash.png",
-DT
-    :
-    "/media/20031/dt.png",
-DTB
-    :
-    "/media/1382791/dtb.png",
-DTC
-    :
-    "/media/14913440/dtc.png",
-DTC*
-:
-"/media/19688/dtc.png",
-DTCT
-    :
-    "/media/1384025/dtct.png",
-DTR
-    :
-    "/media/14761903/dtr.png",
-DTT
-    :
-    "/media/12318109/dtt.png",
-DTT*
-:
-"/media/14761941/dtt1.png",
-DUB
-    :
-    "/media/19986/a3c.png",
-DUCK
-    :
-    "/media/1382852/duckduckcoin.png",
-DUO
-    :
-    "/media/1383196/duo.png",
-DUTCH
-    :
-    "/media/14913487/dutch.png",
-DUX
-    :
-    "/media/1383364/dux.png",
-DVC
-    :
-    "/media/20563/dvc.png",
-DYN
-    :
-    "/media/1383557/dyn.png",
-EA
-    :
-    "/media/1382685/ea.png",
-EAC
-    :
-    "/media/19690/eac.png",
-EAGS
-    :
-    "/media/19808/mrs.png",
-EARTH
-    :
-    "/media/12318190/earth.png",
-EB3
-    :
-    "/media/1382938/eb3.png",
-EBCH
-    :
-    "/media/14913464/ebch.png",
-EBET
-    :
-    "/media/12318358/ebet.png",
-EBS
-    :
-    "/media/20267/ebs.png",
-EBST
-    :
-    "/media/14913431/ebst.png",
-EBTC
-    :
-    "/media/12318175/ebtc.png",
-EBZ
-    :
-    "/media/352069/ebz.png",
-EC
-    :
-    "/media/351750/ec.jpg"
-ECA
-    :
-    "/media/16404869/eca.png",
-ECASH
-    :
-    "/media/14543971/ecash.png",
-ECC
-    :
-    "/media/1383546/ecc.png",
-ECHT
-    :
-    "/media/12318352/echt.png",
-ECO
-    :
-    "/media/1382993/eco.png",
-ECOB
-    :
-    "/media/1383670/ecob.png",
-EDC
-    :
-    "/media/351066/edc.png",
-EDDIE
-    :
-    "/media/12318382/eddie.png",
-EDG
-    :
-    "/media/1382799/edg.jpg"
-EDGE
-    :
-    "/media/20556/edge.png",
-EDO
-    :
-    "/media/12318082/eiboo.png",
-EDR
-    :
-    "/media/351430/edc.png",
-EDRC
-    :
-    "/media/350858/edrc.jpg"
-EFL
-    :
-    "/media/19692/efl.png",
-EFYT
-    :
-    "/media/1383646/efyt.png",
-EGC
-    :
-    "/media/350614/egc.png",
-EGG
-    :
-    "/media/20269/egg.png",
-EGO
-    :
-    "/media/351632/ego.png",
-EKN
-    :
-    "/media/20270/ekn.png",
-EKO
-    :
-    "/media/351085/eko.png",
-ELC
-    :
-    "/media/19694/elc.png",
-ELE
-    :
-    "/media/351793/ele.png",
-ELITE
-    :
-    "/media/14761914/elite.png",
-ELIX
-    :
-    "/media/12318172/elix.png",
-ELLA
-    :
-    "/media/14913603/ella.png",
-ELM
-    :
-    "/media/12318308/elm.png",
-ELS
-    :
-    "/media/1382400/els.png",
-ELT
-    :
-    "/media/12318259/elt.png",
-ELTC2
-    :
-    "/media/12318300/eltc2.png",
-EMB
-    :
-    "/media/352110/emb.png",
-EMC
-    :
-    "/media/350611/emc.png",
-EMC2
-    :
-    "/media/20033/emc2.png",
-EMD
-    :
-    "/media/20278/emd.png",
-EMIGR
-    :
-    "/media/351659/emirg.png",
-EMPC
-    :
-    "/media/1383081/empc.png",
-EMT
-    :
-    "/media/9350765/emt.png",
-ENE
-    :
-    "/media/351506/ene.png",
-ENG
-    :
-    "/media/12318287/eng.png",
-ENJ
-    :
-    "/media/11417639/enjt.png",
-ENRG
-    :
-    "/media/19697/enrg.png",
-ENT
-    :
-    "/media/352157/ent.jpg"
-ENTER
-    :
-    "/media/351305/enter.png",
-ENV
-    :
-    "/media/14913587/env.png",
-EOC
-    :
-    "/media/1382628/eoc.png",
-EON
-    :
-    "/media/9350791/eon.jpg"
-EOS
-    :
-    "/media/1383652/eos_1.png",
-EPY
-    :
-    "/media/20628/epy.png",
-EPY*
-:
-"/media/14913643/epy.png",
-EQ
-    :
-    "/media/1383891/eq.png",
-EQB
-    :
-    "/media/1383816/eqb.png",
-EQM
-    :
-    "/media/19808/mrs.png",
-EQT
-    :
-    "/media/1383366/eqt.png",
-EQUAL
-    :
-    "/media/351867/equal.png",
-ERB
-    :
-    "/media/351550/erb.png",
-ERC
-    :
-    "/media/350960/erc.png",
-ERR
-    :
-    "/media/1382624/err.png",
-ERT
-    :
-    "/media/12318226/ert.png",
-ERY
-    :
-    "/media/1382403/ely2.png",
-ESC*
-:
-"/media/14913585/esc.png",
-ESP
-    :
-    "/media/14761907/esp.png",
-ETBS
-    :
-    "/media/12318348/etbs.png",
-ETC
-    :
-    "/media/20275/etc2.png",
-ETG
-    :
-    "/media/12318378/etg.png",
-ETH
-    :
-    "/media/20646/eth_logo.png",
-ETHD
-    :
-    "/media/12318087/ethd.png",
-ETHS
-    :
-    "/media/350910/eths.png",
-ETK
-    :
-    "/media/14913635/etk.png",
-ETN
-    :
-    "/media/14761932/electroneum.png",
-ETP
-    :
-    "/media/12318223/etp.png",
-ETT
-    :
-    "/media/1383046/ett.png",
-EUC
-    :
-    "/media/1382471/euc.png",
-EVC
-    :
-    "/media/12318064/evc.png",
-EVENT
-    :
-    "/media/20277/event.png",
-EVIL
-    :
-    "/media/351080/evil.png",
-EVR
-    :
-    "/media/12318332/evr.png",
-EVX
-    :
-    "/media/1383850/evx.png",
-EXB
-    :
-    "/media/351401/exb.png",
-EXCL
-    :
-    "/media/20035/excl.png",
-EXE
-    :
-    "/media/19700/exe.png",
-EXIT
-    :
-    "/media/351065/exit.png",
-EXN
-    :
-    "/media/14913459/exn.png",
-EXP
-    :
-    "/media/20707/exp.png",
-EXY
-    :
-    "/media/14913645/exy.png",
-EZC
-    :
-    "/media/19702/ezc.png",
-EZM
-    :
-    "/media/12318143/ezm.png",
-F16
-    :
-    "/media/1383372/f16.png",
-FAIR
-    :
-    "/media/20287/fair.png",
-FAME
-    :
-    "/media/352006/fame.png",
-FAZZ
-    :
-    "/media/1382944/fazz.png",
-FC
-    :
-    "/media/12318045/fc.png",
-FC2
-    :
-    "/media/19719/fuel.png",
-FCN
-    :
-    "/media/20282/fcn.png",
-FCS
-    :
-    "/media/19808/mrs.png",
-FCT
-    :
-    "/media/1382863/fct1.png",
-FDC
-    :
-    "/media/12318125/fdc.jpg"
-FFC
-    :
-    "/media/19706/ffc.png",
-FGZ
-    :
-    "/media/352082/fgz.png",
-FIBRE
-    :
-    "/media/20030/fibre.png",
-FIL
-    :
-    "/media/1383987/fil.png",
-FIND
-    :
-    "/media/1382713/find.png",
-FIRE
-    :
-    "/media/351625/fire.png",
-FIRST
-    :
-    "/media/352116/first.png",
-FIST
-    :
-    "/media/352056/fist.png",
-FIT
-    :
-    "/media/351618/fit.png",
-FJC
-    :
-    "/media/351702/fjc.png",
-FLAP
-    :
-    "/media/20032/flap.png",
-FLASH
-    :
-    "/media/12318206/flash.png",
-FLDC
-    :
-    "/media/20284/fldc.png",
-FLIK
-    :
-    "/media/12318230/flik.png",
-FLIXX
-    :
-    "/media/16404862/flixx.png",
-FLLW
-    :
-    "/media/12318412/fllw.png",
-FLO
-    :
-    "/media/1383331/flo1.png",
-FLP
-    :
-    "/media/12318280/flip.png",
-FLT
-    :
-    "/media/19709/flt.png",
-FLVR
-    :
-    "/media/351046/2flav.png",
-FLX
-    :
-    "/media/351007/flx.png",
-FLY
-    :
-    "/media/351013/fly.png",
-FND
-    :
-    "/media/1383765/fnd.png",
-FONZ
-    :
-    "/media/351553/fonz.png",
-FOREX
-    :
-    "/media/351748/forex.png",
-FRAC
-    :
-    "/media/19710/frac.png",
-FRAZ
-    :
-    "/media/9350764/fraz.png",
-FRC
-    :
-    "/media/1382629/frc.png",
-FRE
-    :
-    "/media/352129/fre.png",
-FRK
-    :
-    "/media/19712/frk.png",
-FRN
-    :
-    "/media/350992/frn.png",
-FRST
-    :
-    "/media/1382654/first.png",
-FRWC
-    :
-    "/media/351361/frwc.png",
-FSC2
-    :
-    "/media/19717/fsc.png",
-FSN
-    :
-    "/media/351495/fsn.png",
-FST
-    :
-    "/media/19720/fst.png",
-FTC
-    :
-    "/media/19718/ftc.png",
-FTP
-    :
-    "/media/351501/ftp.png",
-FUCK
-    :
-    "/media/1384043/fuck.png",
-FUEL
-    :
-    "/media/11999072/fuel.png",
-FUN
-    :
-    "/media/1383738/fun.png",
-FUNC
-    :
-    "/media/1383739/func.png",
-FUTC
-    :
-    "/media/20558/futc.png",
-FUZZ
-    :
-    "/media/351025/fuzz.png",
-FX
-    :
-    "/media/351527/fx.png",
-FYN
-    :
-    "/media/1383764/fyn.png",
-GAIA
-    :
-    "/media/20290/gaia.png",
-GAKH
-    :
-    "/media/1382090/gakh.png",
-GAM
-    :
-    "/media/20293/gam.png",
-GAME
-    :
-    "/media/350887/game.png",
-GAP
-    :
-    "/media/350943/gap.png",
-GAS
-    :
-    "/media/1383858/neo.jpg"
-GAT
-    :
-    "/media/12318390/gat.png",
-GAY
-    :
-    "/media/351531/gay.png",
-GB
-    :
-    "/media/351411/db.png",
-GBIT
-    :
-    "/media/1382382/gbit.jpg"
-GBRC
-    :
-    "/media/351637/gbrc.png",
-GBT
-    :
-    "/media/350897/gbt.png",
-GBX
-    :
-    "/media/15887411/gbx.png",
-GBYTE
-    :
-    "/media/351835/bytes.png",
-GCC
-    :
-    "/media/351796/gcc.jpg"
-GCN
-    :
-    "/media/1383899/gcn.png",
-GCR
-    :
-    "/media/20708/gcr.png",
-GDC
-    :
-    "/media/20054/gdc.png",
-GEMZ
-    :
-    "/media/19710/frac.png",
-GEN
-    :
-    "/media/20640/gen.png",
-GEO
-    :
-    "/media/20292/geo.png",
-GES
-    :
-    "/media/14913547/ges.png",
-GFT
-    :
-    "/media/14913686/gft.jpg"
-GGS
-    :
-    "/media/1383762/ggs.png",
-GHC
-    :
-    "/media/19721/ghc.png",
-GHOUL
-    :
-    "/media/20701/ghoul.png",
-GHS
-    :
-    "/media/19565/cexio.png",
-GIFT
-    :
-    "/media/1382171/gift.png",
-GIG
-    :
-    "/media/20294/gig.png",
-GIM
-    :
-    "/media/9350754/gim.png",
-GIVE
-    :
-    "/media/20297/give.png",
-GIZ
-    :
-    "/media/351015/giz.png",
-GJC
-    :
-    "/media/12318166/gjc.png",
-GLA
-    :
-    "/media/12318141/gla.png",
-GLC
-    :
-    "/media/19724/glc.png",
-GLD
-    :
-    "/media/19723/gld.png",
-GLOBE
-    :
-    "/media/20564/globe.png",
-GLX
-    :
-    "/media/19728/glx.png",
-GLYPH
-    :
-    "/media/19725/glyph.png",
-GMC
-    :
-    "/media/20299/gmc.png",
-GML
-    :
-    "/media/19726/gml.png",
-GMT
-    :
-    "/media/14913642/gmt.png",
-GMX
-    :
-    "/media/351762/gmx.jpg"
-GNJ
-    :
-    "/media/351789/gnj.png",
-GNO
-    :
-    "/media/1383083/gnosis-logo.png",
-GNT
-    :
-    "/media/351995/golem_logo.png",
-GOAT
-    :
-    "/media/1381990/goat.png",
-GOLOS
-    :
-    "/media/1382246/golos.png",
-GOOD
-    :
-    "/media/9350786/good.png",
-GOON
-    :
-    "/media/351512/goon.png",
-GOT
-    :
-    "/media/1383079/got.png",
-GOTX
-    :
-    "/media/351071/gotx.png",
-GP
-    :
-    "/media/20656/gp.png",
-GPL
-    :
-    "/media/351525/gpl.png",
-GPU
-    :
-    "/media/350939/gpu.png",
-GRAM
-    :
-    "/media/20688/gram.png",
-GRAV
-    :
-    "/media/20659/grav.png",
-GRC
-    :
-    "/media/20307/grc.png",
-GRE
-    :
-    "/media/1382396/grn.png",
-GREXIT
-    :
-    "/media/351016/grexit.png",
-GRF
-    :
-    "/media/12318208/grf.png",
-GRID
-    :
-    "/media/14913632/grid.png",
-GRID*
-:
-"/media/20313/grid.png",
-GRM
-    :
-    "/media/20642/grm.png",
-GROW
-    :
-    "/media/350934/grow.png",
-GRS
-    :
-    "/media/20309/grs.png",
-GRT
-    :
-    "/media/20310/grt.png",
-GRW
-    :
-    "/media/1383234/grw.png",
-GRWI
-    :
-    "/media/1383971/grwi.png",
-GSM
-    :
-    "/media/20316/gsm.png",
-GSX
-    :
-    "/media/20314/gsxjpeg.png",
-GSY
-    :
-    "/media/351103/gsy.png",
-GUE
-    :
-    "/media/19732/gue.png",
-GUESS
-    :
-    "/media/12318217/guess.png",
-GUNS
-    :
-    "/media/1383789/guns.png",
-GUP
-    :
-    "/media/1383107/gup.png",
-GVT
-    :
-    "/media/14913634/gvt.png",
-GXC
-    :
-    "/media/9350766/gxc.png",
-GXC*
-:
-"/media/12318306/gxc.png",
-H2O
-    :
-    "/media/12318092/h2o.png",
-HAC
-    :
-    "/media/12318176/hac.jpg"
-HAL
-    :
-    "/media/20036/hal.png",
-HALLO
-    :
-    "/media/351657/hallo.png",
-HAMS
-    :
-    "/media/1383381/hams.png",
-HAZE
-    :
-    "/media/1382595/haze.png",
-HBN
-    :
-    "/media/19735/hbn.png",
-HBT
-    :
-    "/media/9350768/hbt.png",
-HCC
-    :
-    "/media/351752/hcc.png",
-HDG
-    :
-    "/media/9350726/hdg.png",
-HEAT
-    :
-    "/media/351399/heat.png",
-HEDG
-    :
-    "/media/20663/hedg.png",
-HEEL
-    :
-    "/media/1382051/heel.png",
-HGT
-    :
-    "/media/9350692/hgt.jpg"
-HILL
-    :
-    "/media/351747/hill.png",
-HIRE
-    :
-    "/media/1383882/hite.png",
-HIRE*
-:
-"/media/350613/hire.png",
-HKG
-    :
-    "/media/351689/hkg.jpg"
-HMP
-    :
-    "/media/350941/hmp.png",
-HMQ
-    :
-    "/media/1383174/hmq.png",
-HNC
-    :
-    "/media/20702/hnc.png",
-HNC*
-:
-"/media/14913529/hnc.png",
-HODL
-    :
-    "/media/350840/hodl.png",
-HOLD
-    :
-    "/media/14913647/hold.png",
-HONEY
-    :
-    "/media/1382937/honey1.png",
-HPC
-    :
-    "/media/1383046/hpc.png",
-HRB
-    :
-    "/media/1383695/hrb.png",
-HSP
-    :
-    "/media/352251/hsp.png",
-HSR
-    :
-    "/media/12318137/hsr.png",
-HST
-    :
-    "/media/14913538/hst.png",
-HTC
-    :
-    "/media/350888/htc.png",
-HTML5
-    :
-    "/media/1383327/html5.png",
-HUC
-    :
-    "/media/20037/hun.png",
-HUGE
-    :
-    "/media/20318/huge.png",
-HUSH
-    :
-    "/media/1383138/thehush_300x300.png",
-HVC
-    :
-    "/media/19745/hvc.png",
-HVCO
-    :
-    "/media/351014/hvco.png",
-HVN
-    :
-    "/media/1383745/hvt.png",
-HXT
-    :
-    "/media/12318282/hxt.png",
-HXX
-    :
-    "/media/1382348/hexx.jpg"
-HYP
-    :
-    "/media/20624/hyp.png",
-HYPER
-    :
-    "/media/19744/hyper.png",
-HZ
-    :
-    "/media/20320/hz.png",
-HZT
-    :
-    "/media/352291/hzt.png",
-I0C
-    :
-    "/media/350691/i0c.png",
-IBANK
-    :
-    "/media/351238/ibank.png",
-ICASH
-    :
-    "/media/20319/icash.png",
-ICB
-    :
-    "/media/19747/icb.png",
-ICC
-    :
-    "/media/15887424/icc.png",
-ICE
-    :
-    "/media/1383896/46b-uaba_400x400.jpg"
-ICN
-    :
-    "/media/351400/icn.png",
-ICOB
-    :
-    "/media/352133/icb.png",
-ICON
-    :
-    "/media/352297/icon.png",
-ICOO
-    :
-    "/media/1383904/icoo.jpg"
-ICOS
-    :
-    "/media/1383968/icos1.png",
-ICX
-    :
-    "/media/12318192/icx.png",
-IEC
-    :
-    "/media/1383144/wsx.png",
-IFC
-    :
-    "/media/19754/ifc.png",
-IFLT
-    :
-    "/media/351934/iflt.png",
-IFT
-    :
-    "/media/12318127/ift.png",
-IGNIS
-    :
-    "/media/1384046/ignis.png",
-ILC
-    :
-    "/media/1383238/ilc.png",
-ILCT
-    :
-    "/media/12318299/ilct.png",
-IML
-    :
-    "/media/1383783/iml.png",
-IMPCH
-    :
-    "/media/1382606/impch.png",
-IMPS
-    :
-    "/media/1381984/imps.jpg"
-IMS
-    :
-    "/media/1383145/ims.png",
-IMX
-    :
-    "/media/1382891/imx.png",
-IN
-    :
-    "/media/1381987/in.png",
-INC
-    :
-    "/media/1382173/inc.png",
-INCNT
-    :
-    "/media/352296/incnt.png",
-INCP
-    :
-    "/media/351078/incp.png",
-IND
-    :
-    "/media/1383794/ind.png",
-INDI
-    :
-    "/media/12318419/indi.png",
-INF8
-    :
-    "/media/1383326/inf8.png",
-INFX
-    :
-    "/media/350919/infx.png",
-INN
-    :
-    "/media/14913536/inn.png",
-INPAY
-    :
-    "/media/1383004/inpay.png",
-INS
-    :
-    "/media/14913458/ins.png",
-INSANE
-    :
-    "/media/351993/insane.png",
-INSN
-    :
-    "/media/1383366/insn.png",
-INV
-    :
-    "/media/351682/inv.png",
-INXT
-    :
-    "/media/12318355/inxt.png",
-IOC
-    :
-    "/media/20042/ioc.png",
-ION
-    :
-    "/media/350933/ion.jpg"
-IOP
-    :
-    "/media/12318262/iop.png",
-IOT
-    :
-    "/media/1383540/iota_logo.png",
-IOU
-    :
-    "/media/1383241/iou1.png",
-IPC
-    :
-    "/media/1383776/ipc.png",
-ISL
-    :
-    "/media/19808/mrs.png",
-ITT
-    :
-    "/media/1384050/itt.png",
-IVZ
-    :
-    "/media/350944/ivz.png",
-IW
-    :
-    "/media/352121/iw.png",
-IWT
-    :
-    "/media/1384048/iwt.png",
-IXC
-    :
-    "/media/19761/ixc.png",
-IXT
-    :
-    "/media/1383612/ixt.png",
-J
-    :
-    "/media/20350/j.png",
-JANE
-    :
-    "/media/1382640/jane.png",
-JBS
-    :
-    "/media/20044/jbs.png",
-JCR
-    :
-    "/media/14761952/jcr.png",
-JDC
-    :
-    "/media/1384049/jdc.png",
-JIF
-    :
-    "/media/351738/jif.png",
-JIO
-    :
-    "/media/352120/jio.png",
-JKC
-    :
-    "/media/19757/jkc.png",
-JNS
-    :
-    "/media/352126/jns.png",
-JNT
-    :
-    "/media/15887422/jnt.jpg"
-JOBS
-    :
-    "/media/351691/jobs.png",
-JOK
-    :
-    "/media/1382381/jok.png",
-JPC
-    :
-    "/media/19759/jpc.png",
-JPC*
-:
-"/media/14913466/jpc.png",
-JUDGE
-    :
-    "/media/20038/judge.png",
-JVY
-    :
-    "/media/12318244/jvy.png",
-JWL
-    :
-    "/media/351432/jwl.png",
-KAPU
-    :
-    "/media/12318035/logo_500x500.png",
-KARM
-    :
-    "/media/350693/karm.png",
-KAT
-    :
-    "/media/351028/katz.png",
-KAYI
-    :
-    "/media/1382863/kayi.png",
-KC
-    :
-    "/media/352224/kc.png",
-KCN
-    :
-    "/media/1383953/kencoin.png",
-KCS
-    :
-    "/media/12318389/kcs.png",
-KDC
-    :
-    "/media/19766/kdc.png",
-KED
-    :
-    "/media/1382390/ked.png",
-KEK
-    :
-    "/media/14913432/kek.png",
-KEX
-    :
-    "/media/9350699/kex.png",
-KEY
-    :
-    "/media/20331/key.png",
-KEY*
-:
-"/media/14761912/key.png",
-KGC
-    :
-    "/media/19763/kgc.png",
-KICK
-    :
-    "/media/1383929/kick.png",
-KIN
-    :
-    "/media/1383731/kin.png",
-KING
-    :
-    "/media/1383862/king.png",
-KLC
-    :
-    "/media/352024/klc.png",
-KMD
-    :
-    "/media/351408/kmd.png",
-KNC
-    :
-    "/media/12318084/knc.png",
-KNC*
-:
-"/media/350895/knc.png",
-KNC**
-:
-"/media/16404850/knc.png",
-KOBO
-    :
-    "/media/20329/kobo.png",
-KOLION
-    :
-    "/media/12318295/kolion.png",
-KORE
-    :
-    "/media/14543972/kore.png",
-KR
-    :
-    "/media/350974/kr.png",
-KRAK
-    :
-    "/media/351236/krak.png",
-KRB
-    :
-    "/media/351504/krb.jpg"
-KRC
-    :
-    "/media/351755/krc.png",
-KRONE
-    :
-    "/media/9350770/krone.png",
-KTK
-    :
-    "/media/19771/ktk.png",
-KUBO
-    :
-    "/media/351077/kubo.png",
-KURT
-    :
-    "/media/352155/kurt.png",
-KUSH
-    :
-    "/media/1382401/kush.png",
-LA
-    :
-    "/media/1383782/lato.png",
-LAB
-    :
-    "/media/16404858/lab.png",
-LAB*
-:
-"/media/20040/lab.png",
-LANA
-    :
-    "/media/351792/lana.png",
-LAT
-    :
-    "/media/9350724/lat.png",
-LAZ
-    :
-    "/media/351552/laz.png",
-LBC
-    :
-    "/media/351211/lbc.png",
-LBTC
-    :
-    "/media/9350763/lbtc.png",
-LC
-    :
-    "/media/351398/lc.png",
-LCASH
-    :
-    "/media/14913550/lcash.png",
-LDM
-    :
-    "/media/16404870/ldm.png",
-LDOGE
-    :
-    "/media/20332/ldoge.png",
-LEA
-    :
-    "/media/351729/lea.png",
-LEMON
-    :
-    "/media/351021/lemon.png",
-LENIN
-    :
-    "/media/1382270/lenin.png",
-LEO
-    :
-    "/media/351988/leo.png",
-LEPEN
-    :
-    "/media/1382507/lepen.png",
-LEV
-    :
-    "/media/12318249/lev.png",
-LFC
-    :
-    "/media/351757/lfc.png",
-LGBTQ
-    :
-    "/media/350996/lgbtq.png",
-LGD
-    :
-    "/media/1383085/lgd.png",
-LGD*
-:
-"/media/19770/lgd.png",
-LIFE
-    :
-    "/media/14913568/life.png",
-LIMX
-    :
-    "/media/19769/limx.png",
-LINDA
-    :
-    "/media/1383860/linda.png",
-LINK
-    :
-    "/media/12318078/link.png",
-LINX
-    :
-    "/media/9350783/linx.png",
-LIR
-    :
-    "/media/351208/lir.png",
-LIV
-    :
-    "/media/352007/liv.png",
-LK7
-    :
-    "/media/19776/lk7.png",
-LKK
-    :
-    "/media/1383553/lkk.png",
-LKY
-    :
-    "/media/19774/lky.png",
-LMC
-    :
-    "/media/1383139/lmc.png",
-LNK
-    :
-    "/media/9350738/lnk.png",
-LOAN*
-:
-"/media/14761940/loan.png",
-LOC
-    :
-    "/media/1381971/loc.png",
-LOCI
-    :
-    "/media/16404856/loci.png",
-LOG
-    :
-    "/media/20335/log.png",
-LOOK
-    :
-    "/media/1381970/look.png",
-LQD
-    :
-    "/media/351097/lqd.png",
-LRC
-    :
-    "/media/12318135/lrc.png",
-LSD
-    :
-    "/media/20041/lsd.png",
-LSK
-    :
-    "/media/352246/lsk.png",
-LTA
-    :
-    "/media/9350693/lta.png",
-LTB
-    :
-    "/media/20336/ltb.png",
-LTBC
-    :
-    "/media/20336/ltb.png",
-LTC
-    :
-    "/media/19782/litecoin-logo.png",
-LTCD
-    :
-    "/media/20043/ltcd.png",
-LTCR
-    :
-    "/media/1382097/ltcr.png",
-LTCX
-    :
-    "/media/19779/ltcx.png",
-LTD
-    :
-    "/media/1382049/ltd.png",
-LTG
-    :
-    "/media/16404871/ltg.png",
-LTH
-    :
-    "/media/351565/lth.png",
-LTS
-    :
-    "/media/20644/lts.png",
-LUCKY
-    :
-    "/media/351946/lucky.png",
-LUN
-    :
-    "/media/1383112/lunyr-logo.png",
-LUX
-    :
-    "/media/12318422/lux.png",
-LUX*
-:
-"/media/20557/lux.png",
-LVG
-    :
-    "/media/1382094/lvg.png",
-LXC
-    :
-    "/media/20045/lxc.png",
-LYB
-    :
-    "/media/20339/lyb.png",
-LYC
-    :
-    "/media/19785/lyc.png",
-M1
-    :
-    "/media/19808/mrs.png",
-MAC
-    :
-    "/media/1382368/mac.png",
-MAD
-    :
-    "/media/1383556/mad.png",
-MAG
-    :
-    "/media/16404853/mag.png",
-MAG*
-:
-"/media/9350711/mag.png",
-MAID
-    :
-    "/media/352247/maid.png",
-MANA
-    :
-    "/media/1383903/mana.png",
-MAPC
-    :
-    "/media/20710/mapc.png",
-MAR
-    :
-    "/media/1382577/mar.png",
-MARS
-    :
-    "/media/19808/mrs.png",
-MARV
-    :
-    "/media/351099/marv.png",
-MARX
-    :
-    "/media/1382578/marx.png",
-MARYJ
-    :
-    "/media/20343/maryj.png",
-MASS
-    :
-    "/media/1383781/mass.png",
-MAT
-    :
-    "/media/12318162/mat.png",
-MAT*
-:
-"/media/1383371/mat.png",
-MAX
-    :
-    "/media/19786/max.png",
-MAY
-    :
-    "/media/12318380/may.png",
-MBI
-    :
-    "/media/1383759/mbi.png",
-MBIT
-    :
-    "/media/1382793/mbit.png",
-MBRS
-    :
-    "/media/1384010/mbrs.png",
-MBT
-    :
-    "/media/12318238/mbt.png",
-MC
-    :
-    "/media/351428/mc.png",
-MCAP
-    :
-    "/media/1383559/mcap.png",
-MCAR
-    :
-    "/media/1382659/mcar.png",
-MCI
-    :
-    "/media/12318289/mci.png",
-MCN
-    :
-    "/media/20346/mcn.png",
-MCO
-    :
-    "/media/1383653/mco.jpg"
-MCRN
-    :
-    "/media/1383111/mcrn.png",
-MDA
-    :
-    "/media/12318340/mda.png",
-MDC
-    :
-    "/media/351500/mdc.png",
-MDC*
-:
-"/media/14913531/mdc.png",
-MDL
-    :
-    "/media/14913435/mdl-ico.png",
-MDT
-    :
-    "/media/351989/mdt.png",
-MEC
-    :
-    "/media/19789/mec.png",
-MED
-    :
-    "/media/20046/med.png",
-MEDI
-    :
-    "/media/1384051/medi.png",
-MEGA
-    :
-    "/media/352020/mega.png",
-MEME
-    :
-    "/media/1383050/pepecoin-512.png",
-MER
-    :
-    "/media/14913628/mer.png",
-MET
-    :
-    "/media/1384013/met1.png",
-METAL
-    :
-    "/media/20359/metal.png",
-MG
-    :
-    "/media/351588/mg.png",
-MGO
-    :
-    "/media/1382798/mgo.png",
-MI
-    :
-    "/media/20711/mi.png",
-MIL
-    :
-    "/media/20354/mil.png",
-MILO
-    :
-    "/media/1383236/milo.png",
-MIN
-    :
-    "/media/19793/min.png",
-MINE
-    :
-    "/media/20356/mine.png",
-MINEX
-    :
-    "/media/9350702/minex.png",
-MINT
-    :
-    "/media/19797/mint.png",
-MIS
-    :
-    "/media/1381981/mis.png",
-MIV
-    :
-    "/media/1383728/miv.png",
-MKR
-    :
-    "/media/1382296/mkr.png",
-MLITE
-    :
-    "/media/1382725/mlite.png",
-MLN
-    :
-    "/media/1382653/mln.png",
-MLS
-    :
-    "/media/9350696/mls.png",
-MM
-    :
-    "/media/1382642/mm.jpg"
-MMC
-    :
-    "/media/19795/mmc.png",
-MMNXT
-    :
-    "/media/351209/nxtasset.png",
-MMXIV
-    :
-    "/media/19798/mmxiv.png",
-MMXVI
-    :
-    "/media/1381972/mmxvi.png",
-MN
-    :
-    "/media/19796/mn1.png",
-MNC
-    :
-    "/media/19805/mincoin.png",
-MND
-    :
-    "/media/350616/mnd.png",
-MNE
-    :
-    "/media/1383328/mne.png",
-MNM
-    :
-    "/media/350982/mnm.png",
-MNT
-    :
-    "/media/9350745/mntp.png",
-MNX
-    :
-    "/media/14913648/mnx.png",
-MNY
-    :
-    "/media/1383973/mny.png",
-MNZ
-    :
-    "/media/12318336/mnz.png",
-MOBI
-    :
-    "/media/1383921/mobi.png",
-MOD
-    :
-    "/media/12318362/mod.png",
-MOIN
-    :
-    "/media/350959/moin.png",
-MOJO
-    :
-    "/media/351003/mojo.png",
-MONA
-    :
-    "/media/19801/mona.png",
-MONETA
-    :
-    "/media/351749/moneta.png",
-MONEY
-    :
-    "/media/352249/money.png",
-MOON
-    :
-    "/media/19802/moon.png",
-MOOND
-    :
-    "/media/351558/moond.png",
-MOTO
-    :
-    "/media/1382339/moto.png",
-MPRO
-    :
-    "/media/350999/mpro.jpg"
-MRP
-    :
-    "/media/20357/mrp.png",
-MRS
-    :
-    "/media/19808/mrs.png",
-MRSA
-    :
-    "/media/1382287/msra.png",
-MRT
-    :
-    "/media/350884/waves_1.png",
-MRV
-    :
-    "/media/1384009/mrv.png",
-MRY
-    :
-    "/media/19807/mry.jpg"
-MSC
-    :
-    "/media/19814/mst.png",
-MSP
-    :
-    "/media/1383881/c9fobrlr_400x400.jpg"
-MSR
-    :
-    "/media/14913574/msr.png",
-MST
-    :
-    "/media/351529/mst1.png",
-MT
-    :
-    "/media/19453/mycelium.png",
-MTH
-    :
-    "/media/1383976/mth.png",
-MTK
-    :
-    "/media/12318149/mtk.png",
-MTL
-    :
-    "/media/1383743/mtl.png",
-MTLM3
-    :
-    "/media/352183/mtmc3.png",
-MTN
-    :
-    "/media/12318118/mtn.png",
-MTR
-    :
-    "/media/19710/frac.png",
-MTX
-    :
-    "/media/9350793/mtx.png",
-MUDRA
-    :
-    "/media/351394/mudra.png",
-MUE
-    :
-    "/media/351084/mue.png",
-MUSIC
-    :
-    "/media/1382783/music.png",
-MUU
-    :
-    "/media/1383325/muu.png",
-MWC
-    :
-    "/media/19808/mrs.png",
-MXT
-    :
-    "/media/1382782/mxt.jpg"
-MYB
-    :
-    "/media/1383746/myb.png",
-MYC
-    :
-    "/media/350947/myc.png",
-MYST
-    :
-    "/media/1383561/myst.png",
-MYST*
-:
-"/media/20053/myst.png",
-MZC
-    :
-    "/media/19816/mzc.png",
-N7
-    :
-    "/media/350995/n7.jpg"
-NAMO
-    :
-    "/media/12318384/namo.png",
-NAN
-    :
-    "/media/19821/nan.png",
-NANAS
-    :
-    "/media/20575/nanas.png",
-NAS2
-    :
-    "/media/350776/nas2.png",
-NAUT
-    :
-    "/media/19822/naut.png",
-NAV
-    :
-    "/media/351431/nav.png",
-NBIT
-    :
-    "/media/351928/nbit.png",
-NBL
-    :
-    "/media/19825/nbl.png",
-NBT
-    :
-    "/media/20363/nbt.png",
-NDC
-    :
-    "/media/1383827/ndc.png",
-NDOGE
-    :
-    "/media/1382650/ndoge.png",
-NEBL
-    :
-    "/media/1384016/nebl.png",
-NEBU
-    :
-    "/media/350990/nebu.png",
-NEC
-    :
-    "/media/19824/nec.png",
-NEF
-    :
-    "/media/1383383/nef.png",
-NEO
-    :
-    "/media/1383858/neo.jpg"
-NEOG
-    :
-    "/media/14913457/neog.png",
-NEOS
-    :
-    "/media/1382788/neos1.png",
-NET
-    :
-    "/media/19826/net.png",
-NET*
-:
-"/media/1383697/net1.png",
-NETC
-    :
-    "/media/350938/netc.png",
-NETKO
-    :
-    "/media/1382771/netko.png",
-NEU
-    :
-    "/media/20721/neu.png",
-NEU*
-:
-"/media/14913483/neu.png",
-NEVA
-    :
-    "/media/351026/neva.png",
-NEWB
-    :
-    "/media/14913564/newb.png",
-NIC
-    :
-    "/media/352309/nic.png",
-NICE
-    :
-    "/media/1382467/nice.png",
-NIMFA
-    :
-    "/media/9350694/nimfa.jpg"
-NKA
-    :
-    "/media/20367/nka.png",
-NKC
-    :
-    "/media/351041/nkc.png",
-NKT
-    :
-    "/media/20371/nkt.png",
-NLC
-    :
-    "/media/351591/nlc.png",
-NLC2
-    :
-    "/media/1383855/nlc21.png",
-NLG
-    :
-    "/media/19828/nlg.png",
-NMB
-    :
-    "/media/20049/nmb.png",
-NMC
-    :
-    "/media/19830/nmc.png",
-NMR
-    :
-    "/media/1383655/nmr.png",
-NOBL
-    :
-    "/media/19833/nobl.png",
-NODE
-    :
-    "/media/20373/node.png",
-NOO
-    :
-    "/media/1382370/noo.png",
-NOTE
-    :
-    "/media/19832/note.png",
-NPC
-    :
-    "/media/352130/npc.png",
-NPX
-    :
-    "/media/12318066/npx.png",
-NRB
-    :
-    "/media/19839/nrb.png",
-NRC
-    :
-    "/media/1382604/nrc.png",
-NRN
-    :
-    "/media/12318047/nrn.png",
-NRS
-    :
-    "/media/19834/nrs.png",
-NSR
-    :
-    "/media/20378/nsr.png",
-NTC
-    :
-    "/media/351631/ntc.png",
-NTCC
-    :
-    "/media/1382346/ntcc.png",
-NTM
-    :
-    "/media/12318286/ntm.png",
-NTO
-    :
-    "/media/12318293/nto.png",
-NTRN
-    :
-    "/media/12318281/ntrn.png",
-NUBIS
-    :
-    "/media/351759/nubis.png",
-NUKE
-    :
-    "/media/1382626/nuke.png",
-NULS
-    :
-    "/media/14913548/nuls.png",
-NUM
-    :
-    "/media/350932/num.png",
-NVC
-    :
-    "/media/20713/nvc.png",
-NVST
-    :
-    "/media/1383732/nvst.png",
-NXC
-    :
-    "/media/352248/nxc.png",
-NXE
-    :
-    "/media/351070/nxe.png",
-NXS
-    :
-    "/media/1382387/nexus.jpg"
-NXT
-    :
-    "/media/20627/nxt.png",
-NXTI
-    :
-    "/media/20376/nxti.png",
-NXTTY
-    :
-    "/media/20379/nxtty.png",
-NYAN
-    :
-    "/media/19842/nyan.png",
-NYC
-    :
-    "/media/9350762/nyc.png",
-NZC
-    :
-    "/media/351366/nzc.png",
-OAX
-    :
-    "/media/1383756/oax.png",
-OBITS
-    :
-    "/media/350565/obits.png",
-OBS
-    :
-    "/media/351064/obs.png",
-OC
-    :
-    "/media/19843/oc.png",
-OCL
-    :
-    "/media/1383989/ocl.png",
-OCTO
-    :
-    "/media/19983/888.png",
-ODMC
-    :
-    "/media/14761889/odmcoin.png",
-ODN
-    :
-    "/media/12318145/odn.png",
-ODNT
-    :
-    "/media/352186/odnt.png",
-OK
-    :
-    "/media/350819/ok.png",
-OLDSF
-    :
-    "/media/350936/oldsf.png",
-OLV
-    :
-    "/media/1383239/xvs.png",
-OLYMP
-    :
-    "/media/351683/olymp.png",
-OMA
-    :
-    "/media/20386/oma.png",
-OMC
-    :
-    "/media/1381967/omc.png",
-OMG
-    :
-    "/media/1383814/omisego.png",
-OMNI
-    :
-    "/media/351102/omni.png",
-ONION
-    :
-    "/media/1383894/onion.png",
-ONX
-    :
-    "/media/1383910/onx.png",
-OPAL
-    :
-    "/media/20050/opal.png",
-OPES
-    :
-    "/media/1382434/opes.png",
-OPP
-    :
-    "/media/12318188/opp.png",
-OPT
-    :
-    "/media/1383873/opt.png",
-OPTION
-    :
-    "/media/1381998/option.png",
-ORB
-    :
-    "/media/19845/orb.png",
-ORLY
-    :
-    "/media/351076/orly.png",
-ORME
-    :
-    "/media/12317975/omes.png",
-ORO
-    :
-    "/media/1382656/oro.png",
-OROC
-    :
-    "/media/1383755/oroc.png",
-OS76
-    :
-    "/media/1382288/os76.png",
-OSC
-    :
-    "/media/19847/osc.png",
-OTN
-    :
-    "/media/14913453/otn.png",
-OTX
-    :
-    "/media/1383817/1qrfuod6_400x400.jpg"
-OXY
-    :
-    "/media/9350753/oxy.png",
-PAC
-    :
-    "/media/1382605/pac.png",
-PAK
-    :
-    "/media/350788/pak.png",
-PARA
-    :
-    "/media/1382641/para.png",
-PART
-    :
-    "/media/1383838/part.png",
-PASC
-    :
-    "/media/1382247/pasc.png",
-PASL
-    :
-    "/media/1382741/pasl.png",
-PAY
-    :
-    "/media/1383687/pay.png",
-PAYP
-    :
-    "/media/1382251/payp.png",
-PBC
-    :
-    "/media/351062/pbc.png",
-PBL
-    :
-    "/media/16404866/pbl.png",
-PBT
-    :
-    "/media/1383324/pbt.png",
-PCM
-    :
-    "/media/352223/pcm.png",
-PCS
-    :
-    "/media/351927/pabyosi.png",
-PDC
-    :
-    "/media/351088/pdc.png",
-PEC
-    :
-    "/media/351761/pec.png",
-PEN
-    :
-    "/media/20384/pen.png",
-PEPECASH
-    :
-    "/media/1382397/pepecash.png",
-PEX
-    :
-    "/media/351992/pex.png",
-PFR
-    :
-    "/media/16404867/pfr.png",
-PGL
-    :
-    "/media/1384018/pgl.png",
-PHR
-    :
-    "/media/1383243/phr.jpg"
-PHR*
-:
-"/media/14913549/phr.png",
-PHS
-    :
-    "/media/19857/phs.png",
-PIE
-    :
-    "/media/1382686/pie.png",
-PIGGY
-    :
-    "/media/19854/piggy.png",
-PING
-    :
-    "/media/1383706/ping1.png",
-PINK
-    :
-    "/media/350588/pinkcoin-logo.png",
-PINKX
-    :
-    "/media/351624/pinkx.png",
-PIO
-    :
-    "/media/351528/pio.png",
-PIRL
-    :
-    "/media/14543968/pirl.png",
-PIVX
-    :
-    "/media/1382389/pivx.png",
-PIX
-    :
-    "/media/1384024/pix.png",
-PIZZA
-    :
-    "/media/351397/pizza.png",
-PKB
-    :
-    "/media/20694/pkb.png",
-PKT
-    :
-    "/media/12318349/playkey.png",
-PLANET
-    :
-    "/media/1382851/planet.png",
-PLAY
-    :
-    "/media/14913441/play.png",
-PLBT
-    :
-    "/media/1383671/polybius.png",
-PLM
-    :
-    "/media/12318124/plm.jpg"
-PLNC
-    :
-    "/media/352131/plnc.png",
-PLR
-    :
-    "/media/1383786/plr.png",
-PLU
-    :
-    "/media/1382431/plu.png",
-PNC
-    :
-    "/media/352085/pnc.png",
-PND
-    :
-    "/media/12318184/pnd.png",
-PNK
-    :
-    "/media/351557/pnk.png",
-POE
-    :
-    "/media/1383828/poe.png",
-POINTS
-    :
-    "/media/19863/points.png",
-POLL
-    :
-    "/media/12318144/poll.png",
-POLY
-    :
-    "/media/20631/poly.png",
-POS
-    :
-    "/media/14913455/pos.png",
-POST
-    :
-    "/media/350917/post.png",
-POSW
-    :
-    "/media/1382902/posw.png",
-POT
-    :
-    "/media/19865/pot.png",
-POWR
-    :
-    "/media/12318301/powr.png",
-PPC
-    :
-    "/media/19864/peercoin-logo.png",
-PPP
-    :
-    "/media/12318216/ppp.png",
-PPT
-    :
-    "/media/1383747/ppt.png",
-PPY
-    :
-    "/media/351630/peerplays.png",
-PQT
-    :
-    "/media/1383741/pqt.png",
-PRC
-    :
-    "/media/20393/prc.png",
-PRE
-    :
-    "/media/351711/pre.png",
-PRE*
-:
-"/media/1383801/pst.png",
-PRES
-    :
-    "/media/1382432/pres.png",
-PRG
-    :
-    "/media/1384033/prg.png",
-PRIME
-    :
-    "/media/350979/prime.png",
-PRIX
-    :
-    "/media/9350797/prix.png",
-PRM
-    :
-    "/media/350906/prm.png",
-PRO
-    :
-    "/media/1383792/pro.png",
-PROC
-    :
-    "/media/1383159/proc.png",
-PRP
-    :
-    "/media/12318007/prp.png",
-PRX
-    :
-    "/media/1382603/prx.png",
-PSB
-    :
-    "/media/351594/psb.jpg"
-PSEUD
-    :
-    "/media/20052/pseud.png",
-PSI
-    :
-    "/media/351589/psi.png",
-PST
-    :
-    "/media/9350792/pst.jpg"
-PSY
-    :
-    "/media/351362/psy.png",
-PTA
-    :
-    "/media/1382236/pta.png",
-PTC
-    :
-    "/media/19868/ptc.png",
-PTC*
-:
-"/media/14913426/ptc.png",
-PTOY
-    :
-    "/media/1383547/ptoy.png",
-PTS*
-:
-"/media/19869/pts.png",
-PULSE
-    :
-    "/media/350994/pulse.jpg"
-PUPA
-    :
-    "/media/1383245/pupa.png",
-PURA
-    :
-    "/media/14913533/pura.png",
-PURE
-    :
-    "/media/14913451/pure.png",
-PUT
-    :
-    "/media/1383668/put1.png",
-PWR
-    :
-    "/media/350899/pwr.png",
-PX
-    :
-    "/media/1381994/px.png",
-PXC
-    :
-    "/media/20058/pxc.png",
-PXI
-    :
-    "/media/350559/pxi.png",
-PXL
-    :
-    "/media/350930/pxl.png",
-PYC
-    :
-    "/media/19878/pyc.png",
-PYN
-    :
-    "/media/12318033/pyn.png",
-PZM
-    :
-    "/media/1383242/pzm.jpg"
-QASH
-    :
-    "/media/15887431/qash.png",
-QAU
-    :
-    "/media/1383669/qau.png",
-QBC
-    :
-    "/media/19874/qbc.png",
-QBK
-    :
-    "/media/20400/qbk.png",
-QBT
-    :
-    "/media/1382936/qbt.png",
-QCN
-    :
-    "/media/19877/qcn.png",
-QORA
-    :
-    "/media/19876/qora.png",
-QRK
-    :
-    "/media/19882/qrk.png",
-QRL
-    :
-    "/media/1383543/qrl.png",
-QSLV
-    :
-    "/media/20404/qslv.png",
-QSP
-    :
-    "/media/15887408/qsp.png",
-QTL
-    :
-    "/media/19879/qtl.png",
-QTUM
-    :
-    "/media/1383382/qtum.png",
-QTZ
-    :
-    "/media/20643/qtz.png",
-QVT
-    :
-    "/media/1383954/qvt.png",
-QWARK
-    :
-    "/media/1383522/qwark.png",
-R
-    :
-    "/media/12318360/r.png",
-RADI
-    :
-    "/media/1382239/rad.png",
-RADS
-    :
-    "/media/350610/rads.png",
-RAIN
-    :
-    "/media/1383114/rain.png",
-RATIO
-    :
-    "/media/1382442/ratio.png",
-RBIES
-    :
-    "/media/350904/rbies.png",
-RBIT
-    :
-    "/media/351405/rbit.png",
-RBR
-    :
-    "/media/20408/rbr.png",
-RBT
-    :
-    "/media/20407/rbt.png",
-RBX
-    :
-    "/media/1383197/rbx.png",
-RBY
-    :
-    "/media/351279/rby.png",
-RC
-    :
-    "/media/1381992/rc.png",
-RCC
-    :
-    "/media/1383864/rcc.png",
-RCN
-    :
-    "/media/12318046/rnc.png",
-RCN*
-:
-"/media/351634/rcn.png",
-RCX
-    :
-    "/media/350902/rcx.png",
-RDD
-    :
-    "/media/19887/rdd.png",
-RDN
-    :
-    "/media/19808/mrs.png",
-RDN*
-:
-"/media/14913482/rdn.png",
-REA
-    :
-    "/media/14761934/rea.png",
-REAL
-    :
-    "/media/1383884/rise.png",
-REBL
-    :
-    "/media/14913454/rebl.png",
-REC
-    :
-    "/media/12318179/rec.png",
-RED
-    :
-    "/media/1383265/red.png",
-REE
-    :
-    "/media/351096/ree.png",
-REP
-    :
-    "/media/350815/augur-logo.png",
-REQ
-    :
-    "/media/12318260/req.png",
-REV
-    :
-    "/media/351061/rev.png",
-REX
-    :
-    "/media/12318086/rex.png",
-RGC
-    :
-    "/media/12318357/rgc.png",
-RHEA
-    :
-    "/media/12318096/rhea.png",
-RIC
-    :
-    "/media/19888/ric.jpg"
-RICE
-    :
-    "/media/1383245/rice.png",
-RIDE
-    :
-    "/media/1382388/ride.png",
-RING
-    :
-    "/media/351546/ring.png",
-RIPO
-    :
-    "/media/20051/ripo.png",
-RIPT
-    :
-    "/media/15887409/ript.png",
-RISE
-    :
-    "/media/351059/rise.png",
-RIYA
-    :
-    "/media/9350737/riya.png",
-RKC
-    :
-    "/media/1383852/rkc.png",
-RLC
-    :
-    "/media/12318418/rlc.png",
-RMS
-    :
-    "/media/351701/rms.png",
-RNC
-    :
-    "/media/1382240/rnc.png",
-RNDR
-    :
-    "/media/12318381/rndr.png",
-RNS
-    :
-    "/media/1382859/rns.png",
-ROCK
-    :
-    "/media/12318189/rock.png",
-ROCK*
-:
-"/media/14913607/rock1.png",
-ROK
-    :
-    "/media/12318268/rok.png",
-ROOT
-    :
-    "/media/351523/root.png",
-ROOTS
-    :
-    "/media/1383851/roots.png",
-ROS
-    :
-    undefined
-ROUND
-    :
-    "/media/1382508/round.png",
-ROYAL
-    :
-    "/media/351756/royal.png",
-RPC
-    :
-    "/media/19895/rpc-2.png",
-RPX
-    :
-    "/media/12318339/rpx.png",
-RRT
-    :
-    "/media/19554/bitfinex.png",
-RT2
-    :
-    "/media/19896/rt2.png",
-RUBIT
-    :
-    "/media/351751/rubit.png",
-RUP
-    :
-    "/media/12318363/rup.jpg"
-RUPX
-    :
-    "/media/14913484/rupx.png",
-RUST
-    :
-    "/media/351365/rust.png",
-RUSTBITS
-    :
-    "/media/12318085/rustbits.png",
-RVT
-    :
-    "/media/1383694/rvt.png",
-RYC
-    :
-    "/media/19898/ryc.png",
-RYCN
-    :
-    "/media/351756/royal.png",
-RZR
-    :
-    "/media/20055/rzr.png",
-S8C
-    :
-    "/media/1382093/s8c.png",
-SAFEX
-    :
-    "/media/1383986/safex.png",
-SAK
-    :
-    "/media/351079/sak.png",
-SALT
-    :
-    "/media/9350744/salt.jpg"
-SAN
-    :
-    "/media/1383730/san.png",
-SAND
-    :
-    "/media/1383825/beach.png",
-SANDG
-    :
-    "/media/351556/sandt.png",
-SAR
-    :
-    "/media/350901/sar.png",
-SAT2
-    :
-    "/media/19897/sat2.png",
-SBC
-    :
-    "/media/19900/sbc.png",
-SBD
-    :
-    "/media/350907/steem.png",
-SC
-    :
-    "/media/20726/siacon-logo.png",
-SCASH
-    :
-    "/media/352117/scash.png",
-SCL
-    :
-    "/media/9350788/scl.png",
-SCN
-    :
-    "/media/351563/scn.png",
-SCOR
-    :
-    "/media/9350695/scor.jpg"
-SCORE
-    :
-    "/media/1383813/score.png",
-SCOT
-    :
-    "/media/20416/scot_1.png",
-SCR
-    :
-    "/media/14913681/scr.png",
-SCRPT
-    :
-    "/media/351210/scrpt.png",
-SCRT
-    :
-    "/media/351031/scrt.png",
-SCT
-    :
-    "/media/351791/sct.png",
-SCT*
-:
-"/media/12318383/sct.png",
-SDAO
-    :
-    "/media/1383933/sdao.png",
-SDC
-    :
-    "/media/20419/sdc.png",
-SDP
-    :
-    "/media/351709/sdp.jpg"
-SEEDS
-    :
-    "/media/352190/seeds.png",
-SEL
-    :
-    "/media/1382369/sel.png",
-SEN
-    :
-    "/media/351560/sen.png",
-SENSE
-    :
-    "/media/12318034/sense.png",
-SEQ
-    :
-    "/media/1383558/seq.png",
-SFC
-    :
-    "/media/1382639/sfc.png",
-SFE
-    :
-    "/media/351735/sfe.png",
-SFR
-    :
-    "/media/19903/sfr.png",
-SH
-    :
-    "/media/351567/sh.png",
-SHADE
-    :
-    "/media/20056/shade.png",
-SHIFT
-    :
-    "/media/1382125/shift.png",
-SHLD
-    :
-    "/media/19904/shld.png",
-SHORTY
-    :
-    "/media/352222/shorty.png",
-SHP
-    :
-    "/media/14761950/shp.png",
-SIB
-    :
-    "/media/350958/sib.png",
-SIFT
-    :
-    "/media/1384045/sift.jpg"
-SIGT
-    :
-    "/media/9350710/sigt.png",
-SIGU
-    :
-    "/media/19808/mrs.png",
-SILK
-    :
-    "/media/20057/silk.png",
-SJCX
-    :
-    "/media/20422/sjcx.png",
-SKB
-    :
-    "/media/19808/mrs.png",
-SKIN
-    :
-    "/media/1383880/dsb_amky_400x400.jpg"
-SKR
-    :
-    "/media/14913631/skr.png",
-SKR*
-:
-"/media/12318013/skr.png",
-SKY
-    :
-    "/media/1383565/sky.png",
-SLG
-    :
-    "/media/20428/slg.png",
-SLING
-    :
-    "/media/20425/sling.png",
-SLM
-    :
-    "/media/20426/slm.png",
-SLR
-    :
-    "/media/20699/slr.png",
-SLS
-    :
-    "/media/350946/sls.png",
-SMAC
-    :
-    "/media/20427/smac.png",
-SMART
-    :
-    "/media/1383906/smart.png",
-SMC
-    :
-    "/media/20059/smc.png",
-SMF
-    :
-    "/media/1382468/xmf.png",
-SMLY
-    :
-    "/media/20429/smly.png",
-SMNX
-    :
-    "/media/1383998/sx.png",
-SMSR
-    :
-    "/media/351543/smsr.png",
-SMT
-    :
-    "/media/12318350/smt.png",
-SNC
-    :
-    "/media/1383748/snc.png",
-SND
-    :
-    "/media/12318128/snd.png",
-SNGLS
-    :
-    "/media/351368/sngls.png",
-SNK
-    :
-    "/media/1383865/snk.png",
-SNM
-    :
-    "/media/1383564/snm.png",
-SNOV
-    :
-    "/media/12318100/snov.png",
-SNRG
-    :
-    "/media/20700/snrg.png",
-SNS
-    :
-    "/media/351494/sns.png",
-SNT
-    :
-    "/media/1383568/snt.png",
-SOAR
-    :
-    "/media/14913644/soar.png",
-SOCC
-    :
-    "/media/1383779/socc.png",
-SOIL
-    :
-    "/media/350949/soil.png",
-SOJ
-    :
-    "/media/9350725/soj.png",
-SOLE
-    :
-    "/media/20431/sole.png",
-SONG
-    :
-    "/media/20432/song.png",
-SOON
-    :
-    "/media/20436/soon.png",
-SOUL
-    :
-    "/media/350930/pxl.png",
-SP
-    :
-    "/media/352018/sp.png",
-SPA
-    :
-    "/media/19911/spa.png",
-SPACE
-    :
-    "/media/351095/space.png",
-SPC
-    :
-    "/media/20655/spc.png",
-SPEC
-    :
-    "/media/20689/spec.png",
-SPHR
-    :
-    "/media/19808/mrs.png",
-SPHTX
-    :
-    "/media/14913551/sphtx.png",
-SPKTR
-    :
-    "/media/1382349/spkr.png",
-SPM
-    :
-    "/media/351002/sup.png",
-SPN
-    :
-    "/media/1383861/spn.png",
-SPORT
-    :
-    "/media/351627/sports.png",
-SPOTS
-    :
-    "/media/350893/spots.png",
-SPR
-    :
-    "/media/20438/spr.png",
-SPRTS
-    :
-    "/media/20692/sprts.png",
-SPT
-    :
-    "/media/19917/spt.png",
-SPX
-    :
-    "/media/351212/spx.png",
-SQL
-    :
-    "/media/20441/sql.png",
-SQP
-    :
-    "/media/9350728/sqp.png",
-SRC
-    :
-    "/media/19918/src.png",
-SRC*
-:
-"/media/1382936/src1.png",
-SRN
-    :
-    "/media/14913556/srn.png",
-SRT
-    :
-    "/media/9350771/srt.png",
-SSD
-    :
-    "/media/20443/ssd.png",
-SSTC
-    :
-    "/media/350937/ssc.png",
-SSV
-    :
-    "/media/20060/ssv.png",
-ST
-    :
-    "/media/14913437/st.png",
-STA
-    :
-    "/media/1383620/crs.png",
-STA*
-:
-"/media/351063/sta.png",
-STALIN
-    :
-    "/media/1382726/stalin.png",
-STAR
-    :
-    "/media/1383750/star1.png",
-STAR*
-:
-"/media/351043/star.jpg"
-START
-    :
-    "/media/19916/start.png",
-STC
-    :
-    "/media/15887405/sct.png",
-STCN
-    :
-    "/media/9350727/stcn.png",
-STEEM
-    :
-    "/media/350907/steem.png",
-STEPS
-    :
-    "/media/350952/steps.png",
-STEX
-    :
-    "/media/16404854/stex.png",
-STHR
-    :
-    "/media/351042/sthr.png",
-STO
-    :
-    "/media/351493/sto.png",
-STOCKBET
-    :
-    "/media/12318119/stockbet.png",
-STORJ
-    :
-    "/media/20422/sjcx.png",
-STORM
-    :
-    "/media/1383803/storm.jpg"
-STR*
-:
-"/media/19920/str.png",
-STRAT
-    :
-    "/media/351303/stratis-logo.png",
-STS
-    :
-    "/media/351022/sts.png",
-STU
-    :
-    "/media/1383785/stu.png",
-STV
-    :
-    "/media/20444/stv.png",
-STX
-    :
-    "/media/1383946/stx.png",
-SUB
-    :
-    "/media/1384011/sub1.png",
-SUB*
-:
-"/media/1383362/sub.png",
-SUMO
-    :
-    "/media/12318088/sumo.png",
-SUP
-    :
-    "/media/20442/sup.png",
-SUPER
-    :
-    "/media/20061/super.png",
-SUR
-    :
-    "/media/1383696/sur.png",
-SWARM
-    :
-    "/media/20445/swarm.png",
-SWEET
-    :
-    "/media/351868/sweet.png",
-SWIFT
-    :
-    "/media/20446/swift.png",
-SWING
-    :
-    "/media/350987/swing.png",
-SWT
-    :
-    "/media/1382740/swt.jpg"
-SXC
-    :
-    "/media/19924/sxc.png",
-SYC
-    :
-    "/media/1383793/syc.png",
-SYNC
-    :
-    "/media/19922/sync.png",
-SYNX
-    :
-    "/media/15887426/synx.png",
-SYS
-    :
-    "/media/20062/sys.png",
-TAAS
-    :
-    "/media/1383085/taas.png",
-TAB
-    :
-    "/media/351488/tab.png",
-TAG
-    :
-    "/media/19925/tag.png",
-TAGR
-    :
-    "/media/350940/tagr.png",
-TAJ
-    :
-    "/media/1382867/taj.png",
-TAK
-    :
-    "/media/19928/tak.png",
-TAM
-    :
-    "/media/20565/tam.png",
-TAP
-    :
-    "/media/1383283/tap.png",
-TAT
-    :
-    "/media/1382594/tat.png",
-TAU
-    :
-    "/media/16404857/lamden.png",
-TBCX
-    :
-    "/media/1382658/tbcx.png",
-TCR
-    :
-    "/media/350918/tcr.png",
-TDFB
-    :
-    "/media/351507/tdfb.png",
-TEAM
-    :
-    "/media/351790/team.png",
-TEC
-    :
-    "/media/1382383/tecoin.png",
-TECH
-    :
-    "/media/1382505/tech.png",
-TEK
-    :
-    "/media/19929/tek.png",
-TELL
-    :
-    "/media/351505/tell.png",
-TENNET
-    :
-    "/media/351760/tennet.png",
-TER
-    :
-    "/media/12318324/ter.png",
-TES
-    :
-    "/media/19927/tes.png",
-TESLA
-    :
-    "/media/351945/tesla.png",
-TFL
-    :
-    "/media/1383621/tfl.png",
-TGC
-    :
-    "/media/19930/tgc.png",
-THC
-    :
-    "/media/351699/thc.png",
-THNX
-    :
-    "/media/1384039/thnx.jpg"
-THS
-    :
-    "/media/1382660/ths.png",
-TIA
-    :
-    "/media/351636/tia.png",
-TIC
-    :
-    "/media/1382625/tic.png",
-TIE
-    :
-    "/media/1383955/tie.png",
-TIME
-    :
-    "/media/352105/time.png",
-TIO
-    :
-    "/media/14913488/tio.png",
-TIT
-    :
-    "/media/20069/tit.png",
-TIX
-    :
-    "/media/1383690/tix.png",
-TKN
-    :
-    "/media/1383157/tkn.png",
-TKN*
-:
-"/media/351104/tkn.png",
-TKR
-    :
-    "/media/14761909/tkr.png",
-TKS
-    :
-    "/media/352207/tks.jpg"
-TKT
-    :
-    "/media/12318093/tkt.png",
-TMC
-    :
-    "/media/20451/tmc.png",
-TME
-    :
-    "/media/1383905/tme.png",
-TMT
-    :
-    "/media/12317977/tmt.png",
-TNT
-    :
-    "/media/1383800/tnt.png",
-TOA
-    :
-    "/media/12318334/toacoin.png",
-TODAY
-    :
-    "/media/351521/today.png",
-TOM
-    :
-    "/media/1383992/tom.png",
-TOR
-    :
-    "/media/19934/tor.png",
-TOT
-    :
-    undefined
-TPAY
-    :
-    "/media/1382770/tpay.png",
-TPG
-    :
-    "/media/351948/tpg.png",
-TRA
-    :
-    "/media/351700/tra.png",
-TRC
-    :
-    "/media/19938/terracoin.png",
-TRCT
-    :
-    "/media/14913462/trct.png",
-TRI
-    :
-    "/media/350568/tri.png",
-TRIA
-    :
-    "/media/16404852/tria.png",
-TRIBE
-    :
-    "/media/1383797/tribe.jpg"
-TRICK
-    :
-    "/media/352127/trick.png",
-TRIG
-    :
-    "/media/351489/trg.png",
-TRIP
-    :
-    "/media/12318231/trip.png",
-TRK
-    :
-    "/media/20460/trk.png",
-TRON
-    :
-    "/media/20459/tron.png",
-TRST
-    :
-    "/media/1381975/trst.png",
-TRUMP
-    :
-    "/media/350905/trump.png",
-TRUST
-    :
-    "/media/19935/trust.png",
-TRV
-    :
-    "/media/9350789/trv.png",
-TRX
-    :
-    "/media/12318089/trx.png",
-TSE
-    :
-    "/media/1382790/tato1.png",
-TTC
-    :
-    "/media/20064/ttc.png",
-TTT
-    :
-    "/media/9350755/ttt.jpg"
-TUR
-    :
-    "/media/351020/tur.png",
-TWIST
-    :
-    "/media/1382250/twist1.png",
-TWLV
-    :
-    "/media/20472/viral.png",
-TX
-    :
-    "/media/20722/tx.png",
-TZC
-    :
-    "/media/12318285/tzc.png",
-U
-    :
-    "/media/351629/u.jpg"
-UAEC
-    :
-    "/media/1382684/uaec.png",
-UBIQ
-    :
-    "/media/351544/ubiq.png",
-UBQ
-    :
-    "/media/1382441/ubq.png",
-UET
-    :
-    "/media/1383837/uet.png",
-UFO
-    :
-    "/media/12318167/ufo1.png",
-UFR
-    :
-    "/media/16404855/ufr.png",
-UGT
-    :
-    "/media/14913439/ugt.png",
-UIS
-    :
-    "/media/20455/uis.png",
-UKG
-    :
-    "/media/14913456/ukg.png",
-ULTC
-    :
-    "/media/20063/ultc.png",
-UMC
-    :
-    "/media/1383983/umb.png",
-UNAT
-    :
-    "/media/20456/unat.png",
-UNB
-    :
-    "/media/19940/unb.png",
-UNC
-    :
-    "/media/20693/unc.png",
-UNF
-    :
-    "/media/351626/unf.png",
-UNI
-    :
-    "/media/1382968/uni.png",
-UNIFY
-    :
-    "/media/1383775/unify.png",
-UNIKRN
-    :
-    "/media/1383805/unikr.png",
-UNIQ
-    :
-    "/media/351387/uniq.png",
-UNIT
-    :
-    "/media/350954/unit.png",
-UNITS
-    :
-    "/media/1382050/units.png",
-UNITY
-    :
-    "/media/350935/unity_1.png",
-UNO
-    :
-    "/media/20065/uno.png",
-UP
-    :
-    "/media/12318374/up.png",
-UR
-    :
-    "/media/352182/ur.jpg"
-URO
-    :
-    "/media/19937/uro.png",
-USC
-    :
-    "/media/1383363/usc.png",
-USDE
-    :
-    "/media/20465/usde.png",
-USDT
-    :
-    "/media/1383672/usdt.png",
-UTC
-    :
-    "/media/19942/utc.png",
-UTH
-    :
-    "/media/350998/uth.png",
-UTIL
-    :
-    "/media/20067/util.png",
-UTK
-    :
-    "/media/9350717/utrust.png",
-VAPOR
-    :
-    "/media/351708/vapor.png",
-VDO
-    :
-    "/media/20066/vdo.png",
-VEC2
-    :
-    "/media/351101/vec2.png",
-VEE
-    :
-    "/media/12318044/vee.png",
-VEG
-    :
-    "/media/1382792/veg.png",
-VEN
-    :
-    "/media/12318129/ven.png",
-VERI
-    :
-    "/media/1383562/veri.png",
-VERSA
-    :
-    "/media/20629/versa.png",
-VIA
-    :
-    "/media/20070/via.png",
-VIB
-    :
-    "/media/1383893/vib.png",
-VIBE
-    :
-    "/media/12318267/vibe.png",
-VIDZ
-    :
-    "/media/1382172/vidz.png",
-VIOR
-    :
-    "/media/20469/viorjpeg.png",
-VIP
-    :
-    "/media/351069/vip.png",
-VIRAL
-    :
-    "/media/20472/viral.png",
-VISIO
-    :
-    "/media/1383047/visio.png",
-VIU
-    :
-    "/media/14913680/viu.png",
-VIVO
-    :
-    "/media/12318337/vivo.png",
-VLT
-    :
-    "/media/351514/vlt.png",
-VLTC
-    :
-    "/media/1382738/vltc.png",
-VMC
-    :
-    "/media/19943/vmc.png",
-VNT
-    :
-    "/media/1384015/vent.png",
-VOISE
-    :
-    "/media/12318263/voise.png",
-VOLT
-    :
-    "/media/1382794/volt.png",
-VOOT
-    :
-    "/media/19946/voot.png",
-VOX
-    :
-    "/media/350824/vox.png",
-VOYA
-    :
-    "/media/351304/voya.png",
-VPRC
-    :
-    "/media/350951/vpc.png",
-VRC
-    :
-    "/media/20068/vrc.png",
-VRM
-    :
-    "/media/351522/vrm.png",
-VRP*
-:
-"/media/12318284/vrt.png",
-VRS
-    :
-    "/media/352021/vrs.png",
-VSL
-    :
-    "/media/352113/d5a4e4f0366d3ae8cdbc45ad097f664c2557a55f0c237c1710-pimgpsh_fullsize_distr.jpg"
-VSX
-    :
-    "/media/12318194/vsx.png",
-VTA
-    :
-    "/media/350945/vta.png",
-VTC
-    :
-    "/media/19945/vtc.png",
-VTR
-    :
-    "/media/20471/vtr.png",
-VTX
-    :
-    "/media/351754/vertex.png",
-VTY
-    :
-    "/media/351733/vty.png",
-VUC
-    :
-    "/media/1383773/vuc.png",
-VZT
-    :
-    "/media/12318414/vzt.png",
-WABI
-    :
-    "/media/12318331/wabi.png",
-WAN
-    :
-    "/media/9350742/wan.jpg"
-WAND
-    :
-    "/media/12318182/wandxlogo_new1.png",
-WARP
-    :
-    "/media/351395/warp.png",
-WASH
-    :
-    "/media/351944/wash.png",
-WAVES
-    :
-    "/media/350884/waves_1.png",
-WAX
-    :
-    "/media/12318290/wax.png",
-WAY
-    :
-    "/media/351433/way.png",
-WBB
-    :
-    "/media/20477/wbb.png",
-WBTC
-    :
-    "/media/1383045/wbtc.png",
-WC
-    :
-    "/media/19948/wc.png",
-WCT
-    :
-    "/media/350884/waves_1.png",
-WDC
-    :
-    "/media/19949/wdc.png",
-WEALTH
-    :
-    "/media/1382392/wealth.png",
-WEB
-    :
-    "/media/12318169/web.png",
-WEX
-    :
-    "/media/351564/wex.jpg"
-WGC
-    :
-    "/media/351310/wgc.png",
-WGO
-    :
-    "/media/1382998/wgo.png",
-WGR
-    :
-    "/media/1383736/wgr.png",
-WHL
-    :
-    "/media/12318372/whl.png",
-WIC
-    :
-    "/media/12318168/ocfkmb0t_400x400.jpg"
-WILD
-    :
-    "/media/12318298/wild.png",
-WINE
-    :
-    "/media/351929/wine.png",
-WINGS
-    :
-    "/media/1382758/1wings.png",
-WINK
-    :
-    "/media/1383913/wink.png",
-WISC
-    :
-    "/media/1382710/wisc.jpg"
-WISH
-    :
-    "/media/12317980/wish.png",
-WIZ
-    :
-    "/media/12318081/wiz.png",
-WMC
-    :
-    "/media/351044/wmc.png",
-WNET
-    :
-    "/media/1383982/wnet1.png",
-WOLF
-    :
-    "/media/20559/wolf.png",
-WOLK
-    :
-    "/media/1383892/wolk.png",
-WOMEN
-    :
-    "/media/12318379/women.png",
-WOP
-    :
-    "/media/1381982/wop.png",
-WORM
-    :
-    "/media/1384040/worm.png",
-WPR
-    :
-    "/media/14543969/wpr.png",
-WRC
-    :
-    "/media/11999078/wrc.png",
-WRC*
-:
-"/media/1383162/wrc.png",
-WRT
-    :
-    "/media/12317963/wrt.png",
-WSC
-    :
-    "/media/14913560/wsc.png",
-WSX
-    :
-    "/media/1383144/wsx.png",
-WTC
-    :
-    "/media/12317959/wtc.png",
-WTT
-    :
-    "/media/1383742/wtt.png",
-WYR
-    :
-    "/media/12318413/wyr.png",
-X2
-    :
-    "/media/351635/x2.png",
-XAI
-    :
-    "/media/20071/xai.png",
-XAI*
-:
-"/media/1383840/xai.png",
-XAS
-    :
-    "/media/1383997/xas.png",
-XAU
-    :
-    "/media/20479/xau.png",
-XAUR
-    :
-    "/media/351382/xaur.png",
-XBC
-    :
-    "/media/20488/xbc.png",
-XBL
-    :
-    "/media/14913541/xbl.png",
-XBOT
-    :
-    "/media/20073/xbot.png",
-XBS
-    :
-    "/media/351060/xbs_1.png",
-XBTS
-    :
-    "/media/351617/beats.png",
-XBY
-    :
-    "/media/1383439/xby1.png",
-XC
-    :
-    "/media/19956/xc.png",
-XCASH
-    :
-    "/media/20075/xcash.png",
-XCE
-    :
-    "/media/20573/xce.png",
-XCI
-    :
-    "/media/352312/xci.png",
-XCJ
-    :
-    "/media/1383849/xcj.png",
-XCN
-    :
-    "/media/20483/xcn.png",
-XCO
-    :
-    "/media/20486/xco.png",
-XCP
-    :
-    "/media/19960/xcp.png",
-XCR
-    :
-    "/media/19710/frac.png",
-XCRE
-    :
-    "/media/352156/xcre.png",
-XCS
-    :
-    "/media/12318323/xcs.png",
-XCT
-    :
-    "/media/1383246/xct.png",
-XCXT
-    :
-    "/media/9350784/xcxt.png",
-XDB
-    :
-    "/media/350977/xdb.png",
-XDE2
-    :
-    "/media/351100/xde2.png",
-XDN
-    :
-    "/media/19957/xdn.jpg"
-XDP
-    :
-    "/media/20560/xdp.png",
-XDQ
-    :
-    "/media/19959/xdq.png",
-XEL
-    :
-    "/media/1383737/xel.png",
-XEM
-    :
-    "/media/20490/xem.png",
-XEN
-    :
-    "/media/352119/xen.jpg"
-XFC
-    :
-    "/media/20574/xfc.png",
-XG
-    :
-    "/media/20156/xg.png",
-XGB
-    :
-    "/media/1382372/xgb.png",
-XGR
-    :
-    "/media/1383161/xgr.png",
-XHI
-    :
-    "/media/350892/xhi.png",
-XID
-    :
-    "/media/1383898/xid.jpg"
-XID*
-:
-"/media/350916/xid.png",
-XIN
-    :
-    "/media/14913486/xin.png",
-XIOS
-    :
-    "/media/14761915/xios.png",
-XJO
-    :
-    "/media/19962/xjo.png",
-XLB
-    :
-    "/media/19966/xlb.png",
-XLC
-    :
-    "/media/1383879/ivetpxdq_400x400.jpg"
-XLM
-    :
-    "/media/20696/str.png",
-XLR
-    :
-    "/media/1382994/xlr.png",
-XMCC
-    :
-    "/media/1384017/mcc.png",
-XMG
-    :
-    "/media/20154/xmg.png",
-XMR
-    :
-    "/media/19969/xmr.png",
-XMS
-    :
-    "/media/19808/mrs.png",
-XMY
-    :
-    "/media/19815/myr.png",
-XNA
-    :
-    "/media/19808/mrs.png",
-XNC
-    :
-    "/media/352109/xnc.png",
-XNC*
-:
-"/media/1382347/xnc.png",
-XNG
-    :
-    "/media/352311/xng.png",
-XNN
-    :
-    "/media/14761938/xnn.png",
-XNX
-    :
-    "/media/351033/xnx.jpg"
-XP
-    :
-    "/media/12318134/xp.png",
-XPB
-    :
-    "/media/20158/xpb.png",
-XPD
-    :
-    "/media/20162/xpd.png",
-XPH
-    :
-    "/media/20641/xph.png",
-XPM
-    :
-    "/media/19970/xpm.png",
-XPO
-    :
-    "/media/351590/xpo.png",
-XPOKE
-    :
-    "/media/351393/xpoke.png",
-XPRO
-    :
-    "/media/1382098/xpro.png",
-XPS
-    :
-    "/media/1383365/xps.png",
-XPTX
-    :
-    "/media/14913633/xptx.png",
-XPY
-    :
-    "/media/20076/xpy_1.png",
-XQN
-    :
-    "/media/12318067/xqn.png",
-XRA
-    :
-    "/media/351032/xra.png",
-XRB
-    :
-    "/media/1383674/xrb.png",
-XRE
-    :
-    "/media/350975/xre.jpg"
-XRED
-    :
-    "/media/12318269/xred.png",
-XRL
-    :
-    "/media/1383754/xrl.png",
-XRP
-    :
-    "/media/19972/ripple.png",
-XSB
-    :
-    "/media/14761953/xbs.png",
-XSEED
-    :
-    "/media/20163/xseed.png",
-XSI
-    :
-    "/media/20165/xsi.png",
-XSP
-    :
-    "/media/352293/xsp.png",
-XSPEC
-    :
-    "/media/1382395/xspec.png",
-XST
-    :
-    "/media/20077/xst.png",
-XT
-    :
-    "/media/351364/xt.png",
-XTC
-    :
-    "/media/20167/xtc.png",
-XTZ
-    :
-    "/media/1383651/xbt.png",
-XUC
-    :
-    "/media/1383784/xuc.png",
-XUC*
-:
-"/media/12317962/xuc.png",
-XUP
-    :
-    "/media/351638/xup.png",
-XVC
-    :
-    "/media/350813/xvc.png",
-XVE
-    :
-    "/media/1382937/xve.png",
-XVG
-    :
-    "/media/12318032/xvg.png",
-XVP
-    :
-    "/media/1382865/xvp.png",
-XWC
-    :
-    "/media/350911/xwc_1.png",
-XWT
-    :
-    "/media/19808/mrs.png",
-XXX
-    :
-    "/media/350617/xxx.png",
-XZC
-    :
-    "/media/1382780/xzc1.png",
-YAC
-    :
-    "/media/19976/yac.png",
-YAY
-    :
-    "/media/1382253/yay.png",
-YBC
-    :
-    "/media/19975/ybc.png",
-YES
-    :
-    "/media/1382269/yes.png",
-YMC
-    :
-    "/media/1382380/ymc.png",
-YOC
-    :
-    "/media/350957/yoc.png",
-YOVI
-    :
-    "/media/351073/yovi.png",
-YOYOW
-    :
-    "/media/12318178/yoyow.png",
-Z2
-    :
-    "/media/9350780/z2.png",
-ZAB
-    :
-    "/media/14761946/zab.png",
-ZBC
-    :
-    "/media/1382652/zbc.png",
-ZCC
-    :
-    "/media/19979/zcc.png",
-ZCL
-    :
-    "/media/351926/zcl.png",
-ZEC
-    :
-    "/media/351360/zec.png",
-ZECD
-    :
-    "/media/351935/zecd.png",
-ZED
-    :
-    "/media/19981/zed.png",
-ZEIT
-    :
-    "/media/350984/zeit.png",
-ZEN
-    :
-    "/media/1383502/zen.png",
-ZENI
-    :
-    "/media/1382807/zen.png",
-ZEPH
-    :
-    "/media/14913542/zeph.png",
-ZER
-    :
-    "/media/1382761/zer.png",
-ZET
-    :
-    "/media/19993/zet.png",
-ZET2
-    :
-    "/media/351502/zet2.png",
-ZLQ
-    :
-    "/media/1382238/zlq.png",
-ZNA
-    :
-    "/media/12318142/zna.png",
-ZNE
-    :
-    "/media/351515/zne.jpg"
-ZNT
-    :
-    "/media/1383875/znt.png",
-ZNY
-    :
-    "/media/20691/zny.png",
-ZOI
-    :
-    "/media/1382772/zoin.png",
-ZOOM
-    :
-    "/media/351081/zoom.png",
-ZRC
-    :
-    "/media/1383548/xzc.png",
-ZRC*
-:
-"/media/20078/zrc.png",
-ZRX
-    :
-    "/media/1383799/zrx.png",
-ZSC
-    :
-    "/media/12318341/zsc.png",
-ZSE
-    :
-    "/media/1383266/zse.png",
-ZUR
-    :
-    "/media/351758/zur.png",
-ZXT
-    :
-    "/media/351936/zxt.png",
-ZYD
-    :
-    "/media/351510/zyd.png",
-xGOx
-    :
-    "/media/14913685/xgox.png",}
-*/
+const IMGS = {
+    "42": "https://www.cryptocompare.com/media/12318415/42.png",
+    "365": "https://www.cryptocompare.com/media/352070/365.png",
+    "404": "https://www.cryptocompare.com/media/351001/404.png",
+    "611": "https://www.cryptocompare.com/media/350985/611.png",
+    "808": "https://www.cryptocompare.com/media/351513/808.png",
+    "888": "https://www.cryptocompare.com/media/351639/888.png",
+    "1337": "https://www.cryptocompare.com/media/350976/1337.png",
+    "2015": "https://www.cryptocompare.com/media/20180/2015.png",
+    "USC": "https://www.cryptocompare.com/media/1383363/usc.png",
+    "DUX": "https://www.cryptocompare.com/media/1383364/dux.png",
+    "XPS": "https://www.cryptocompare.com/media/1383365/xps.png",
+    "EQT": "https://www.cryptocompare.com/media/1383366/eqt.png",
+    "INSN": "https://www.cryptocompare.com/media/1383366/insn.png",
+    "BAT": "https://www.cryptocompare.com/media/1383370/bat.png",
+    "F16": "https://www.cryptocompare.com/media/1383372/f16.png",
+    "HAMS": "https://www.cryptocompare.com/media/1383381/hams.png",
+    "QTUM": "https://www.cryptocompare.com/media/1383382/qtum.png",
+    "NEF": "https://www.cryptocompare.com/media/1383383/nef.png",
+    "ZEN": "https://www.cryptocompare.com/media/1383502/zen.png",
+    "BOS": "https://www.cryptocompare.com/media/1383521/bos.png",
+    "BTC": "https://www.cryptocompare.com/media/19633/btc.png",
+    "DIGS": "https://www.cryptocompare.com/media/20706/digs.png",
+    "GCR": "https://www.cryptocompare.com/media/20708/gcr.png",
+    "MAPC": "https://www.cryptocompare.com/media/20710/mapc.png",
+    "MI": "https://www.cryptocompare.com/media/20711/mi.png",
+    "ECC": "https://www.cryptocompare.com/media/1383546/ecc.png",
+    "ZRC": "https://www.cryptocompare.com/media/1383548/xzc.png",
+    "CON": "https://www.cryptocompare.com/media/20717/con_.png",
+    "NEU": "https://www.cryptocompare.com/media/20721/neu.png",
+    "CLV": "https://www.cryptocompare.com/media/20727/clv.png",
+    "LKK": "https://www.cryptocompare.com/media/1383553/lkk.png",
+    "DYN": "https://www.cryptocompare.com/media/1383557/dyn.png",
+    "SEQ": "https://www.cryptocompare.com/media/1383558/seq.png",
+    "FCT": "https://www.cryptocompare.com/media/1382863/fct1.png",
+    "LYB": "https://www.cryptocompare.com/media/20339/lyb.png",
+    "SKY": "https://www.cryptocompare.com/media/1383565/sky.png",
+    "CVC": "https://www.cryptocompare.com/media/1383611/cvc.png",
+    "STA": "https://www.cryptocompare.com/media/1383620/crs.png",
+    "TFL": "https://www.cryptocompare.com/media/1383621/tfl.png",
+    "BST": "https://www.cryptocompare.com/media/350558/bst.png",
+    "PXI": "https://www.cryptocompare.com/media/350559/pxi.png",
+    "CPC": "https://www.cryptocompare.com/media/350560/cpc.png",
+    "OBITS": "https://www.cryptocompare.com/media/350565/obits.png",
+    "RADS": "https://www.cryptocompare.com/media/350610/rads.png",
+    "EMC": "https://www.cryptocompare.com/media/350611/emc.png",
+    "BLITZ": "https://www.cryptocompare.com/media/350612/blitz.png",
+    "HIRE*": "https://www.cryptocompare.com/media/350613/hire.png",
+    "I0C": "https://www.cryptocompare.com/media/350691/i0c.png",
+    "KARM": "https://www.cryptocompare.com/media/350693/karm.png",
+    "EFYT": "https://www.cryptocompare.com/media/1383646/efyt.png",
+    "MCO": "https://www.cryptocompare.com/media/1383653/mco.jpg",
+    "DCR": "https://www.cryptocompare.com/media/1382607/decred.png",
+    "NAS2": "https://www.cryptocompare.com/media/350776/nas2.png",
+    "ADX": "https://www.cryptocompare.com/media/1383667/adx1.png",
+    "QAU": "https://www.cryptocompare.com/media/1383669/qau.png",
+    "ECOB": "https://www.cryptocompare.com/media/1383670/ecob.png",
+    "PLBT": "https://www.cryptocompare.com/media/1383671/polybius.png",
+    "USDT": "https://www.cryptocompare.com/media/1383672/usdt.png",
+    "DOGED": "https://www.cryptocompare.com/media/20029/doged.png",
+    "AHT": "https://www.cryptocompare.com/media/1383688/ahc.png",
+    "4CHN": "https://www.cryptocompare.com/media/1383831/chan2.png",
+    "CMP": "https://www.cryptocompare.com/media/1383692/compcoin.png",
+    "RVT": "https://www.cryptocompare.com/media/1383694/rvt.png",
+    "HRB": "https://www.cryptocompare.com/media/1383695/hrb.png",
+    "DNT": "https://www.cryptocompare.com/media/1383701/dnt.png",
+    "SUR": "https://www.cryptocompare.com/media/1383696/sur.png",
+    "PING": "https://www.cryptocompare.com/media/1383706/ping1.png",
+    "MIV": "https://www.cryptocompare.com/media/1383728/miv.png",
+    "REP": "https://www.cryptocompare.com/media/350815/augur-logo.png",
+    "KIN": "https://www.cryptocompare.com/media/1383731/kin.png",
+    "WGR": "https://www.cryptocompare.com/media/1383736/wgr.png",
+    "OK": "https://www.cryptocompare.com/media/350819/ok.png",
+    "XEL": "https://www.cryptocompare.com/media/1383737/xel.png",
+    "NVST": "https://www.cryptocompare.com/media/1383732/nvst.png",
+    "FUN": "https://www.cryptocompare.com/media/1383738/fun.png",
+    "FUNC": "https://www.cryptocompare.com/media/1383739/func.png",
+    "PQT": "https://www.cryptocompare.com/media/1383741/pqt.png",
+    "WTT": "https://www.cryptocompare.com/media/1383742/wtt.png",
+    "MTL": "https://www.cryptocompare.com/media/1383743/mtl.png",
+    "MYB": "https://www.cryptocompare.com/media/1383746/myb.png",
+    "PPT": "https://www.cryptocompare.com/media/1383747/ppt.png",
+    "SNC": "https://www.cryptocompare.com/media/1383748/snc.png",
+    "STAR": "https://www.cryptocompare.com/media/1383750/star1.png",
+    "COR": "https://www.cryptocompare.com/media/1383753/cor.png",
+    "XRL": "https://www.cryptocompare.com/media/1383754/xrl.png",
+    "OROC": "https://www.cryptocompare.com/media/1383755/oroc.png",
+    "MBI": "https://www.cryptocompare.com/media/1383759/mbi.png",
+    "DDF": "https://www.cryptocompare.com/media/1383760/ddf.png",
+    "DIM": "https://www.cryptocompare.com/media/1383761/dim.png",
+    "GGS": "https://www.cryptocompare.com/media/1383762/ggs.png",
+    "DNA": "https://www.cryptocompare.com/media/1383763/dna.png",
+    "FYN": "https://www.cryptocompare.com/media/1383764/fyn.png",
+    "DCY": "https://www.cryptocompare.com/media/1383767/dcy.png",
+    "CFT": "https://www.cryptocompare.com/media/1383769/cft.png",
+    "DNR": "https://www.cryptocompare.com/media/1383770/dnr.png",
+    "VUC": "https://www.cryptocompare.com/media/1383773/vuc.png",
+    "BTPL": "https://www.cryptocompare.com/media/1383774/btpl.png",
+    "UNIFY": "https://www.cryptocompare.com/media/1383775/unify.png",
+    "IPC": "https://www.cryptocompare.com/media/1383776/ipc.png",
+    "BRIT": "https://www.cryptocompare.com/media/1383777/brit.png",
+    "AMMO": "https://www.cryptocompare.com/media/1383778/ammo.png",
+    "SOCC": "https://www.cryptocompare.com/media/1383779/socc.png",
+    "MASS": "https://www.cryptocompare.com/media/1383781/mass.png",
+    "IML": "https://www.cryptocompare.com/media/1383783/iml.png",
+    "PLR": "https://www.cryptocompare.com/media/1383786/plr.png",
+    "GUNS": "https://www.cryptocompare.com/media/1383789/guns.png",
+    "PRO": "https://www.cryptocompare.com/media/1383792/pro.png",
+    "AHT*": "https://www.cryptocompare.com/media/1383796/aht.png",
+    "TRIBE": "https://www.cryptocompare.com/media/1383797/tribe.jpg",
+    "ZRX": "https://www.cryptocompare.com/media/1383799/zrx.png",
+    "TNT": "https://www.cryptocompare.com/media/1383800/tnt.png",
+    "COSS": "https://www.cryptocompare.com/media/1383802/coss.png",
+    "STORM": "https://www.cryptocompare.com/media/1383803/storm.jpg",
+    "UNIKRN": "https://www.cryptocompare.com/media/1383805/unikr.png",
+    "SCORE": "https://www.cryptocompare.com/media/1383813/score.png",
+    "OMG": "https://www.cryptocompare.com/media/1383814/omisego.png",
+    "EQB": "https://www.cryptocompare.com/media/1383816/eqb.png",
+    "CVCOIN": "https://www.cryptocompare.com/media/1383821/cvcoin.png",
+    "DRP": "https://www.cryptocompare.com/media/1383822/drp.png",
+    "SAND": "https://www.cryptocompare.com/media/1383825/beach.png",
+    "BOG": "https://www.cryptocompare.com/media/1383826/bog.png",
+    "EDRC": "https://www.cryptocompare.com/media/350858/edrc.jpg",
+    "UET": "https://www.cryptocompare.com/media/1383837/uet.png",
+    "AGRS": "https://www.cryptocompare.com/media/1383839/agrs.png",
+    "XAI*": "https://www.cryptocompare.com/media/1383840/xai.png",
+    "CAT": "https://www.cryptocompare.com/media/1383848/bcat1.png",
+    "XCJ": "https://www.cryptocompare.com/media/1383849/xcj.png",
+    "ROOTS": "https://www.cryptocompare.com/media/1383851/roots.png",
+    "SPN": "https://www.cryptocompare.com/media/1383861/spn.png",
+    "KING": "https://www.cryptocompare.com/media/1383862/king.png",
+    "ANCP": "https://www.cryptocompare.com/media/1383863/ancp.png",
+    "RCC": "https://www.cryptocompare.com/media/1383864/rcc.png",
+    "SNK": "https://www.cryptocompare.com/media/1383865/snk.png",
+    "OPT": "https://www.cryptocompare.com/media/1383873/opt.png",
+    "BITSD": "https://www.cryptocompare.com/media/1383878/bitsd.png",
+    "XLC": "https://www.cryptocompare.com/media/1383879/ivetpxdq_400x400.jpg",
+    "SKIN": "https://www.cryptocompare.com/media/1383880/dsb_amky_400x400.jpg",
+    "MSP": "https://www.cryptocompare.com/media/1383881/c9fobrlr_400x400.jpg",
+    "HIRE": "https://www.cryptocompare.com/media/1383882/hite.png",
+    "REAL": "https://www.cryptocompare.com/media/1383884/rise.png",
+    "DFBT": "https://www.cryptocompare.com/media/1383890/dfbt.png",
+    "EQ": "https://www.cryptocompare.com/media/1383891/eq.png",
+    "ATOM*": "https://www.cryptocompare.com/media/1383901/cosmos.jpg",
+    "ICOO": "https://www.cryptocompare.com/media/1383904/icoo.jpg",
+    "TME": "https://www.cryptocompare.com/media/1383905/tme.png",
+    "WAVES": "https://www.cryptocompare.com/media/350884/waves_1.png",
+    "HTC": "https://www.cryptocompare.com/media/350888/htc.png",
+    "ONX": "https://www.cryptocompare.com/media/1383910/onx.png",
+    "COE": "https://www.cryptocompare.com/media/1383911/coe.png",
+    "DSH": "https://www.cryptocompare.com/media/20026/dash.png",
+    "WINK": "https://www.cryptocompare.com/media/1383913/wink.png",
+    "DBIC": "https://www.cryptocompare.com/media/350891/dbic.png",
+    "CRM": "https://www.cryptocompare.com/media/1383915/cream.png",
+    "SPOTS": "https://www.cryptocompare.com/media/350893/spots.png",
+    "CAB": "https://www.cryptocompare.com/media/350896/cab.png",
+    "DIEM": "https://www.cryptocompare.com/media/20260/diem_1.png",
+    "GBT": "https://www.cryptocompare.com/media/350897/gbt.png",
+    "SAR": "https://www.cryptocompare.com/media/350901/sar.png",
+    "RCX": "https://www.cryptocompare.com/media/350902/rcx.png",
+    "PWR": "https://www.cryptocompare.com/media/350899/pwr.png",
+    "TRUMP": "https://www.cryptocompare.com/media/350905/trump.png",
+    "PRM": "https://www.cryptocompare.com/media/350906/prm.png",
+    "SDAO": "https://www.cryptocompare.com/media/1383933/sdao.png",
+    "RBIES": "https://www.cryptocompare.com/media/350904/rbies.png",
+    "SCOT": "https://www.cryptocompare.com/media/20416/scot_1.png",
+    "DNET": "https://www.cryptocompare.com/media/350912/dnet.png",
+    "GRT": "https://www.cryptocompare.com/media/20310/grt.png",
+    "POST": "https://www.cryptocompare.com/media/350917/post.png",
+    "PXL": "https://www.cryptocompare.com/media/350930/pxl.png",
+    "NUM": "https://www.cryptocompare.com/media/350932/num.png",
+    "SOUL": "https://www.cryptocompare.com/media/350930/pxl.png",
+    "KCN": "https://www.cryptocompare.com/media/1383953/kencoin.png",
+    "GROW": "https://www.cryptocompare.com/media/350934/grow.png",
+    "AUT": "https://www.cryptocompare.com/media/1383956/aut.png",
+    "CTT": "https://www.cryptocompare.com/media/1383957/ctt.png",
+    "UNITY": "https://www.cryptocompare.com/media/350935/unity_1.png",
+    "OLDSF": "https://www.cryptocompare.com/media/350936/oldsf.png",
+    "SSTC": "https://www.cryptocompare.com/media/350937/ssc.png",
+    "NETC": "https://www.cryptocompare.com/media/350938/netc.png",
+    "GPU": "https://www.cryptocompare.com/media/350939/gpu.png",
+    "WNET": "https://www.cryptocompare.com/media/1383982/wnet1.png",
+    "TAGR": "https://www.cryptocompare.com/media/350940/tagr.png",
+    "ADZ": "https://www.cryptocompare.com/media/351424/adz1.jpg",
+    "GAP": "https://www.cryptocompare.com/media/350943/gap.png",
+    "MYC": "https://www.cryptocompare.com/media/350947/myc.png",
+    "IVZ": "https://www.cryptocompare.com/media/350944/ivz.png",
+    "VTA": "https://www.cryptocompare.com/media/350945/vta.png",
+    "SLS": "https://www.cryptocompare.com/media/350946/sls.png",
+    "SOIL": "https://www.cryptocompare.com/media/350949/soil.png",
+    "CUBE": "https://www.cryptocompare.com/media/350948/cube.png",
+    "APC": "https://www.cryptocompare.com/media/350956/apc.png",
+    "STEPS": "https://www.cryptocompare.com/media/350952/steps.png",
+    "UNIT": "https://www.cryptocompare.com/media/350954/unit.png",
+    "MOIN": "https://www.cryptocompare.com/media/350959/moin.png",
+    "SIB": "https://www.cryptocompare.com/media/350958/sib.png",
+    "ERC": "https://www.cryptocompare.com/media/350960/erc.png",
+    "GRWI": "https://www.cryptocompare.com/media/1383971/grwi.png",
+    "MNY": "https://www.cryptocompare.com/media/1383973/mny.png",
+    "AIB": "https://www.cryptocompare.com/media/350971/aib.png",
+    "PRIME": "https://www.cryptocompare.com/media/350979/prime.png",
+    "BERN": "https://www.cryptocompare.com/media/350973/bern.png",
+    "BIGUP": "https://www.cryptocompare.com/media/350980/bigup.png",
+    "KR": "https://www.cryptocompare.com/media/350974/kr.png",
+    "XRE": "https://www.cryptocompare.com/media/350975/xre.jpg",
+    "XDB": "https://www.cryptocompare.com/media/350977/xdb.png",
+    "ANTI": "https://www.cryptocompare.com/media/350972/anti.png",
+    "BRK": "https://www.cryptocompare.com/media/350981/brk.png",
+    "MNM": "https://www.cryptocompare.com/media/350982/mnm.png",
+    "ADCN": "https://www.cryptocompare.com/media/350983/adcn.png",
+    "ZEIT": "https://www.cryptocompare.com/media/350984/zeit.png",
+    "CGA": "https://www.cryptocompare.com/media/350988/cga.png",
+    "SWING": "https://www.cryptocompare.com/media/350987/swing.png",
+    "NEBU": "https://www.cryptocompare.com/media/350990/nebu.png",
+    "AEC": "https://www.cryptocompare.com/media/350991/aec.png",
+    "ADN": "https://www.cryptocompare.com/media/350993/adn.png",
+    "PULSE": "https://www.cryptocompare.com/media/350994/pulse.jpg",
+    "N7": "https://www.cryptocompare.com/media/350995/n7.jpg",
+    "CCC": "https://www.cryptocompare.com/media/1383980/ccc.png",
+    "CYG": "https://www.cryptocompare.com/media/350997/cygnus.png",
+    "LGBTQ": "https://www.cryptocompare.com/media/350996/lgbtq.png",
+    "UTH": "https://www.cryptocompare.com/media/350998/uth.png",
+    "MPRO": "https://www.cryptocompare.com/media/350999/mpro.jpg",
+    "KAT": "https://www.cryptocompare.com/media/351028/katz.png",
+    "SPM": "https://www.cryptocompare.com/media/351002/sup.png",
+    "MOJO": "https://www.cryptocompare.com/media/351003/mojo.png",
+    "FLX": "https://www.cryptocompare.com/media/351007/flx.png",
+    "BMXT": "https://www.cryptocompare.com/media/1383984/bmxt.png",
+    "GAS": "https://www.cryptocompare.com/media/1383858/neo.jpg",
+    "BOLI": "https://www.cryptocompare.com/media/351008/boli.png",
+    "CLUD": "https://www.cryptocompare.com/media/351027/clud.png",
+    "FIL": "https://www.cryptocompare.com/media/1383987/fil.png",
+    "FLY": "https://www.cryptocompare.com/media/351013/fly.png",
+    "HVCO": "https://www.cryptocompare.com/media/351014/hvco.png",
+    "GIZ": "https://www.cryptocompare.com/media/351015/giz.png",
+    "GREXIT": "https://www.cryptocompare.com/media/351016/grexit.png",
+    "CARBON": "https://www.cryptocompare.com/media/351017/carbon.png",
+    "DEUR": "https://www.cryptocompare.com/media/351018/deur.png",
+    "OCL": "https://www.cryptocompare.com/media/1383989/ocl.png",
+    "BNC": "https://www.cryptocompare.com/media/1383991/bnc.png",
+    "TOM": "https://www.cryptocompare.com/media/1383992/tom.png",
+    "TUR": "https://www.cryptocompare.com/media/351020/tur.png",
+    "LEMON": "https://www.cryptocompare.com/media/351021/lemon.png",
+    "STS": "https://www.cryptocompare.com/media/351022/sts.png",
+    "DISK": "https://www.cryptocompare.com/media/351023/disk.png",
+    "NEVA": "https://www.cryptocompare.com/media/351026/neva.png",
+    "CYT": "https://www.cryptocompare.com/media/351024/cyt.png",
+    "FUZZ": "https://www.cryptocompare.com/media/351025/fuzz.png",
+    "NKC": "https://www.cryptocompare.com/media/351041/nkc.png",
+    "SCRT": "https://www.cryptocompare.com/media/351031/scrt.png",
+    "XRA": "https://www.cryptocompare.com/media/351032/xra.png",
+    "XNX": "https://www.cryptocompare.com/media/351033/xnx.jpg",
+    "STAR*": "https://www.cryptocompare.com/media/351043/star.jpg",
+    "BTM*": "https://www.cryptocompare.com/media/1383996/btm.png",
+    "XAS": "https://www.cryptocompare.com/media/1383997/xas.png",
+    "SMNX": "https://www.cryptocompare.com/media/1383998/sx.png",
+    "STHR": "https://www.cryptocompare.com/media/351042/sthr.png",
+    "DBG": "https://www.cryptocompare.com/media/351047/dbg.png",
+    "WMC": "https://www.cryptocompare.com/media/351044/wmc.png",
+    "GOTX": "https://www.cryptocompare.com/media/351071/gotx.png",
+    "FLVR": "https://www.cryptocompare.com/media/351046/2flav.png",
+    "STA*": "https://www.cryptocompare.com/media/351063/sta.png",
+    "MBRS": "https://www.cryptocompare.com/media/1384010/mbrs.png",
+    "MET": "https://www.cryptocompare.com/media/1384013/met1.png",
+    "REV": "https://www.cryptocompare.com/media/351061/rev.png",
+    "PBC": "https://www.cryptocompare.com/media/351062/pbc.png",
+    "OBS": "https://www.cryptocompare.com/media/351064/obs.png",
+    "EXIT": "https://www.cryptocompare.com/media/351065/exit.png",
+    "EDC": "https://www.cryptocompare.com/media/351066/edc.png",
+    "CLINT": "https://www.cryptocompare.com/media/351067/clint.png",
+    "CKC": "https://www.cryptocompare.com/media/351068/ckc.png",
+    "PGL": "https://www.cryptocompare.com/media/1384018/pgl.png",
+    "NXE": "https://www.cryptocompare.com/media/351070/nxe.png",
+    "ZOOM": "https://www.cryptocompare.com/media/351081/zoom.png",
+    "DRACO": "https://www.cryptocompare.com/media/351390/dt-token.png",
+    "YOVI": "https://www.cryptocompare.com/media/351073/yovi.png",
+    "ORLY": "https://www.cryptocompare.com/media/351076/orly.png",
+    "KUBO": "https://www.cryptocompare.com/media/351077/kubo.png",
+    "INCP": "https://www.cryptocompare.com/media/351078/incp.png",
+    "SAK": "https://www.cryptocompare.com/media/351079/sak.png",
+    "EVIL": "https://www.cryptocompare.com/media/351080/evil.png",
+    "OMA": "https://www.cryptocompare.com/media/20386/oma.png",
+    "MUE": "https://www.cryptocompare.com/media/351084/mue.png",
+    "COX": "https://www.cryptocompare.com/media/351083/cox.png",
+    "BNT": "https://www.cryptocompare.com/media/1383549/bnt.jpg",
+    "EKO": "https://www.cryptocompare.com/media/351085/eko.png",
+    "BSD": "https://www.cryptocompare.com/media/351086/bsd.png",
+    "DES": "https://www.cryptocompare.com/media/351087/des.png",
+    "BIT16": "https://www.cryptocompare.com/media/20181/16bit.png",
+    "PDC": "https://www.cryptocompare.com/media/351088/pdc.png",
+    "CMT": "https://www.cryptocompare.com/media/351090/cmt.png",
+    "DTCT": "https://www.cryptocompare.com/media/1384025/dtct.png",
+    "CHESS": "https://www.cryptocompare.com/media/351094/chess.jpg",
+    "SPACE": "https://www.cryptocompare.com/media/351095/space.png",
+    "LQD": "https://www.cryptocompare.com/media/351097/lqd.png",
+    "MARV": "https://www.cryptocompare.com/media/351099/marv.png",
+    "XDE2": "https://www.cryptocompare.com/media/351100/xde2.png",
+    "VEC2": "https://www.cryptocompare.com/media/351101/vec2.png",
+    "TKN*": "https://www.cryptocompare.com/media/351104/tkn.png",
+    "CMPCO": "https://www.cryptocompare.com/media/1384036/cmpo.png",
+    "THNX": "https://www.cryptocompare.com/media/1384039/thnx.jpg",
+    "WORM": "https://www.cryptocompare.com/media/1384040/worm.png",
+    "FUCK": "https://www.cryptocompare.com/media/1384043/fuck.png",
+    "VNT": "https://www.cryptocompare.com/media/1384015/vent.png",
+    "SIFT": "https://www.cryptocompare.com/media/1384045/sift.jpg",
+    "IWT": "https://www.cryptocompare.com/media/1384048/iwt.png",
+    "JDC": "https://www.cryptocompare.com/media/1384049/jdc.png",
+    "ITT": "https://www.cryptocompare.com/media/1384050/itt.png",
+    "MEDI": "https://www.cryptocompare.com/media/1384051/medi.png",
+    "LIR": "https://www.cryptocompare.com/media/351208/lir.png",
+    "MMNXT": "https://www.cryptocompare.com/media/351209/nxtasset.png",
+    "SCRPT": "https://www.cryptocompare.com/media/351210/scrpt.png",
+    "LBC": "https://www.cryptocompare.com/media/351211/lbc.png",
+    "SPX": "https://www.cryptocompare.com/media/351212/spx.png",
+    "HGT": "https://www.cryptocompare.com/media/9350692/hgt.jpg",
+    "LTA": "https://www.cryptocompare.com/media/9350693/lta.png",
+    "NIMFA": "https://www.cryptocompare.com/media/9350694/nimfa.jpg",
+    "SCOR": "https://www.cryptocompare.com/media/9350695/scor.jpg",
+    "MLS": "https://www.cryptocompare.com/media/9350696/mls.png",
+    "BRO": "https://www.cryptocompare.com/media/9350701/bro.png",
+    "MINEX": "https://www.cryptocompare.com/media/9350702/minex.png",
+    "ARI*": "https://www.cryptocompare.com/media/9350704/ari.png",
+    "LAT": "https://www.cryptocompare.com/media/9350724/lat.png",
+    "CJ": "https://www.cryptocompare.com/media/351234/cj.png",
+    "SOJ": "https://www.cryptocompare.com/media/9350725/soj.png",
+    "KRAK": "https://www.cryptocompare.com/media/351236/krak.png",
+    "STCN": "https://www.cryptocompare.com/media/9350727/stcn.png",
+    "DLISK": "https://www.cryptocompare.com/media/351237/dlisk.png",
+    "SQP": "https://www.cryptocompare.com/media/9350728/sqp.png",
+    "IBANK": "https://www.cryptocompare.com/media/351238/ibank.png",
+    "LNK": "https://www.cryptocompare.com/media/9350738/lnk.png",
+    "WAN": "https://www.cryptocompare.com/media/9350742/wan.jpg",
+    "BOU": "https://www.cryptocompare.com/media/9350750/bou.jpg",
+    "TTT": "https://www.cryptocompare.com/media/9350755/ttt.jpg",
+    "VOYA": "https://www.cryptocompare.com/media/351304/voya.png",
+    "ENTER": "https://www.cryptocompare.com/media/351305/enter.png",
+    "GIM": "https://www.cryptocompare.com/media/9350754/gim.png",
+    "WGC": "https://www.cryptocompare.com/media/351310/wgc.png",
+    "BM": "https://www.cryptocompare.com/media/351311/bm.png",
+    "LBTC": "https://www.cryptocompare.com/media/9350763/lbtc.png",
+    "EMT": "https://www.cryptocompare.com/media/9350765/emt.png",
+    "GXC": "https://www.cryptocompare.com/media/9350766/gxc.png",
+    "HBT": "https://www.cryptocompare.com/media/9350768/hbt.png",
+    "KRONE": "https://www.cryptocompare.com/media/9350770/krone.png",
+    "AVA": "https://www.cryptocompare.com/media/9350772/ava.png",
+    "FRWC": "https://www.cryptocompare.com/media/351361/frwc.png",
+    "PSY": "https://www.cryptocompare.com/media/351362/psy.png",
+    "XT": "https://www.cryptocompare.com/media/351364/xt.png",
+    "RUST": "https://www.cryptocompare.com/media/351365/rust.png",
+    "NZC": "https://www.cryptocompare.com/media/351366/nzc.png",
+    "SNGLS": "https://www.cryptocompare.com/media/351368/sngls.png",
+    "BT": "https://www.cryptocompare.com/media/9350775/bt.png",
+    "ACC": "https://www.cryptocompare.com/media/9350776/acc.jpg",
+    "Z2": "https://www.cryptocompare.com/media/9350780/z2.png",
+    "BFX": "https://www.cryptocompare.com/media/19554/bitfinex.png",
+    "LINX": "https://www.cryptocompare.com/media/9350783/linx.png",
+    "XCXT": "https://www.cryptocompare.com/media/9350784/xcxt.png",
+    "BLAS": "https://www.cryptocompare.com/media/9350785/blas.png",
+    "GOOD": "https://www.cryptocompare.com/media/9350786/good.png",
+    "TRV": "https://www.cryptocompare.com/media/9350789/trv.png",
+    "EON": "https://www.cryptocompare.com/media/9350791/eon.jpg",
+    "PST": "https://www.cryptocompare.com/media/9350792/pst.jpg",
+    "UNIQ": "https://www.cryptocompare.com/media/351387/uniq.png",
+    "CRX": "https://www.cryptocompare.com/media/351388/crx.png",
+    "XPOKE": "https://www.cryptocompare.com/media/351393/xpoke.png",
+    "MUDRA": "https://www.cryptocompare.com/media/351394/mudra.png",
+    "WARP": "https://www.cryptocompare.com/media/351395/warp.png",
+    "CNMT": "https://www.cryptocompare.com/media/351396/cnmt.png",
+    "PIZZA": "https://www.cryptocompare.com/media/351397/pizza.png",
+    "LC": "https://www.cryptocompare.com/media/351398/lc.png",
+    "HEAT": "https://www.cryptocompare.com/media/351399/heat.png",
+    "ICN": "https://www.cryptocompare.com/media/351400/icn.png",
+    "EXB": "https://www.cryptocompare.com/media/351401/exb.png",
+    "WINGS": "https://www.cryptocompare.com/media/1382758/1wings.png",
+    "CDX": "https://www.cryptocompare.com/media/351404/cdx.png",
+    "RBIT": "https://www.cryptocompare.com/media/351405/rbit.png",
+    "DCS.": "https://www.cryptocompare.com/media/351407/cloud.png",
+    "KMD": "https://www.cryptocompare.com/media/351408/kmd.png",
+    "GB": "https://www.cryptocompare.com/media/351411/db.png",
+    "NEO": "https://www.cryptocompare.com/media/1383858/neo.jpg",
+    "ANC": "https://www.cryptocompare.com/media/19598/anc.png",
+    "MC": "https://www.cryptocompare.com/media/351428/mc.png",
+    "EDR": "https://www.cryptocompare.com/media/351430/edc.png",
+    "JWL": "https://www.cryptocompare.com/media/351432/jwl.png",
+    "WAY": "https://www.cryptocompare.com/media/351433/way.png",
+    "TAB": "https://www.cryptocompare.com/media/351488/tab.png",
+    "TRIG": "https://www.cryptocompare.com/media/351489/trg.png",
+    "BITCNY": "https://www.cryptocompare.com/media/351490/bitcny.png",
+    "BITUSD": "https://www.cryptocompare.com/media/351491/bitusd.png",
+    "STO": "https://www.cryptocompare.com/media/351493/sto.png",
+    "SNS": "https://www.cryptocompare.com/media/351494/sns.png",
+    "FSN": "https://www.cryptocompare.com/media/351495/fsn.png",
+    "CTC": "https://www.cryptocompare.com/media/351496/ctc.png",
+    "TOT": "https://www.cryptocompare.comundefined",
+    "BTD": "https://www.cryptocompare.com/media/351498/btd.png",
+    "BOTS": "https://www.cryptocompare.com/media/351499/bot.png",
+    "MDC": "https://www.cryptocompare.com/media/351500/mdc.png",
+    "FTP": "https://www.cryptocompare.com/media/351501/ftp.png",
+    "ZET2": "https://www.cryptocompare.com/media/351502/zet2.png",
+    "TELL": "https://www.cryptocompare.com/media/351505/tell.png",
+    "ENE": "https://www.cryptocompare.com/media/351506/ene.png",
+    "TDFB": "https://www.cryptocompare.com/media/351507/tdfb.png",
+    "BLOCKPAY": "https://www.cryptocompare.com/media/351508/blockpay.png",
+    "BXT": "https://www.cryptocompare.com/media/351509/bxt.png",
+    "ZYD": "https://www.cryptocompare.com/media/351510/zyd.png",
+    "MST": "https://www.cryptocompare.com/media/351529/mst1.png",
+    "GOON": "https://www.cryptocompare.com/media/351512/goon.png",
+    "VLT": "https://www.cryptocompare.com/media/351514/vlt.png",
+    "ZNE": "https://www.cryptocompare.com/media/351515/zne.jpg",
+    "DCK": "https://www.cryptocompare.com/media/351516/dck.png",
+    "COVAL": "https://www.cryptocompare.com/media/351519/coval.png",
+    "DGDC": "https://www.cryptocompare.com/media/351520/dgd.png",
+    "TODAY": "https://www.cryptocompare.com/media/351521/today.png",
+    "VRM": "https://www.cryptocompare.com/media/351522/vrm.png",
+    "ROOT": "https://www.cryptocompare.com/media/351523/root.png",
+    "1ST": "https://www.cryptocompare.com/media/351524/1st.png",
+    "GPL": "https://www.cryptocompare.com/media/351525/gpl.png",
+    "DOPE": "https://www.cryptocompare.com/media/351526/dope.png",
+    "FX": "https://www.cryptocompare.com/media/351527/fx.png",
+    "PIO": "https://www.cryptocompare.com/media/351528/pio.png",
+    "GAY": "https://www.cryptocompare.com/media/351531/gay.png",
+    "SMSR": "https://www.cryptocompare.com/media/351543/smsr.png",
+    "UBIQ": "https://www.cryptocompare.com/media/351544/ubiq.png",
+    "ARM": "https://www.cryptocompare.com/media/351545/arm.png",
+    "RING": "https://www.cryptocompare.com/media/351546/ring.png",
+    "ERB": "https://www.cryptocompare.com/media/351550/erb.png",
+    "LAZ": "https://www.cryptocompare.com/media/351552/laz.png",
+    "FONZ": "https://www.cryptocompare.com/media/351553/fonz.png",
+    "BTCR": "https://www.cryptocompare.com/media/351554/btr.png",
+    "DROP": "https://www.cryptocompare.com/media/351555/drop.png",
+    "SANDG": "https://www.cryptocompare.com/media/351556/sandt.png",
+    "PNK": "https://www.cryptocompare.com/media/351557/pnk.png",
+    "MOOND": "https://www.cryptocompare.com/media/351558/moond.png",
+    "DLC": "https://www.cryptocompare.com/media/351559/dlc.png",
+    "SEN": "https://www.cryptocompare.com/media/351560/sen.png",
+    "SCN": "https://www.cryptocompare.com/media/351563/scn.png",
+    "WEX": "https://www.cryptocompare.com/media/351564/wex.jpg",
+    "LTH": "https://www.cryptocompare.com/media/351565/lth.png",
+    "BRONZ": "https://www.cryptocompare.com/media/351566/bronz.png",
+    "SH": "https://www.cryptocompare.com/media/351567/sh.png",
+    "MG": "https://www.cryptocompare.com/media/351588/mg.png",
+    "PSI": "https://www.cryptocompare.com/media/351589/psi.png",
+    "XPO": "https://www.cryptocompare.com/media/351590/xpo.png",
+    "NLC": "https://www.cryptocompare.com/media/351591/nlc.png",
+    "PSB": "https://www.cryptocompare.com/media/351594/psb.jpg",
+    "XBTS": "https://www.cryptocompare.com/media/351617/beats.png",
+    "FIT": "https://www.cryptocompare.com/media/351618/fit.png",
+    "PINKX": "https://www.cryptocompare.com/media/351624/pinkx.png",
+    "FIRE": "https://www.cryptocompare.com/media/351625/fire.png",
+    "UNF": "https://www.cryptocompare.com/media/351626/unf.png",
+    "SPORT": "https://www.cryptocompare.com/media/351627/sports.png",
+    "PPY": "https://www.cryptocompare.com/media/351630/peerplays.png",
+    "NTC": "https://www.cryptocompare.com/media/351631/ntc.png",
+    "EGO": "https://www.cryptocompare.com/media/351632/ego.png",
+    "BTCL": "https://www.cryptocompare.com/media/351633/btlc.png",
+    "X2": "https://www.cryptocompare.com/media/351635/x2.png",
+    "MT": "https://www.cryptocompare.com/media/19453/mycelium.png",
+    "TIA": "https://www.cryptocompare.com/media/351636/tia.png",
+    "GBRC": "https://www.cryptocompare.com/media/351637/gbrc.png",
+    "XUP": "https://www.cryptocompare.com/media/351638/xup.png",
+    "HALLO": "https://www.cryptocompare.com/media/351657/hallo.png",
+    "BBCC": "https://www.cryptocompare.com/media/351658/bbcc.png",
+    "EMIGR": "https://www.cryptocompare.com/media/351659/emirg.png",
+    "BHC": "https://www.cryptocompare.com/media/351660/bhc.png",
+    "CRAFT": "https://www.cryptocompare.com/media/351681/craft.png",
+    "INV": "https://www.cryptocompare.com/media/351682/inv.png",
+    "OLYMP": "https://www.cryptocompare.com/media/351683/olymp.png",
+    "DPAY": "https://www.cryptocompare.com/media/351684/dpay.png",
+    "ATOM": "https://www.cryptocompare.com/media/351685/atom.png",
+    "HKG": "https://www.cryptocompare.com/media/351689/hkg.jpg",
+    "ANTC": "https://www.cryptocompare.com/media/351690/antc.png",
+    "JOBS": "https://www.cryptocompare.com/media/351691/jobs.png",
+    "DGORE": "https://www.cryptocompare.com/media/351697/dgore.png",
+    "TRA": "https://www.cryptocompare.com/media/351700/tra.png",
+    "RMS": "https://www.cryptocompare.com/media/351701/rms.png",
+    "FJC": "https://www.cryptocompare.com/media/351702/fjc.png",
+    "WTC": "https://www.cryptocompare.com/media/12317959/wtc.png",
+    "BRX": "https://www.cryptocompare.com/media/12317960/brx.png",
+    "VAPOR": "https://www.cryptocompare.com/media/351708/vapor.png",
+    "RRT": "https://www.cryptocompare.com/media/19554/bitfinex.png",
+    "XZC": "https://www.cryptocompare.com/media/1382780/xzc1.png",
+    "PRE": "https://www.cryptocompare.com/media/351711/pre.png",
+    "CALC": "https://www.cryptocompare.com/media/351712/calc.png",
+    "ORME": "https://www.cryptocompare.com/media/12317975/omes.png",
+    "CF": "https://www.cryptocompare.com/media/351730/cf.png",
+    "CRNK": "https://www.cryptocompare.com/media/351731/crnk.png",
+    "CFC": "https://www.cryptocompare.com/media/351732/cfc.png",
+    "VTY": "https://www.cryptocompare.com/media/351733/vty.png",
+    "SFE": "https://www.cryptocompare.com/media/351735/sfe.png",
+    "ARDR": "https://www.cryptocompare.com/media/351736/ardr.png",
+    "BS": "https://www.cryptocompare.com/media/351737/bs.png",
+    "JIF": "https://www.cryptocompare.com/media/351738/jif.png",
+    "CRAB": "https://www.cryptocompare.com/media/351739/crab.png",
+    "HILL": "https://www.cryptocompare.com/media/351747/hill.png",
+    "FOREX": "https://www.cryptocompare.com/media/351748/forex.png",
+    "MONETA": "https://www.cryptocompare.com/media/351749/moneta.png",
+    "EC": "https://www.cryptocompare.com/media/351750/ec.jpg",
+    "RUBIT": "https://www.cryptocompare.com/media/351751/rubit.png",
+    "HCC": "https://www.cryptocompare.com/media/351752/hcc.png",
+    "BRAIN": "https://www.cryptocompare.com/media/351753/brain.png",
+    "VTX": "https://www.cryptocompare.com/media/351754/vertex.png",
+    "KRC": "https://www.cryptocompare.com/media/351755/krc.png",
+    "ROYAL": "https://www.cryptocompare.com/media/351756/royal.png",
+    "LFC": "https://www.cryptocompare.com/media/351757/lfc.png",
+    "ZUR": "https://www.cryptocompare.com/media/351758/zur.png",
+    "NUBIS": "https://www.cryptocompare.com/media/351759/nubis.png",
+    "ABC": "https://www.cryptocompare.com/media/12318006/bac.png",
+    "BMC": "https://www.cryptocompare.com/media/12318008/bmc.png",
+    "TENNET": "https://www.cryptocompare.com/media/351760/tennet.png",
+    "PEC": "https://www.cryptocompare.com/media/351761/pec.png",
+    "GMX": "https://www.cryptocompare.com/media/351762/gmx.jpg",
+    "32BIT": "https://www.cryptocompare.com/media/351763/32bit.png",
+    "GNJ": "https://www.cryptocompare.com/media/351789/gnj.png",
+    "TEAM": "https://www.cryptocompare.com/media/351790/team.png",
+    "SCT": "https://www.cryptocompare.com/media/351791/sct.png",
+    "LANA": "https://www.cryptocompare.com/media/351792/lana.png",
+    "ELE": "https://www.cryptocompare.com/media/351793/ele.png",
+    "GCC": "https://www.cryptocompare.com/media/351796/gcc.jpg",
+    "AND": "https://www.cryptocompare.com/media/351797/and.png",
+    "FC": "https://www.cryptocompare.com/media/12318045/fc.png",
+    "EQUAL": "https://www.cryptocompare.com/media/351867/equal.png",
+    "SWEET": "https://www.cryptocompare.com/media/351868/sweet.png",
+    "2BACCO": "https://www.cryptocompare.com/media/351869/2bacco.png",
+    "DKC": "https://www.cryptocompare.com/media/351870/dkc.png",
+    "COC": "https://www.cryptocompare.com/media/351872/coc.png",
+    "LINK": "https://www.cryptocompare.com/media/12318078/link.png",
+    "CHOOF": "https://www.cryptocompare.com/media/351876/choof.png",
+    "CSH": "https://www.cryptocompare.com/media/351877/csh.png",
+    "RUSTBITS": "https://www.cryptocompare.com/media/12318085/rustbits.png",
+    "SUMO": "https://www.cryptocompare.com/media/12318088/sumo.png",
+    "TRX": "https://www.cryptocompare.com/media/12318089/trx.png",
+    "ZCL": "https://www.cryptocompare.com/media/351926/zcl.png",
+    "RYCN": "https://www.cryptocompare.com/media/351756/royal.png",
+    "PCS": "https://www.cryptocompare.com/media/351927/pabyosi.png",
+    "NBIT": "https://www.cryptocompare.com/media/351928/nbit.png",
+    "WINE": "https://www.cryptocompare.com/media/351929/wine.png",
+    "DAR": "https://www.cryptocompare.com/media/351930/dar.png",
+    "IFLT": "https://www.cryptocompare.com/media/351934/iflt.png",
+    "ZECD": "https://www.cryptocompare.com/media/351935/zecd.png",
+    "ZXT": "https://www.cryptocompare.com/media/351936/zxt.png",
+    "WASH": "https://www.cryptocompare.com/media/351944/wash.png",
+    "TESLA": "https://www.cryptocompare.com/media/351945/tesla.png",
+    "LUCKY": "https://www.cryptocompare.com/media/351946/lucky.png",
+    "TPG": "https://www.cryptocompare.com/media/351948/tpg.png",
+    "LEO": "https://www.cryptocompare.com/media/351988/leo.png",
+    "MDT": "https://www.cryptocompare.com/media/351989/mdt.png",
+    "CBD": "https://www.cryptocompare.com/media/351990/cbd.png",
+    "PEX": "https://www.cryptocompare.com/media/351992/pex.png",
+    "INSANE": "https://www.cryptocompare.com/media/351993/insane.png",
+    "GNT": "https://www.cryptocompare.com/media/351995/golem_logo.png",
+    "PEN": "https://www.cryptocompare.com/media/20384/pen.png",
+    "FAME": "https://www.cryptocompare.com/media/352006/fame.png",
+    "LIV": "https://www.cryptocompare.com/media/352007/liv.png",
+    "SP": "https://www.cryptocompare.com/media/352018/sp.png",
+    "MEGA": "https://www.cryptocompare.com/media/352020/mega.png",
+    "VRS": "https://www.cryptocompare.com/media/352021/vrs.png",
+    "ALC": "https://www.cryptocompare.com/media/352022/alc.png",
+    "DOGETH": "https://www.cryptocompare.com/media/352023/dogeth-2.png",
+    "KLC": "https://www.cryptocompare.com/media/352024/klc.png",
+    "BTLC": "https://www.cryptocompare.com/media/352054/btlc.png",
+    "DRM8": "https://www.cryptocompare.com/media/352055/drm8.png",
+    "FIST": "https://www.cryptocompare.com/media/352056/fist.png",
+    "EBZ": "https://www.cryptocompare.com/media/352069/ebz.png",
+    "DRS": "https://www.cryptocompare.com/media/352072/drs.png",
+    "FGZ": "https://www.cryptocompare.com/media/352082/fgz.png",
+    "BOSON": "https://www.cryptocompare.com/media/352083/boson.png",
+    "ATX": "https://www.cryptocompare.com/media/352084/atx.png",
+    "PNC": "https://www.cryptocompare.com/media/352085/pnc.png",
+    "BRDD": "https://www.cryptocompare.com/media/352086/brdd.png",
+    "TIME": "https://www.cryptocompare.com/media/352105/time.png",
+    "BIP": "https://www.cryptocompare.com/media/352108/bip.png",
+    "EMB": "https://www.cryptocompare.com/media/352110/emb.png",
+    "BTTF": "https://www.cryptocompare.com/media/352111/bttf.png",
+    "DLR": "https://www.cryptocompare.com/media/352114/dollarcoin.png",
+    "CSMIC": "https://www.cryptocompare.com/media/352115/csmic.png",
+    "SCASH": "https://www.cryptocompare.com/media/352117/scash.png",
+    "XEN": "https://www.cryptocompare.com/media/352119/xen.jpg",
+    "JIO": "https://www.cryptocompare.com/media/352120/jio.png",
+    "IW": "https://www.cryptocompare.com/media/352121/iw.png",
+    "JNS": "https://www.cryptocompare.com/media/352126/jns.png",
+    "TRICK": "https://www.cryptocompare.com/media/352127/trick.png",
+    "DCRE": "https://www.cryptocompare.com/media/352128/dcre.png",
+    "FRE": "https://www.cryptocompare.com/media/352129/fre.png",
+    "NPC": "https://www.cryptocompare.com/media/352130/npc.png",
+    "PLNC": "https://www.cryptocompare.com/media/352131/plnc.png",
+    "DGMS": "https://www.cryptocompare.com/media/352132/dgms.png",
+    "ICOB": "https://www.cryptocompare.com/media/352133/icb.png",
+    "XCRE": "https://www.cryptocompare.com/media/352156/xcre.png",
+    "UR": "https://www.cryptocompare.com/media/352182/ur.jpg",
+    "MTLM3": "https://www.cryptocompare.com/media/352183/mtmc3.png",
+    "ODNT": "https://www.cryptocompare.com/media/352186/odnt.png",
+    "EUC": "https://www.cryptocompare.com/media/1382471/euc.png",
+    "CCX": "https://www.cryptocompare.com/media/352188/ccx.png",
+    "SEEDS": "https://www.cryptocompare.com/media/352190/seeds.png",
+    "TKS": "https://www.cryptocompare.com/media/352207/tks.jpg",
+    "SHORTY": "https://www.cryptocompare.com/media/352222/shorty.png",
+    "PCM": "https://www.cryptocompare.com/media/352223/pcm.png",
+    "KC": "https://www.cryptocompare.com/media/352224/kc.png",
+    "CORAL": "https://www.cryptocompare.com/media/352225/coral.png",
+    "BamitCoin": "https://www.cryptocompare.com/media/352236/bam.png",
+    "NXC": "https://www.cryptocompare.com/media/352248/nxc.png",
+    "MONEY": "https://www.cryptocompare.com/media/352249/money.png",
+    "HSP": "https://www.cryptocompare.com/media/352251/hsp.png",
+    "HZT": "https://www.cryptocompare.com/media/352291/hzt.png",
+    "CS": "https://www.cryptocompare.com/media/352292/cs.png",
+    "XSP": "https://www.cryptocompare.com/media/352293/xsp.png",
+    "BULLS": "https://www.cryptocompare.com/media/352295/bulls.png",
+    "INCNT": "https://www.cryptocompare.com/media/352296/incnt.png",
+    "ICON": "https://www.cryptocompare.com/media/352297/icon.png",
+    "NIC": "https://www.cryptocompare.com/media/352309/nic.png",
+    "ACN": "https://www.cryptocompare.com/media/352310/acn.png",
+    "XNG": "https://www.cryptocompare.com/media/352311/xng.png",
+    "XCI": "https://www.cryptocompare.com/media/352312/xci.png",
+    "YBC": "https://www.cryptocompare.com/media/19975/ybc.png",
+    "DANK": "https://www.cryptocompare.com/media/20247/dank.png",
+    "GIVE": "https://www.cryptocompare.com/media/20297/give.png",
+    "DT": "https://www.cryptocompare.com/media/20031/dt.png",
+    "CETI": "https://www.cryptocompare.com/media/20228/ceti.png",
+    "SUP": "https://www.cryptocompare.com/media/20442/sup.png",
+    "XPD": "https://www.cryptocompare.com/media/20162/xpd.png",
+    "CHASH": "https://www.cryptocompare.com/media/20231/chash.png",
+    "SPR": "https://www.cryptocompare.com/media/20438/spr.png",
+    "NXTI": "https://www.cryptocompare.com/media/20376/nxti.png",
+    "WOLF": "https://www.cryptocompare.com/media/20559/wolf.png",
+    "XDP": "https://www.cryptocompare.com/media/20560/xdp.png",
+    "LOOK": "https://www.cryptocompare.com/media/1381970/look.png",
+    "MMXVI": "https://www.cryptocompare.com/media/1381972/mmxvi.png",
+    "MIS": "https://www.cryptocompare.com/media/1381981/mis.png",
+    "WOP": "https://www.cryptocompare.com/media/1381982/wop.png",
+    "CQST": "https://www.cryptocompare.com/media/1381983/cqst.png",
+    "IMPS": "https://www.cryptocompare.com/media/1381984/imps.jpg",
+    "IN": "https://www.cryptocompare.com/media/1381987/in.png",
+    "CHIEF": "https://www.cryptocompare.com/media/1381988/chief.png",
+    "GOAT": "https://www.cryptocompare.com/media/1381990/goat.png",
+    "ANAL": "https://www.cryptocompare.com/media/1381991/anal.jpg",
+    "RC": "https://www.cryptocompare.com/media/1381992/rc.png",
+    "PX": "https://www.cryptocompare.com/media/1381994/px.png",
+    "OPTION": "https://www.cryptocompare.com/media/1381998/option.png",
+    "AV": "https://www.cryptocompare.com/media/1382048/av.png",
+    "UNITS": "https://www.cryptocompare.com/media/1382050/units.png",
+    "HEEL": "https://www.cryptocompare.com/media/1382051/heel.png",
+    "DASH": "https://www.cryptocompare.com/media/20626/imageedit_27_4355944719.png",
+    "LTC": "https://www.cryptocompare.com/media/19782/litecoin-logo.png",
+    "GAKH": "https://www.cryptocompare.com/media/1382090/gakh.png",
+    "S8C": "https://www.cryptocompare.com/media/1382093/s8c.png",
+    "LVG": "https://www.cryptocompare.com/media/1382094/lvg.png",
+    "LTCR": "https://www.cryptocompare.com/media/1382097/ltcr.png",
+    "QBC": "https://www.cryptocompare.com/media/19874/qbc.png",
+    "XPRO": "https://www.cryptocompare.com/media/1382098/xpro.png",
+    "GIFT": "https://www.cryptocompare.com/media/1382171/gift.png",
+    "VIDZ": "https://www.cryptocompare.com/media/1382172/vidz.png",
+    "INC": "https://www.cryptocompare.com/media/1382173/inc.png",
+    "PTA": "https://www.cryptocompare.com/media/1382236/pta.png",
+    "ACID": "https://www.cryptocompare.com/media/1382237/acid.png",
+    "ZLQ": "https://www.cryptocompare.com/media/1382238/zlq.png",
+    "RNC": "https://www.cryptocompare.com/media/1382240/rnc.png",
+    "PASC": "https://www.cryptocompare.com/media/1382247/pasc.png",
+    "TWIST": "https://www.cryptocompare.com/media/1382250/twist1.png",
+    "PAYP": "https://www.cryptocompare.com/media/1382251/payp.png",
+    "DETH": "https://www.cryptocompare.com/media/1382252/deth.png",
+    "YAY": "https://www.cryptocompare.com/media/1382253/yay.png",
+    "YES": "https://www.cryptocompare.com/media/1382269/yes.png",
+    "LENIN": "https://www.cryptocompare.com/media/1382270/lenin.png",
+    "MRSA": "https://www.cryptocompare.com/media/1382287/msra.png",
+    "OS76": "https://www.cryptocompare.com/media/1382288/os76.png",
+    "BOSS": "https://www.cryptocompare.com/media/1382289/boss.png",
+    "MKR": "https://www.cryptocompare.com/media/1382296/mkr.png",
+    "BIC": "https://www.cryptocompare.com/media/1382337/bic.png",
+    "CRPS": "https://www.cryptocompare.com/media/1382338/crps.png",
+    "MOTO": "https://www.cryptocompare.com/media/1382339/moto.png",
+    "NTCC": "https://www.cryptocompare.com/media/1382346/ntcc.png",
+    "XNC*": "https://www.cryptocompare.com/media/1382347/xnc.png",
+    "SPKTR": "https://www.cryptocompare.com/media/1382349/spkr.png",
+    "MAC": "https://www.cryptocompare.com/media/1382368/mac.png",
+    "SEL": "https://www.cryptocompare.com/media/1382369/sel.png",
+    "NOO": "https://www.cryptocompare.com/media/1382370/noo.png",
+    "CHAO": "https://www.cryptocompare.com/media/1382371/chao.png",
+    "YMC": "https://www.cryptocompare.com/media/1382380/ymc.png",
+    "JOK": "https://www.cryptocompare.com/media/1382381/jok.png",
+    "GBIT": "https://www.cryptocompare.com/media/1382382/gbit.jpg",
+    "TEC": "https://www.cryptocompare.com/media/1382383/tecoin.png",
+    "BOMB": "https://www.cryptocompare.com/media/1382384/bomb.png",
+    "RIDE": "https://www.cryptocompare.com/media/1382388/ride.png",
+    "KED": "https://www.cryptocompare.com/media/1382390/ked.png",
+    "CNO": "https://www.cryptocompare.com/media/1382391/coino.png",
+    "WEALTH": "https://www.cryptocompare.com/media/1382392/wealth.png",
+    "XSPEC": "https://www.cryptocompare.com/media/1382395/xspec.png",
+    "PEPECASH": "https://www.cryptocompare.com/media/1382397/pepecash.png",
+    "CLICK": "https://www.cryptocompare.com/media/1382399/click.png",
+    "ELS": "https://www.cryptocompare.com/media/1382400/els.png",
+    "KUSH": "https://www.cryptocompare.com/media/1382401/kush.png",
+    "ERY": "https://www.cryptocompare.com/media/1382403/ely2.png",
+    "PLU": "https://www.cryptocompare.com/media/1382431/plu.png",
+    "PRES": "https://www.cryptocompare.com/media/1382432/pres.png",
+    "OPES": "https://www.cryptocompare.com/media/1382434/opes.png",
+    "WCT": "https://www.cryptocompare.com/media/350884/waves_1.png",
+    "UBQ": "https://www.cryptocompare.com/media/1382441/ubq.png",
+    "RATIO": "https://www.cryptocompare.com/media/1382442/ratio.png",
+    "AC": "https://www.cryptocompare.com/media/19593/ac.png",
+    "ACOIN": "https://www.cryptocompare.com/media/20079/acoin.png",
+    "AERO": "https://www.cryptocompare.com/media/19594/aero.png",
+    "BAN": "https://www.cryptocompare.com/media/1382466/ban.png",
+    "ALF": "https://www.cryptocompare.com/media/19600/alf.png",
+    "NICE": "https://www.cryptocompare.com/media/1382467/nice.png",
+    "SMF": "https://www.cryptocompare.com/media/1382468/xmf.png",
+    "AGS": "https://www.cryptocompare.com/media/19595/ags.png",
+    "AMC": "https://www.cryptocompare.com/media/19601/amc.png",
+    "ALN": "https://www.cryptocompare.com/media/20080/aln.png",
+    "ANNC": "https://www.cryptocompare.com/media/19598/anc.png",
+    "APEX": "https://www.cryptocompare.com/media/19599/apex.png",
+    "ARCH": "https://www.cryptocompare.com/media/20085/arch.png",
+    "ARI": "https://www.cryptocompare.com/media/20082/ari.png",
+    "AUR": "https://www.cryptocompare.com/media/19608/aur.png",
+    "AXR": "https://www.cryptocompare.com/media/20086/axr.png",
+    "BCX": "https://www.cryptocompare.com/media/19620/bcx.png",
+    "BEN": "https://www.cryptocompare.com/media/19617/ben.png",
+    "BET": "https://www.cryptocompare.com/media/19621/bet.png",
+    "BLK": "https://www.cryptocompare.com/media/351795/blk.png",
+    "BQC": "https://www.cryptocompare.com/media/19631/bqc.png",
+    "MOON": "https://www.cryptocompare.com/media/19802/moon.png",
+    "QTL": "https://www.cryptocompare.com/media/19879/qtl.png",
+    "ENRG": "https://www.cryptocompare.com/media/19697/enrg.png",
+    "RIC": "https://www.cryptocompare.com/media/19888/ric.jpg",
+    "DGC": "https://www.cryptocompare.com/media/19676/dgc.png",
+    "LIMX": "https://www.cryptocompare.com/media/19769/limx.png",
+    "TECH": "https://www.cryptocompare.com/media/1382505/tech.png",
+    "CIR": "https://www.cryptocompare.com/media/1382506/cir.png",
+    "LEPEN": "https://www.cryptocompare.com/media/1382507/lepen.png",
+    "ROUND": "https://www.cryptocompare.com/media/1382508/round.png",
+    "ARG": "https://www.cryptocompare.com/media/19602/arg.png",
+    "MAR": "https://www.cryptocompare.com/media/1382577/mar.png",
+    "MARX": "https://www.cryptocompare.com/media/1382578/marx.png",
+    "TAT": "https://www.cryptocompare.com/media/1382594/tat.png",
+    "HAZE": "https://www.cryptocompare.com/media/1382595/haze.png",
+    "PRX": "https://www.cryptocompare.com/media/1382603/prx.png",
+    "BTCD": "https://www.cryptocompare.com/media/19630/btcd_1.png",
+    "NRC": "https://www.cryptocompare.com/media/1382604/nrc.png",
+    "IMPCH": "https://www.cryptocompare.com/media/1382606/impch.png",
+    "BTM": "https://www.cryptocompare.com/media/20084/btm.png",
+    "BUK": "https://www.cryptocompare.com/media/19637/buk.png",
+    "CACH": "https://www.cryptocompare.com/media/19642/cach.png",
+    "CAIX": "https://www.cryptocompare.com/media/20226/caix.png",
+    "CANN": "https://www.cryptocompare.com/media/20015/cann.png",
+    "CAP": "https://www.cryptocompare.com/media/20017/cap.png",
+    "CASH": "https://www.cryptocompare.com/media/20016/cash.png",
+    "CCN": "https://www.cryptocompare.com/media/19643/ccn.png",
+    "CIN": "https://www.cryptocompare.com/media/20698/cinder.png",
+    "CINNI": "https://www.cryptocompare.com/media/19651/cinni.jpeg",
+    "CXC": "https://www.cryptocompare.com/media/20246/cxc.png",
+    "CLAM": "https://www.cryptocompare.com/media/20020/clam.png",
+    "CLR": "https://www.cryptocompare.com/media/19657/clr.png",
+    "CMC": "https://www.cryptocompare.com/media/20019/cmc.png",
+    "CNC": "https://www.cryptocompare.com/media/20021/cnc.png",
+    "CNL": "https://www.cryptocompare.com/media/20024/cnl.png",
+    "COMM": "https://www.cryptocompare.com/media/19661/comm.png",
+    "COOL": "https://www.cryptocompare.com/media/19658/cool.png",
+    "CRACK": "https://www.cryptocompare.com/media/20023/crack.png",
+    "CRAIG": "https://www.cryptocompare.com/media/20022/craig.png",
+    "CRC": "https://www.cryptocompare.com/media/19665/crc.png",
+    "CRYPT": "https://www.cryptocompare.com/media/19664/crypt.png",
+    "CSC": "https://www.cryptocompare.com/media/19667/csc.png",
+    "DEM": "https://www.cryptocompare.com/media/20028/dem.png",
+    "DMD": "https://www.cryptocompare.com/media/19680/dmd.png",
+    "DOGE": "https://www.cryptocompare.com/media/19684/doge.png",
+    "DRKC": "https://www.cryptocompare.com/media/20027/drkc.png",
+    "DSB": "https://www.cryptocompare.com/media/20034/dsb.png",
+    "EAC": "https://www.cryptocompare.com/media/19690/eac.png",
+    "EFL": "https://www.cryptocompare.com/media/19692/efl.png",
+    "ELC": "https://www.cryptocompare.com/media/19694/elc.png",
+    "EMD": "https://www.cryptocompare.com/media/20278/emd.png",
+    "EXCL": "https://www.cryptocompare.com/media/20035/excl.png",
+    "EXE": "https://www.cryptocompare.com/media/19700/exe.png",
+    "EZC": "https://www.cryptocompare.com/media/19702/ezc.png",
+    "FLAP": "https://www.cryptocompare.com/media/20032/flap.png",
+    "FC2": "https://www.cryptocompare.com/media/19719/fuel.png",
+    "FFC": "https://www.cryptocompare.com/media/19706/ffc.png",
+    "FIBRE": "https://www.cryptocompare.com/media/20030/fibre.png",
+    "FLT": "https://www.cryptocompare.com/media/19709/flt.png",
+    "FRAC": "https://www.cryptocompare.com/media/19710/frac.png",
+    "ERR": "https://www.cryptocompare.com/media/1382624/err.png",
+    "TIC": "https://www.cryptocompare.com/media/1382625/tic.png",
+    "NUKE": "https://www.cryptocompare.com/media/1382626/nuke.png",
+    "EOC": "https://www.cryptocompare.com/media/1382628/eoc.png",
+    "SFC": "https://www.cryptocompare.com/media/1382639/sfc.png",
+    "JANE": "https://www.cryptocompare.com/media/1382640/jane.png",
+    "PARA": "https://www.cryptocompare.com/media/1382641/para.png",
+    "MM": "https://www.cryptocompare.com/media/1382642/mm.jpg",
+    "BXC": "https://www.cryptocompare.com/media/1382649/bxc.jpg",
+    "NDOGE": "https://www.cryptocompare.com/media/1382650/ndoge.png",
+    "FRC": "https://www.cryptocompare.com/media/1382629/frc.png",
+    "FRK": "https://www.cryptocompare.com/media/19712/frk.png",
+    "FST": "https://www.cryptocompare.com/media/19720/fst.png",
+    "FTC": "https://www.cryptocompare.com/media/19718/ftc.png",
+    "ZBC": "https://www.cryptocompare.com/media/1382652/zbc.png",
+    "MLN": "https://www.cryptocompare.com/media/1382653/mln.png",
+    "GDC": "https://www.cryptocompare.com/media/20054/gdc.png",
+    "ORO": "https://www.cryptocompare.com/media/1382656/oro.png",
+    "GLC": "https://www.cryptocompare.com/media/19724/glc.png",
+    "GLD": "https://www.cryptocompare.com/media/19723/gld.png",
+    "GLX": "https://www.cryptocompare.com/media/19728/glx.png",
+    "GLYPH": "https://www.cryptocompare.com/media/19725/glyph.png",
+    "GML": "https://www.cryptocompare.com/media/19726/gml.png",
+    "GUE": "https://www.cryptocompare.com/media/19732/gue.png",
+    "HAL": "https://www.cryptocompare.com/media/20036/hal.png",
+    "HBN": "https://www.cryptocompare.com/media/19735/hbn.png",
+    "HUC": "https://www.cryptocompare.com/media/20037/hun.png",
+    "HVC": "https://www.cryptocompare.com/media/19745/hvc.png",
+    "HYP": "https://www.cryptocompare.com/media/20624/hyp.png",
+    "ICB": "https://www.cryptocompare.com/media/19747/icb.png",
+    "IFC": "https://www.cryptocompare.com/media/19754/ifc.png",
+    "IXC": "https://www.cryptocompare.com/media/19761/ixc.png",
+    "JBS": "https://www.cryptocompare.com/media/20044/jbs.png",
+    "JKC": "https://www.cryptocompare.com/media/19757/jkc.png",
+    "JUDGE": "https://www.cryptocompare.com/media/20038/judge.png",
+    "KDC": "https://www.cryptocompare.com/media/19766/kdc.png",
+    "KGC": "https://www.cryptocompare.com/media/19763/kgc.png",
+    "LGD*": "https://www.cryptocompare.com/media/19770/lgd.png",
+    "LK7": "https://www.cryptocompare.com/media/19776/lk7.png",
+    "LKY": "https://www.cryptocompare.com/media/19774/lky.png",
+    "LSD": "https://www.cryptocompare.com/media/20041/lsd.png",
+    "LTB": "https://www.cryptocompare.com/media/20336/ltb.png",
+    "LTCD": "https://www.cryptocompare.com/media/20043/ltcd.png",
+    "LTCX": "https://www.cryptocompare.com/media/19779/ltcx.png",
+    "LXC": "https://www.cryptocompare.com/media/20045/lxc.png",
+    "LYC": "https://www.cryptocompare.com/media/19785/lyc.png",
+    "MAX": "https://www.cryptocompare.com/media/19786/max.png",
+    "MEC": "https://www.cryptocompare.com/media/19789/mec.png",
+    "MED": "https://www.cryptocompare.com/media/20046/med.png",
+    "ALEX": "https://www.cryptocompare.com/media/1382657/alex.png",
+    "TBCX": "https://www.cryptocompare.com/media/1382658/tbcx.png",
+    "MIN": "https://www.cryptocompare.com/media/19793/min.png",
+    "MCAR": "https://www.cryptocompare.com/media/1382659/mcar.png",
+    "THS": "https://www.cryptocompare.com/media/1382660/ths.png",
+    "ACES": "https://www.cryptocompare.com/media/1382661/aces.png",
+    "MINT": "https://www.cryptocompare.com/media/19797/mint.png",
+    "MN": "https://www.cryptocompare.com/media/19796/mn1.png",
+    "MRY": "https://www.cryptocompare.com/media/19807/mry.jpg",
+    "MYST*": "https://www.cryptocompare.com/media/20053/myst.png",
+    "MZC": "https://www.cryptocompare.com/media/19816/mzc.png",
+    "NAN": "https://www.cryptocompare.com/media/19821/nan.png",
+    "NAUT": "https://www.cryptocompare.com/media/19822/naut.png",
+    "NBL": "https://www.cryptocompare.com/media/19825/nbl.png",
+    "NEC": "https://www.cryptocompare.com/media/19824/nec.png",
+    "NET": "https://www.cryptocompare.com/media/19826/net.png",
+    "NMB": "https://www.cryptocompare.com/media/20049/nmb.png",
+    "NRB": "https://www.cryptocompare.com/media/19839/nrb.png",
+    "NOBL": "https://www.cryptocompare.com/media/19833/nobl.png",
+    "NRS": "https://www.cryptocompare.com/media/19834/nrs.png",
+    "NMC": "https://www.cryptocompare.com/media/19830/nmc.png",
+    "NYAN": "https://www.cryptocompare.com/media/19842/nyan.png",
+    "UAEC": "https://www.cryptocompare.com/media/1382684/uaec.png",
+    "EA": "https://www.cryptocompare.com/media/1382685/ea.png",
+    "ORB": "https://www.cryptocompare.com/media/19845/orb.png",
+    "PIE": "https://www.cryptocompare.com/media/1382686/pie.png",
+    "OSC": "https://www.cryptocompare.com/media/19847/osc.png",
+    "PHS": "https://www.cryptocompare.com/media/19857/phs.png",
+    "POINTS": "https://www.cryptocompare.com/media/19863/points.png",
+    "PSEUD": "https://www.cryptocompare.com/media/20052/pseud.png",
+    "PXC": "https://www.cryptocompare.com/media/20058/pxc.png",
+    "PYC": "https://www.cryptocompare.com/media/19878/pyc.png",
+    "RIPO": "https://www.cryptocompare.com/media/20051/ripo.png",
+    "RPC": "https://www.cryptocompare.com/media/19895/rpc-2.png",
+    "RT2": "https://www.cryptocompare.com/media/19896/rt2.png",
+    "RYC": "https://www.cryptocompare.com/media/19898/ryc.png",
+    "RZR": "https://www.cryptocompare.com/media/20055/rzr.png",
+    "SAT2": "https://www.cryptocompare.com/media/19897/sat2.png",
+    "SBC": "https://www.cryptocompare.com/media/19900/sbc.png",
+    "SDC": "https://www.cryptocompare.com/media/20419/sdc.png",
+    "SFR": "https://www.cryptocompare.com/media/19903/sfr.png",
+    "SHADE": "https://www.cryptocompare.com/media/20056/shade.png",
+    "SHLD": "https://www.cryptocompare.com/media/19904/shld.png",
+    "SILK": "https://www.cryptocompare.com/media/20057/silk.png",
+    "SLG": "https://www.cryptocompare.com/media/20428/slg.png",
+    "SMC": "https://www.cryptocompare.com/media/20059/smc.png",
+    "SOLE": "https://www.cryptocompare.com/media/20431/sole.png",
+    "SPA": "https://www.cryptocompare.com/media/19911/spa.png",
+    "SPT": "https://www.cryptocompare.com/media/19917/spt.png",
+    "SRC": "https://www.cryptocompare.com/media/19918/src.png",
+    "SSV": "https://www.cryptocompare.com/media/20060/ssv.png",
+    "SYNC": "https://www.cryptocompare.com/media/19922/sync.png",
+    "SYS": "https://www.cryptocompare.com/media/20062/sys.png",
+    "TAG": "https://www.cryptocompare.com/media/19925/tag.png",
+    "TAK": "https://www.cryptocompare.com/media/19928/tak.png",
+    "TES": "https://www.cryptocompare.com/media/19927/tes.png",
+    "TGC": "https://www.cryptocompare.com/media/19930/tgc.png",
+    "TIT": "https://www.cryptocompare.com/media/20069/tit.png",
+    "TOR": "https://www.cryptocompare.com/media/19934/tor.png",
+    "TRC": "https://www.cryptocompare.com/media/19938/terracoin.png",
+    "TTC": "https://www.cryptocompare.com/media/20064/ttc.png",
+    "ULTC": "https://www.cryptocompare.com/media/20063/ultc.png",
+    "UNB": "https://www.cryptocompare.com/media/19940/unb.png",
+    "UNO": "https://www.cryptocompare.com/media/20065/uno.png",
+    "URO": "https://www.cryptocompare.com/media/19937/uro.png",
+    "CREA": "https://www.cryptocompare.com/media/1382709/crea.png",
+    "WISC": "https://www.cryptocompare.com/media/1382710/wisc.jpg",
+    "BVC": "https://www.cryptocompare.com/media/1382711/bvc.png",
+    "FIND": "https://www.cryptocompare.com/media/1382713/find.png",
+    "MLITE": "https://www.cryptocompare.com/media/1382725/mlite.png",
+    "STALIN": "https://www.cryptocompare.com/media/1382726/stalin.png",
+    "TSE": "https://www.cryptocompare.com/media/1382790/tato1.png",
+    "USDE": "https://www.cryptocompare.com/media/20465/usde.png",
+    "UTC": "https://www.cryptocompare.com/media/19942/utc.png",
+    "UTIL": "https://www.cryptocompare.com/media/20067/util.png",
+    "VDO": "https://www.cryptocompare.com/media/20066/vdo.png",
+    "VOOT": "https://www.cryptocompare.com/media/19946/voot.png",
+    "VRC": "https://www.cryptocompare.com/media/20068/vrc.png",
+    "WDC": "https://www.cryptocompare.com/media/19949/wdc.png",
+    "XAI": "https://www.cryptocompare.com/media/20071/xai.png",
+    "XBOT": "https://www.cryptocompare.com/media/20073/xbot.png",
+    "XBS": "https://www.cryptocompare.com/media/351060/xbs_1.png",
+    "XCASH": "https://www.cryptocompare.com/media/20075/xcash.png",
+    "XCR": "https://www.cryptocompare.com/media/19710/frac.png",
+    "XJO": "https://www.cryptocompare.com/media/19962/xjo.png",
+    "XLB": "https://www.cryptocompare.com/media/19966/xlb.png",
+    "XPM": "https://www.cryptocompare.com/media/19970/xpm.png",
+    "XPY": "https://www.cryptocompare.com/media/20076/xpy_1.png",
+    "XRP": "https://www.cryptocompare.com/media/19972/ripple.png",
+    "XST": "https://www.cryptocompare.com/media/20077/xst.png",
+    "XXX": "https://www.cryptocompare.com/media/350617/xxx.png",
+    "YAC": "https://www.cryptocompare.com/media/19976/yac.png",
+    "ZCC": "https://www.cryptocompare.com/media/19979/zcc.png",
+    "ZED": "https://www.cryptocompare.com/media/19981/zed.png",
+    "ZRC*": "https://www.cryptocompare.com/media/20078/zrc.png",
+    "VLTC": "https://www.cryptocompare.com/media/1382738/vltc.png",
+    "BIOB": "https://www.cryptocompare.com/media/1382739/biob.png",
+    "PASL": "https://www.cryptocompare.com/media/1382741/pasl.png",
+    "CHAT": "https://www.cryptocompare.com/media/1382762/chat.png",
+    "CDN": "https://www.cryptocompare.com/media/1382763/cdn.png",
+    "EKN": "https://www.cryptocompare.com/media/20270/ekn.png",
+    "XAU": "https://www.cryptocompare.com/media/20479/xau.png",
+    "TMC": "https://www.cryptocompare.com/media/20451/tmc.png",
+    "XEM": "https://www.cryptocompare.com/media/20490/xem.png",
+    "BURST": "https://www.cryptocompare.com/media/1383375/burstcoin_logo.png",
+    "SJCX": "https://www.cryptocompare.com/media/20422/sjcx.png",
+    "HUGE": "https://www.cryptocompare.com/media/20318/huge.png",
+    "XCP": "https://www.cryptocompare.com/media/19960/xcp.png",
+    "MAID": "https://www.cryptocompare.com/media/352247/maid.png",
+    "007": "https://www.cryptocompare.com/media/350595/007.png",
+    "NSR": "https://www.cryptocompare.com/media/20378/nsr.png",
+    "MONA": "https://www.cryptocompare.com/media/19801/mona.png",
+    "CELL": "https://www.cryptocompare.com/media/20227/cell.png",
+    "TEK": "https://www.cryptocompare.com/media/19929/tek.png",
+    "TRON": "https://www.cryptocompare.com/media/20459/tron.png",
+    "SLING": "https://www.cryptocompare.com/media/20425/sling.png",
+    "BLOCK": "https://www.cryptocompare.com/media/20204/block.png",
+    "XSI": "https://www.cryptocompare.com/media/20165/xsi.png",
+    "GHS": "https://www.cryptocompare.com/media/19565/cexio.png",
+    "BYC": "https://www.cryptocompare.com/media/20217/byc.png",
+    "GRC": "https://www.cryptocompare.com/media/20307/grc.png",
+    "GEMZ": "https://www.cryptocompare.com/media/19710/frac.png",
+    "KTK": "https://www.cryptocompare.com/media/19771/ktk.png",
+    "HZ": "https://www.cryptocompare.com/media/20320/hz.png",
+    "FAIR": "https://www.cryptocompare.com/media/20287/fair.png",
+    "QORA": "https://www.cryptocompare.com/media/19876/qora.png",
+    "NLG": "https://www.cryptocompare.com/media/19828/nlg.png",
+    "RBY": "https://www.cryptocompare.com/media/351279/rby.png",
+    "TPAY": "https://www.cryptocompare.com/media/1382770/tpay.png",
+    "PTC": "https://www.cryptocompare.com/media/19868/ptc.png",
+    "NETKO": "https://www.cryptocompare.com/media/1382771/netko.png",
+    "ZOI": "https://www.cryptocompare.com/media/1382772/zoin.png",
+    "WBB": "https://www.cryptocompare.com/media/20477/wbb.png",
+    "SSD": "https://www.cryptocompare.com/media/20443/ssd.png",
+    "XTC": "https://www.cryptocompare.com/media/20167/xtc.png",
+    "FLO": "https://www.cryptocompare.com/media/1383331/flo1.png",
+    "MMXIV": "https://www.cryptocompare.com/media/19798/mmxiv.png",
+    "8BIT": "https://www.cryptocompare.com/media/20176/8bit.png",
+    "STV": "https://www.cryptocompare.com/media/20444/stv.png",
+    "EBS": "https://www.cryptocompare.com/media/20267/ebs.png",
+    "AM": "https://www.cryptocompare.com/media/20191/am.png",
+    "AMBER": "https://www.cryptocompare.com/media/20187/amber.png",
+    "JPC": "https://www.cryptocompare.com/media/19759/jpc.png",
+    "NKT": "https://www.cryptocompare.com/media/20371/nkt.png",
+    "J": "https://www.cryptocompare.com/media/20350/j.png",
+    "GHC": "https://www.cryptocompare.com/media/19721/ghc.png",
+    "ABY": "https://www.cryptocompare.com/media/1383379/aby.png",
+    "MTR": "https://www.cryptocompare.com/media/19710/frac.png",
+    "TRI": "https://www.cryptocompare.com/media/350568/tri.png",
+    "SWARM": "https://www.cryptocompare.com/media/20445/swarm.png",
+    "BBR": "https://www.cryptocompare.com/media/19609/bbr.png",
+    "BTCRY": "https://www.cryptocompare.com/media/20210/btcry.png",
+    "BCR": "https://www.cryptocompare.com/media/20198/bcr.png",
+    "XPB": "https://www.cryptocompare.com/media/20158/xpb.png",
+    "XDQ": "https://www.cryptocompare.com/media/19959/xdq.png",
+    "FLDC": "https://www.cryptocompare.com/media/20284/fldc.png",
+    "SLR": "https://www.cryptocompare.com/media/20699/slr.png",
+    "SMAC": "https://www.cryptocompare.com/media/20427/smac.png",
+    "TRK": "https://www.cryptocompare.com/media/20460/trk.png",
+    "U": "https://www.cryptocompare.com/media/351629/u.jpg",
+    "UIS": "https://www.cryptocompare.com/media/20455/uis.png",
+    "CYP": "https://www.cryptocompare.com/media/20248/cyp.png",
+    "ASN": "https://www.cryptocompare.com/media/20192/asn.png",
+    "OC": "https://www.cryptocompare.com/media/19843/oc.png",
+    "GSM": "https://www.cryptocompare.com/media/20316/gsm.png",
+    "FSC2": "https://www.cryptocompare.com/media/19717/fsc.png",
+    "NXTTY": "https://www.cryptocompare.com/media/20379/nxtty.png",
+    "QBK": "https://www.cryptocompare.com/media/20400/qbk.png",
+    "BLC": "https://www.cryptocompare.com/media/19623/blc.png",
+    "MARYJ": "https://www.cryptocompare.com/media/20343/maryj.png",
+    "OMC": "https://www.cryptocompare.com/media/1381967/omc.png",
+    "GIG": "https://www.cryptocompare.com/media/20294/gig.png",
+    "CC": "https://www.cryptocompare.com/media/20225/cc.png",
+    "BITS": "https://www.cryptocompare.com/media/19622/bits.png",
+    "LTBC": "https://www.cryptocompare.com/media/20336/ltb.png",
+    "NEOS": "https://www.cryptocompare.com/media/1382788/neos1.png",
+    "HYPER": "https://www.cryptocompare.com/media/19744/hyper.png",
+    "VTR": "https://www.cryptocompare.com/media/20471/vtr.png",
+    "METAL": "https://www.cryptocompare.com/media/20359/metal.png",
+    "GRE": "https://www.cryptocompare.com/media/1382396/grn.png",
+    "XG": "https://www.cryptocompare.com/media/20156/xg.png",
+    "CHILD": "https://www.cryptocompare.com/media/20233/child.png",
+    "BOOM": "https://www.cryptocompare.com/media/20208/boom.png",
+    "MINE": "https://www.cryptocompare.com/media/20356/mine.png",
+    "ROS": "https://www.cryptocompare.comundefined",
+    "UNAT": "https://www.cryptocompare.com/media/20456/unat.png",
+    "SLM": "https://www.cryptocompare.com/media/20426/slm.png",
+    "GAIA": "https://www.cryptocompare.com/media/20290/gaia.png",
+    "FCN": "https://www.cryptocompare.com/media/20282/fcn.png",
+    "XCN": "https://www.cryptocompare.com/media/20483/xcn.png",
+    "CURE": "https://www.cryptocompare.com/media/1383812/cure.png",
+    "GMC": "https://www.cryptocompare.com/media/20299/gmc.png",
+    "MMC": "https://www.cryptocompare.com/media/19795/mmc.png",
+    "HONEY": "https://www.cryptocompare.com/media/1382937/honey1.png",
+    "CYC": "https://www.cryptocompare.com/media/19671/cyc.png",
+    "OCTO": "https://www.cryptocompare.com/media/19983/888.png",
+    "MSC": "https://www.cryptocompare.com/media/19814/mst.png",
+    "MXT": "https://www.cryptocompare.com/media/1382782/mxt.jpg",
+    "EGG": "https://www.cryptocompare.com/media/20269/egg.png",
+    "C2": "https://www.cryptocompare.com/media/19640/c2.png",
+    "GSX": "https://www.cryptocompare.com/media/20314/gsxjpeg.png",
+    "CAM": "https://www.cryptocompare.com/media/20220/cam.png",
+    "RBR": "https://www.cryptocompare.com/media/20408/rbr.png",
+    "XQN": "https://www.cryptocompare.com/media/12318067/xqn.png",
+    "ICASH": "https://www.cryptocompare.com/media/20319/icash.png",
+    "NODE": "https://www.cryptocompare.com/media/20373/node.png",
+    "SOON": "https://www.cryptocompare.com/media/20436/soon.png",
+    "BTMI": "https://www.cryptocompare.com/media/20213/btmi.png",
+    "EVENT": "https://www.cryptocompare.com/media/20277/event.png",
+    "1CR": "https://www.cryptocompare.com/media/20175/1cr.png",
+    "VIOR": "https://www.cryptocompare.com/media/20469/viorjpeg.png",
+    "XCO": "https://www.cryptocompare.com/media/20486/xco.png",
+    "MRS": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "DTB": "https://www.cryptocompare.com/media/1382791/dtb.png",
+    "VEG": "https://www.cryptocompare.com/media/1382792/veg.png",
+    "MBIT": "https://www.cryptocompare.com/media/1382793/mbit.png",
+    "EDG": "https://www.cryptocompare.com/media/1382799/edg.jpg",
+    "B@": "https://www.cryptocompare.com/media/1382804/b.png",
+    "BEST": "https://www.cryptocompare.com/media/1382805/best.jpg",
+    "CHC": "https://www.cryptocompare.com/media/1383907/chc.png",
+    "PLANET": "https://www.cryptocompare.com/media/1382851/planet.png",
+    "DUCK": "https://www.cryptocompare.com/media/1382852/duckduckcoin.png",
+    "BNX": "https://www.cryptocompare.com/media/1382853/bnx.png",
+    "BSTK": "https://www.cryptocompare.com/media/1382858/bstk.png",
+    "AMIS": "https://www.cryptocompare.com/media/1382862/amis.png",
+    "KAYI": "https://www.cryptocompare.com/media/1382863/kayi.png",
+    "XVP": "https://www.cryptocompare.com/media/1382865/xvp.png",
+    "BOAT": "https://www.cryptocompare.com/media/1382866/boat.png",
+    "IMX": "https://www.cryptocompare.com/media/1382891/imx.png",
+    "CJC": "https://www.cryptocompare.com/media/1382887/cjc.png",
+    "AMY": "https://www.cryptocompare.com/media/1382935/amy.jpg",
+    "QBT": "https://www.cryptocompare.com/media/1382936/qbt.png",
+    "SRC*": "https://www.cryptocompare.com/media/1382936/src1.png",
+    "EB3": "https://www.cryptocompare.com/media/1382938/eb3.png",
+    "XVE": "https://www.cryptocompare.com/media/1382937/xve.png",
+    "FAZZ": "https://www.cryptocompare.com/media/1382944/fazz.png",
+    "APT": "https://www.cryptocompare.com/media/1382945/apt.png",
+    "BLAZR": "https://www.cryptocompare.com/media/1382946/blazr.png",
+    "ARPA": "https://www.cryptocompare.com/media/1382966/arpa.png",
+    "BNB*": "https://www.cryptocompare.com/media/1382967/bnb.png",
+    "UNI": "https://www.cryptocompare.com/media/1382968/uni.png",
+    "VIRAL": "https://www.cryptocompare.com/media/20472/viral.png",
+    "EQM": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "ISL": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "QSLV": "https://www.cryptocompare.com/media/20404/qslv.png",
+    "XWT": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "XNA": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "RDN": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "SKB": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "BSTY": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "FCS": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "GAM": "https://www.cryptocompare.com/media/20293/gam.png",
+    "NXS": "https://www.cryptocompare.com/media/1382387/nexus.jpg",
+    "CESC": "https://www.cryptocompare.com/media/350786/cesc.png",
+    "TWLV": "https://www.cryptocompare.com/media/20472/viral.png",
+    "EAGS": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "DARK": "https://www.cryptocompare.com/media/1382995/dark.png",
+    "MWC": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "MARS": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "XMS": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "SPHR": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "SIGU": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "BTX*": "https://www.cryptocompare.com/media/20215/btx.png",
+    "DCC": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "M1": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "DB": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "CTO": "https://www.cryptocompare.com/media/19808/mrs.png",
+    "WGO": "https://www.cryptocompare.com/media/1382998/wgo.png",
+    "INPAY": "https://www.cryptocompare.com/media/1383004/inpay.png",
+    "ETT": "https://www.cryptocompare.com/media/1383046/ett.png",
+    "WBTC": "https://www.cryptocompare.com/media/1383045/wbtc.png",
+    "VISIO": "https://www.cryptocompare.com/media/1383047/visio.png",
+    "GOT": "https://www.cryptocompare.com/media/1383079/got.png",
+    "CXT": "https://www.cryptocompare.com/media/1383080/cxt.png",
+    "EMPC": "https://www.cryptocompare.com/media/1383081/empc.png",
+    "EDGE": "https://www.cryptocompare.com/media/20556/edge.png",
+    "FUTC": "https://www.cryptocompare.com/media/20558/futc.png",
+    "GLOBE": "https://www.cryptocompare.com/media/20564/globe.png",
+    "TAM": "https://www.cryptocompare.com/media/20565/tam.png",
+    "MRP": "https://www.cryptocompare.com/media/20357/mrp.png",
+    "CREVA": "https://www.cryptocompare.com/media/20571/creva.png",
+    "XFC": "https://www.cryptocompare.com/media/20574/xfc.png",
+    "NANAS": "https://www.cryptocompare.com/media/20575/nanas.png",
+    "LOG": "https://www.cryptocompare.com/media/20335/log.png",
+    "XCE": "https://www.cryptocompare.com/media/20573/xce.png",
+    "ACP": "https://www.cryptocompare.com/media/351019/acp.png",
+    "GNO": "https://www.cryptocompare.com/media/1383083/gnosis-logo.png",
+    "LGD": "https://www.cryptocompare.com/media/1383085/lgd.png",
+    "BUCKS": "https://www.cryptocompare.com/media/1383089/bucks.png",
+    "RAIN": "https://www.cryptocompare.com/media/1383114/rain.png",
+    "WSX": "https://www.cryptocompare.com/media/1383144/wsx.png",
+    "IEC": "https://www.cryptocompare.com/media/1383144/wsx.png",
+    "IMS": "https://www.cryptocompare.com/media/1383145/ims.png",
+    "ARGUS": "https://www.cryptocompare.com/media/1383149/argus.png",
+    "TKN": "https://www.cryptocompare.com/media/1383157/tkn.png",
+    "BTCS": "https://www.cryptocompare.com/media/1383158/btcs.png",
+    "PROC": "https://www.cryptocompare.com/media/1383159/proc.png",
+    "WRC*": "https://www.cryptocompare.com/media/1383162/wrc.png",
+    "BENJI": "https://www.cryptocompare.com/media/1383163/benji.png",
+    "BCAP": "https://www.cryptocompare.com/media/1383948/bcap1.png",
+    "DUO": "https://www.cryptocompare.com/media/1383196/duo.png",
+    "RBX": "https://www.cryptocompare.com/media/1383197/rbx.png",
+    "DRZ": "https://www.cryptocompare.com/media/20605/drz.png",
+    "BUCKS*": "https://www.cryptocompare.com/media/20602/bucks.png",
+    "BSC": "https://www.cryptocompare.com/media/20601/bsc.png",
+    "DRKT": "https://www.cryptocompare.com/media/20604/drkt.png",
+    "CIRC": "https://www.cryptocompare.com/media/20603/circ.png",
+    "GRW": "https://www.cryptocompare.com/media/1383234/grw.png",
+    "APX": "https://www.cryptocompare.com/media/1383235/apx.png",
+    "MILO": "https://www.cryptocompare.com/media/1383236/milo.png",
+    "ILC": "https://www.cryptocompare.com/media/1383238/ilc.png",
+    "MRT": "https://www.cryptocompare.com/media/350884/waves_1.png",
+    "NKA": "https://www.cryptocompare.com/media/20367/nka.png",
+    "VERSA": "https://www.cryptocompare.com/media/20629/versa.png",
+    "EPY": "https://www.cryptocompare.com/media/20628/epy.png",
+    "SQL": "https://www.cryptocompare.com/media/20441/sql.png",
+    "POLY": "https://www.cryptocompare.com/media/20631/poly.png",
+    "PIGGY": "https://www.cryptocompare.com/media/19854/piggy.png",
+    "CHA": "https://www.cryptocompare.com/media/19986/a3c.png",
+    "MIL": "https://www.cryptocompare.com/media/20354/mil.png",
+    "CRW": "https://www.cryptocompare.com/media/1383378/crw1.png",
+    "GEN": "https://www.cryptocompare.com/media/20640/gen.png",
+    "XPH": "https://www.cryptocompare.com/media/20641/xph.png",
+    "GRM": "https://www.cryptocompare.com/media/20642/grm.png",
+    "QTZ": "https://www.cryptocompare.com/media/20643/qtz.png",
+    "ARB": "https://www.cryptocompare.com/media/20645/arb.png",
+    "LTS": "https://www.cryptocompare.com/media/20644/lts.png",
+    "SPC": "https://www.cryptocompare.com/media/20655/spc.png",
+    "GP": "https://www.cryptocompare.com/media/20656/gp.png",
+    "BITZ": "https://www.cryptocompare.com/media/20654/bitz.png",
+    "DUB": "https://www.cryptocompare.com/media/19986/a3c.png",
+    "GRAV": "https://www.cryptocompare.com/media/20659/grav.png",
+    "BOB": "https://www.cryptocompare.com/media/20207/bob.png",
+    "HEDG": "https://www.cryptocompare.com/media/20663/hedg.png",
+    "IOU": "https://www.cryptocompare.com/media/1383241/iou1.png",
+    "PZM": "https://www.cryptocompare.com/media/1383242/pzm.jpg",
+    "PHR": "https://www.cryptocompare.com/media/1383243/phr.jpg",
+    "ANT": "https://www.cryptocompare.com/media/1383244/ant.png",
+    "PUPA": "https://www.cryptocompare.com/media/1383245/pupa.png",
+    "RICE": "https://www.cryptocompare.com/media/1383245/rice.png",
+    "XCT": "https://www.cryptocompare.com/media/1383246/xct.png",
+    "DEA": "https://www.cryptocompare.com/media/1383264/dea.png",
+    "RED": "https://www.cryptocompare.com/media/1383265/red.png",
+    "ZSE": "https://www.cryptocompare.com/media/1383266/zse.png",
+    "CTIC": "https://www.cryptocompare.com/media/1383267/ctic.png",
+    "BITOK": "https://www.cryptocompare.com/media/1383282/bitok.jpg",
+    "MUU": "https://www.cryptocompare.com/media/1383325/muu.png",
+    "INF8": "https://www.cryptocompare.com/media/1383326/inf8.png",
+    "MNE": "https://www.cryptocompare.com/media/1383328/mne.png",
+    "SONG": "https://www.cryptocompare.com/media/20432/song.png",
+    "XSEED": "https://www.cryptocompare.com/media/20163/xseed.png",
+    "AXIOM": "https://www.cryptocompare.com/media/20686/axiom.png",
+    "RBT": "https://www.cryptocompare.com/media/20407/rbt.png",
+    "CHIP": "https://www.cryptocompare.com/media/20685/chip.png",
+    "SPEC": "https://www.cryptocompare.com/media/20689/spec.png",
+    "GRAM": "https://www.cryptocompare.com/media/20688/gram.png",
+    "UNC": "https://www.cryptocompare.com/media/20693/unc.png",
+    "SPRTS": "https://www.cryptocompare.com/media/20692/sprts.png",
+    "ZNY": "https://www.cryptocompare.com/media/20691/zny.png",
+    "BTQ": "https://www.cryptocompare.com/media/19638/btq.png",
+    "STR*": "https://www.cryptocompare.com/media/19920/str.png",
+    "GHOUL": "https://www.cryptocompare.com/media/20701/ghoul.png",
+    "HNC": "https://www.cryptocompare.com/media/20702/hnc.png",
+    "KNC": "https://www.cryptocompare.com/media/12318084/knc.png",
+    "DLT": "https://www.cryptocompare.com/media/1384001/delta.png",
+    "BNB": "https://www.cryptocompare.com/media/1383947/bnb.png",
+    "FDC": "https://www.cryptocompare.com/media/12318125/fdc.jpg",
+    "SALT": "https://www.cryptocompare.com/media/9350744/salt.jpg",
+    "STOCKBET": "https://www.cryptocompare.com/media/12318119/stockbet.png",
+    "IGNIS": "https://www.cryptocompare.com/media/1384046/ignis.png",
+    "CFT*": "https://www.cryptocompare.com/media/9350747/credo.jpg",
+    "XP": "https://www.cryptocompare.com/media/12318134/xp.png",
+    "AEON": "https://www.cryptocompare.com/media/350955/aeon.png",
+    "SRT": "https://www.cryptocompare.com/media/9350771/srt.png",
+    "CCT*": "https://www.cryptocompare.com/media/12317979/cct1.png",
+    "DRC": "https://www.cryptocompare.com/media/11417638/drp.png",
+    "UFO": "https://www.cryptocompare.com/media/12318167/ufo1.png",
+    "NAV": "https://www.cryptocompare.com/media/351431/nav.png",
+    "ADA": "https://www.cryptocompare.com/media/12318177/ada.png",
+    "SYC": "https://www.cryptocompare.com/media/1383793/syc.png",
+    "WOLK": "https://www.cryptocompare.com/media/1383892/wolk.png",
+    "WIC": "https://www.cryptocompare.com/media/12318168/ocfkmb0t_400x400.jpg",
+    "SIGT": "https://www.cryptocompare.com/media/9350710/sigt.png",
+    "PND": "https://www.cryptocompare.com/media/12318184/pnd.png",
+    "MAT*": "https://www.cryptocompare.com/media/1383371/mat.png",
+    "SUB*": "https://www.cryptocompare.com/media/1383362/sub.png",
+    "BIS": "https://www.cryptocompare.com/media/12318191/bis.png",
+    "KEX": "https://www.cryptocompare.com/media/9350699/kex.png",
+    "FLASH": "https://www.cryptocompare.com/media/12318206/flash.png",
+    "GRF": "https://www.cryptocompare.com/media/12318208/grf.png",
+    "XUC*": "https://www.cryptocompare.com/media/12317962/xuc.png",
+    "AVT": "https://www.cryptocompare.com/media/1383599/avt.png",
+    "8S": "https://www.cryptocompare.com/media/12318091/8s.png",
+    "RHEA": "https://www.cryptocompare.com/media/12318096/rhea.png",
+    "TIE": "https://www.cryptocompare.com/media/1383955/tie.png",
+    "NRN": "https://www.cryptocompare.com/media/12318047/nrn.png",
+    "HDG": "https://www.cryptocompare.com/media/9350726/hdg.png",
+    "FLIK": "https://www.cryptocompare.com/media/12318230/flik.png",
+    "EVC": "https://www.cryptocompare.com/media/12318064/evc.png",
+    "VSX": "https://www.cryptocompare.com/media/12318194/vsx.png",
+    "OLV": "https://www.cryptocompare.com/media/1383239/xvs.png",
+    "XNC": "https://www.cryptocompare.com/media/352109/xnc.png",
+    "KAPU": "https://www.cryptocompare.com/media/12318035/logo_500x500.png",
+    "ALIS": "https://www.cryptocompare.com/media/12318247/alis.png",
+    "SENSE": "https://www.cryptocompare.com/media/12318034/sense.png",
+    "ZNT": "https://www.cryptocompare.com/media/1383875/znt.png",
+    "WRT": "https://www.cryptocompare.com/media/12317963/wrt.png",
+    "IOP": "https://www.cryptocompare.com/media/12318262/iop.png",
+    "VOISE": "https://www.cryptocompare.com/media/12318263/voise.png",
+    "DGB": "https://www.cryptocompare.com/media/12318264/7638-nty_400x400.jpg",
+    "SND": "https://www.cryptocompare.com/media/12318128/snd.png",
+    "TMT": "https://www.cryptocompare.com/media/12317977/tmt.png",
+    "PTS*": "https://www.cryptocompare.com/media/19869/pts.png",
+    "EZM": "https://www.cryptocompare.com/media/12318143/ezm.png",
+    "NTRN": "https://www.cryptocompare.com/media/12318281/ntrn.png",
+    "ARBI": "https://www.cryptocompare.com/media/12318258/arbi.png",
+    "TZC": "https://www.cryptocompare.com/media/12318285/tzc.png",
+    "AST*": "https://www.cryptocompare.com/media/1382170/ast.png",
+    "AST": "https://www.cryptocompare.com/media/12318279/ast.png",
+    "CND*": "https://www.cryptocompare.com/media/1381997/cnd.png",
+    "NTM": "https://www.cryptocompare.com/media/12318286/ntm.png",
+    "FND": "https://www.cryptocompare.com/media/1383765/fnd.png",
+    "HXT": "https://www.cryptocompare.com/media/12318282/hxt.png",
+    "REQ": "https://www.cryptocompare.com/media/12318260/req.png",
+    "ARENA": "https://www.cryptocompare.com/media/12318225/arena.png",
+    "ATCC": "https://www.cryptocompare.com/media/12318294/atcc.png",
+    "MCI": "https://www.cryptocompare.com/media/12318289/mci.png",
+    "VIBE": "https://www.cryptocompare.com/media/12318267/vibe.png",
+    "BAC*": "https://www.cryptocompare.com/media/12318229/bac.png",
+    "PPP": "https://www.cryptocompare.com/media/12318216/ppp.png",
+    "COLX": "https://www.cryptocompare.com/media/12318297/colx.png",
+    "WILD": "https://www.cryptocompare.com/media/12318298/wild.png",
+    "ELTC2": "https://www.cryptocompare.com/media/12318300/eltc2.png",
+    "COV*": "https://www.cryptocompare.com/media/351503/cov.png",
+    "AIR*": "https://www.cryptocompare.com/media/351740/air.png",
+    "GXC*": "https://www.cryptocompare.com/media/12318306/gxc.png",
+    "ZNA": "https://www.cryptocompare.com/media/12318142/zna.png",
+    "XCS": "https://www.cryptocompare.com/media/12318323/xcs.png",
+    "BQ": "https://www.cryptocompare.com/media/12318325/bq.png",
+    "QVT": "https://www.cryptocompare.com/media/1383954/qvt.png",
+    "COB": "https://www.cryptocompare.com/media/9350700/cobin.png",
+    "MTN": "https://www.cryptocompare.com/media/12318118/mtn.png",
+    "POLL": "https://www.cryptocompare.com/media/12318144/poll.png",
+    "TRIP": "https://www.cryptocompare.com/media/12318231/trip.png",
+    "ZSC": "https://www.cryptocompare.com/media/12318341/zsc.png",
+    "RPX": "https://www.cryptocompare.com/media/12318339/rpx.png",
+    "MDA": "https://www.cryptocompare.com/media/12318340/mda.png",
+    "AIR": "https://www.cryptocompare.com/media/12318291/air.png",
+    "AURS": "https://www.cryptocompare.com/media/12318345/aurs.png",
+    "ATS": "https://www.cryptocompare.com/media/12318356/ats.png",
+    "RGC": "https://www.cryptocompare.com/media/12318357/rgc.png",
+    "SNM": "https://www.cryptocompare.com/media/1383564/snm.png",
+    "EBET": "https://www.cryptocompare.com/media/12318358/ebet.png",
+    "VERI": "https://www.cryptocompare.com/media/1383562/veri.png",
+    "B3": "https://www.cryptocompare.com/media/12318367/b3.png",
+    "VEE": "https://www.cryptocompare.com/media/12318044/vee.png",
+    "3DES": "https://www.cryptocompare.com/media/12318014/3des.png",
+    "R": "https://www.cryptocompare.com/media/12318360/r.png",
+    "RUP": "https://www.cryptocompare.com/media/12318363/rup.jpg",
+    "WHL": "https://www.cryptocompare.com/media/12318372/whl.png",
+    "VIA": "https://www.cryptocompare.com/media/20070/via.png",
+    "BTG*": "https://www.cryptocompare.com/media/19634/btg.png",
+    "XMY": "https://www.cryptocompare.com/media/19815/myr.png",
+    "WOMEN": "https://www.cryptocompare.com/media/12318379/women.png",
+    "MAY": "https://www.cryptocompare.com/media/12318380/may.png",
+    "FRAZ": "https://www.cryptocompare.com/media/9350764/fraz.png",
+    "RNDR": "https://www.cryptocompare.com/media/12318381/rndr.png",
+    "BTB": "https://www.cryptocompare.com/media/20083/bitb.png",
+    "EDDIE": "https://www.cryptocompare.com/media/12318382/eddie.png",
+    "NAMO": "https://www.cryptocompare.com/media/12318384/namo.png",
+    "BLU": "https://www.cryptocompare.com/media/19624/blu.png",
+    "XMR": "https://www.cryptocompare.com/media/19969/xmr.png",
+    "ZEC": "https://www.cryptocompare.com/media/351360/zec.png",
+    "BTS": "https://www.cryptocompare.com/media/20705/bts.png",
+    "CORE": "https://www.cryptocompare.com/media/1383950/core.png",
+    "BTE": "https://www.cryptocompare.com/media/19632/bte.png",
+    "BCN": "https://www.cryptocompare.com/media/12318404/bcn.png",
+    "UP": "https://www.cryptocompare.com/media/12318374/up.png",
+    "CTX": "https://www.cryptocompare.com/media/12318075/ctx1.png",
+    "CASH*": "https://www.cryptocompare.com/media/1384020/cpp.png",
+    "BLUE": "https://www.cryptocompare.com/media/12318407/blue.png",
+    "IOT": "https://www.cryptocompare.com/media/1383540/iota_logo.png",
+    "PRG": "https://www.cryptocompare.com/media/1384033/prg.png",
+    "BM*": "https://www.cryptocompare.com/media/12318361/bm.png",
+    "ETG": "https://www.cryptocompare.com/media/12318378/etg.png",
+    "LA": "https://www.cryptocompare.com/media/1383782/lato.png",
+    "CPAY": "https://www.cryptocompare.com/media/12318303/cpay.png",
+    "ACE": "https://www.cryptocompare.com/media/11999076/ace.png",
+    "GJC": "https://www.cryptocompare.com/media/12318166/gjc.png",
+    "LUX*": "https://www.cryptocompare.com/media/20557/lux.png",
+    "DAS": "https://www.cryptocompare.com/media/14543970/das.png",
+    "ECASH": "https://www.cryptocompare.com/media/14543971/ecash.png",
+    "DCN": "https://www.cryptocompare.com/media/1383999/dcn.png",
+    "DENT": "https://www.cryptocompare.com/media/1383613/dent.png",
+    "CABS": "https://www.cryptocompare.com/media/1383869/cabs.png",
+    "ETP": "https://www.cryptocompare.com/media/12318223/etp.png",
+    "XRB": "https://www.cryptocompare.com/media/1383674/xrb.png",
+    "BRAT": "https://www.cryptocompare.com/media/14761895/brat.png",
+    "PRP": "https://www.cryptocompare.com/media/12318007/prp.png",
+    "TKT": "https://www.cryptocompare.com/media/12318093/tkt.png",
+    "PLM": "https://www.cryptocompare.com/media/12318124/plm.jpg",
+    "XRED": "https://www.cryptocompare.com/media/12318269/xred.png",
+    "AMT": "https://www.cryptocompare.com/media/9350756/amt.jpg",
+    "GRS": "https://www.cryptocompare.com/media/20309/grs.png",
+    "ESP": "https://www.cryptocompare.com/media/14761907/esp.png",
+    "VTC": "https://www.cryptocompare.com/media/19945/vtc.png",
+    "ELITE": "https://www.cryptocompare.com/media/14761914/elite.png",
+    "WPR": "https://www.cryptocompare.com/media/14543969/wpr.png",
+    "XIOS": "https://www.cryptocompare.com/media/14761915/xios.png",
+    "MNC": "https://www.cryptocompare.com/media/19805/mincoin.png",
+    "DRGN": "https://www.cryptocompare.com/media/14543974/drgn.jpg",
+    "BON": "https://www.cryptocompare.com/media/351045/bon_1.png",
+    "ETN": "https://www.cryptocompare.com/media/14761932/electroneum.png",
+    "ENG": "https://www.cryptocompare.com/media/12318287/eng.png",
+    "DTT*": "https://www.cryptocompare.com/media/14761941/dtt1.png",
+    "ODMC": "https://www.cryptocompare.com/media/14761889/odmcoin.png",
+    "KEY": "https://www.cryptocompare.com/media/20331/key.png",
+    "XNN": "https://www.cryptocompare.com/media/14761938/xnn.png",
+    "BT1": "https://www.cryptocompare.com/media/19633/btc.png",
+    "BT2": "https://www.cryptocompare.com/media/19633/btc.png",
+    "ARK": "https://www.cryptocompare.com/media/351931/ark.png",
+    "ZAB": "https://www.cryptocompare.com/media/14761946/zab.png",
+    "BAR": "https://www.cryptocompare.com/media/14543951/bar.png",
+    "VRP*": "https://www.cryptocompare.com/media/12318284/vrt.png",
+    "KEK": "https://www.cryptocompare.com/media/14913432/kek.png",
+    "ATM": "https://www.cryptocompare.com/media/14913430/atm.png",
+    "ALTCOM": "https://www.cryptocompare.com/media/14913436/altcom.png",
+    "UGT": "https://www.cryptocompare.com/media/14913439/ugt.png",
+    "DATA": "https://www.cryptocompare.com/media/14913438/data.png",
+    "ROCK": "https://www.cryptocompare.com/media/12318189/rock.png",
+    "EVR": "https://www.cryptocompare.com/media/12318332/evr.png",
+    "EXN": "https://www.cryptocompare.com/media/14913459/exn.png",
+    "TRCT": "https://www.cryptocompare.com/media/14913462/trct.png",
+    "BTCRED": "https://www.cryptocompare.com/media/14913463/btcred.png",
+    "WABI": "https://www.cryptocompare.com/media/12318331/wabi.png",
+    "POS": "https://www.cryptocompare.com/media/14913455/pos.png",
+    "AR*": "https://www.cryptocompare.com/media/14913465/ar.png",
+    "DTC": "https://www.cryptocompare.com/media/14913440/dtc.png",
+    "DTC*": "https://www.cryptocompare.com/media/19688/dtc.png",
+    "CLD": "https://www.cryptocompare.com/media/14913452/cld.png",
+    "BDR": "https://www.cryptocompare.com/media/14913485/bdr.png",
+    "SC": "https://www.cryptocompare.com/media/20726/siacon-logo.png",
+    "DUTCH": "https://www.cryptocompare.com/media/14913487/dutch.png",
+    "RUPX": "https://www.cryptocompare.com/media/14913484/rupx.png",
+    "ALTOCAR": "https://www.cryptocompare.com/media/9350746/altc.png",
+    "MNT": "https://www.cryptocompare.com/media/9350745/mntp.png",
+    "UKG": "https://www.cryptocompare.com/media/14913456/ukg.png",
+    "HNC*": "https://www.cryptocompare.com/media/14913529/hnc.png",
+    "PURA": "https://www.cryptocompare.com/media/14913533/pura.png",
+    "DTT": "https://www.cryptocompare.com/media/12318109/dtt.png",
+    "BCPT": "https://www.cryptocompare.com/media/14913537/cpt.png",
+    "ART": "https://www.cryptocompare.com/media/12318097/art.png",
+    "XBL": "https://www.cryptocompare.com/media/14913541/xbl.png",
+    "ARC": "https://www.cryptocompare.com/media/1383824/arc.png",
+    "AID": "https://www.cryptocompare.com/media/14913433/aidcoin.png",
+    "PRE*": "https://www.cryptocompare.com/media/1383801/pst.png",
+    "MOBI": "https://www.cryptocompare.com/media/1383921/mobi.png",
+    "OTN": "https://www.cryptocompare.com/media/14913453/otn.png",
+    "NULS": "https://www.cryptocompare.com/media/14913548/nuls.png",
+    "PHR*": "https://www.cryptocompare.com/media/14913549/phr.png",
+    "REBL": "https://www.cryptocompare.com/media/14913454/rebl.png",
+    "LCASH": "https://www.cryptocompare.com/media/14913550/lcash.png",
+    "NEOG": "https://www.cryptocompare.com/media/14913457/neog.png",
+    "CFD": "https://www.cryptocompare.com/media/14913552/cfd.png",
+    "ATFS": "https://www.cryptocompare.com/media/14913545/atfs.png",
+    "CIX": "https://www.cryptocompare.com/media/12318222/cnxasterisco.png",
+    "CRTM": "https://www.cryptocompare.com/media/9350790/crtm.jpg",
+    "GCN": "https://www.cryptocompare.com/media/1383899/gcn.png",
+    "ETH": "https://www.cryptocompare.com/media/20646/eth_logo.png",
+    "ZEPH": "https://www.cryptocompare.com/media/14913542/zeph.png",
+    "CMS": "https://www.cryptocompare.com/media/14913540/comsa.png",
+    "WSC": "https://www.cryptocompare.com/media/14913560/wsc.png",
+    "DBET": "https://www.cryptocompare.com/media/14913561/dbet.png",
+    "XIN": "https://www.cryptocompare.com/media/14913486/xin.png",
+    "LIFE": "https://www.cryptocompare.com/media/14913568/life.png",
+    "NEWB": "https://www.cryptocompare.com/media/14913564/newb.png",
+    "MTX": "https://www.cryptocompare.com/media/9350793/mtx.png",
+    "CREDO": "https://www.cryptocompare.com/media/14913573/credo-1.png",
+    "MSR": "https://www.cryptocompare.com/media/14913574/msr.png",
+    "EBTC": "https://www.cryptocompare.com/media/12318175/ebtc.png",
+    "HST": "https://www.cryptocompare.com/media/14913538/hst.png",
+    "CJT": "https://www.cryptocompare.com/media/14913575/cjt.png",
+    "ENV": "https://www.cryptocompare.com/media/14913587/env.png",
+    "ELT": "https://www.cryptocompare.com/media/12318259/elt.png",
+    "UTK": "https://www.cryptocompare.com/media/9350717/utrust.png",
+    "H2O": "https://www.cryptocompare.com/media/12318092/h2o.png",
+    "JCR": "https://www.cryptocompare.com/media/14761952/jcr.png",
+    "RCN": "https://www.cryptocompare.com/media/12318046/rnc.png",
+    "POWR": "https://www.cryptocompare.com/media/12318301/powr.png",
+    "ENJ": "https://www.cryptocompare.com/media/11417639/enjt.png",
+    "RLC": "https://www.cryptocompare.com/media/12318418/rlc.png",
+    "SUB": "https://www.cryptocompare.com/media/1384011/sub1.png",
+    "GUP": "https://www.cryptocompare.com/media/1383107/gup.png",
+    "TIX": "https://www.cryptocompare.com/media/1383690/tix.png",
+    "MDC*": "https://www.cryptocompare.com/media/14913531/mdc.png",
+    "ELLA": "https://www.cryptocompare.com/media/14913603/ella.png",
+    "PIRL": "https://www.cryptocompare.com/media/14543968/pirl.png",
+    "PRIX": "https://www.cryptocompare.com/media/9350797/prix.png",
+    "MER": "https://www.cryptocompare.com/media/14913628/mer.png",
+    "APPC": "https://www.cryptocompare.com/media/12318370/app.png",
+    "XPTX": "https://www.cryptocompare.com/media/14913633/xptx.png",
+    "FLP": "https://www.cryptocompare.com/media/12318280/flip.png",
+    "SRN": "https://www.cryptocompare.com/media/14913556/srn.png",
+    "COIN*": "https://www.cryptocompare.com/media/350950/coin.png",
+    "COIN": "https://www.cryptocompare.com/media/14913606/coin.png",
+    "ETK": "https://www.cryptocompare.com/media/14913635/etk.png",
+    "STORJ": "https://www.cryptocompare.com/media/20422/sjcx.png",
+    "BAY": "https://www.cryptocompare.com/media/1383137/bay1.png",
+    "EMC2": "https://www.cryptocompare.com/media/20033/emc2.png",
+    "BTX": "https://www.cryptocompare.com/media/1383895/btx.png",
+    "XVG": "https://www.cryptocompare.com/media/12318032/xvg.png",
+    "RDN*": "https://www.cryptocompare.com/media/14913482/rdn.png",
+    "CTR": "https://www.cryptocompare.com/media/1384029/ctr.png",
+    "VIB": "https://www.cryptocompare.com/media/1383893/vib.png",
+    "LSK": "https://www.cryptocompare.com/media/352246/lsk.png",
+    "VEN": "https://www.cryptocompare.com/media/12318129/ven.png",
+    "BITB": "https://www.cryptocompare.com/media/350879/bitb.png",
+    "WC": "https://www.cryptocompare.com/media/19948/wc.png",
+    "ASTRO": "https://www.cryptocompare.com/media/14913641/astro.png",
+    "SNT": "https://www.cryptocompare.com/media/1383568/snt.png",
+    "MCAP": "https://www.cryptocompare.com/media/1383559/mcap.png",
+    "CLUB": "https://www.cryptocompare.com/media/350609/club.png",
+    "GMT": "https://www.cryptocompare.com/media/14913642/gmt.png",
+    "SUPER": "https://www.cryptocompare.com/media/20061/super.png",
+    "PIVX": "https://www.cryptocompare.com/media/1382389/pivx.png",
+    "BCCOIN": "https://www.cryptocompare.com/media/9350709/bccoin1.png",
+    "ICX": "https://www.cryptocompare.com/media/12318192/icx.png",
+    "TX": "https://www.cryptocompare.com/media/20722/tx.png",
+    "VOX": "https://www.cryptocompare.com/media/350824/vox.png",
+    "DBIX": "https://www.cryptocompare.com/media/1382860/dbix.png",
+    "DEEP": "https://www.cryptocompare.com/media/12317976/deep.png",
+    "ICOS": "https://www.cryptocompare.com/media/1383968/icos1.png",
+    "ATL": "https://www.cryptocompare.com/media/9350703/atlant.png",
+    "RKC": "https://www.cryptocompare.com/media/1383852/rkc.png",
+    "ZENI": "https://www.cryptocompare.com/media/1382807/zen.png",
+    "ATMS": "https://www.cryptocompare.com/media/1383003/atms.png",
+    "PIX": "https://www.cryptocompare.com/media/1384024/pix.png",
+    "BOST": "https://www.cryptocompare.com/media/19626/bost.png",
+    "XGR": "https://www.cryptocompare.com/media/1383161/xgr.png",
+    "ADST": "https://www.cryptocompare.com/media/1383846/adst.png",
+    "ZER": "https://www.cryptocompare.com/media/1382761/zer.png",
+    "SOAR": "https://www.cryptocompare.com/media/14913644/soar.png",
+    "KRB": "https://www.cryptocompare.com/media/351504/krb.jpg",
+    "ION": "https://www.cryptocompare.com/media/350933/ion.jpg",
+    "NOTE": "https://www.cryptocompare.com/media/19832/note.png",
+    "OMNI": "https://www.cryptocompare.com/media/351102/omni.png",
+    "EDO": "https://www.cryptocompare.com/media/12318082/eiboo.png",
+    "TRUST": "https://www.cryptocompare.com/media/19935/trust.png",
+    "SBD": "https://www.cryptocompare.com/media/350907/steem.png",
+    "ETC": "https://www.cryptocompare.com/media/20275/etc2.png",
+    "CSNO": "https://www.cryptocompare.com/media/1383922/csno.png",
+    "BCY": "https://www.cryptocompare.com/media/350903/bcy.png",
+    "NBT": "https://www.cryptocompare.com/media/20363/nbt.png",
+    "INS": "https://www.cryptocompare.com/media/14913458/ins.png",
+    "SPHTX": "https://www.cryptocompare.com/media/14913551/sphtx.png",
+    "DON": "https://www.cryptocompare.com/media/1382995/don.png",
+    "DGPT": "https://www.cryptocompare.com/media/1383920/dgt.png",
+    "GRID*": "https://www.cryptocompare.com/media/20313/grid.png",
+    "ARNA*": "https://www.cryptocompare.com/media/12318005/arna.png",
+    "ESC*": "https://www.cryptocompare.com/media/14913585/esc.png",
+    "JPC*": "https://www.cryptocompare.com/media/14913466/jpc.png",
+    "ECHT": "https://www.cryptocompare.com/media/12318352/echt.png",
+    "ACT": "https://www.cryptocompare.com/media/1383700/act.png",
+    "EXP": "https://www.cryptocompare.com/media/20707/exp.png",
+    "AMP": "https://www.cryptocompare.com/media/350825/amp.png",
+    "EVX": "https://www.cryptocompare.com/media/1383850/evx.png",
+    "HTML5": "https://www.cryptocompare.com/media/1383327/html5.png",
+    "MTH": "https://www.cryptocompare.com/media/1383976/mth.png",
+    "AE": "https://www.cryptocompare.com/media/1383836/ae.png",
+    "ADT": "https://www.cryptocompare.com/media/1383829/adt.png",
+    "KOLION": "https://www.cryptocompare.com/media/12318295/kolion.png",
+    "TRST": "https://www.cryptocompare.com/media/1381975/trst.png",
+    "MANA": "https://www.cryptocompare.com/media/1383903/mana.png",
+    "XUC": "https://www.cryptocompare.com/media/1383784/xuc.png",
+    "BCH": "https://www.cryptocompare.com/media/1383919/bch.jpg",
+    "QRL": "https://www.cryptocompare.com/media/1383543/qrl.png",
+    "VIU": "https://www.cryptocompare.com/media/14913680/viu.png",
+    "DOVU": "https://www.cryptocompare.com/media/14761916/dovu.png",
+    "LTD": "https://www.cryptocompare.com/media/1382049/ltd.png",
+    "THC": "https://www.cryptocompare.com/media/351699/thc.png",
+    "VSL": "https://www.cryptocompare.com/media/352113/d5a4e4f0366d3ae8cdbc45ad097f664c2557a55f0c237c1710-pimgpsh_fullsize_distr.jpg",
+    "QWARK": "https://www.cryptocompare.com/media/1383522/qwark.png",
+    "GRID": "https://www.cryptocompare.com/media/14913632/grid.png",
+    "NET*": "https://www.cryptocompare.com/media/1383697/net1.png",
+    "INDI": "https://www.cryptocompare.com/media/12318419/indi.png",
+    "HAC": "https://www.cryptocompare.com/media/12318176/hac.jpg",
+    "ETHD": "https://www.cryptocompare.com/media/12318087/ethd.png",
+    "GFT": "https://www.cryptocompare.com/media/14913686/gft.jpg",
+    "PINK": "https://www.cryptocompare.com/media/350588/pinkcoin-logo.png",
+    "HVN": "https://www.cryptocompare.com/media/1383745/hvt.png",
+    "STX": "https://www.cryptocompare.com/media/1383946/stx.png",
+    "XMG": "https://www.cryptocompare.com/media/20154/xmg.png",
+    "INN": "https://www.cryptocompare.com/media/14913536/inn.png",
+    "XAUR": "https://www.cryptocompare.com/media/351382/xaur.png",
+    "MUSIC": "https://www.cryptocompare.com/media/1382783/music.png",
+    "CNX": "https://www.cryptocompare.com/media/11417632/cnx.png",
+    "VIVO": "https://www.cryptocompare.com/media/12318337/vivo.png",
+    "DFT": "https://www.cryptocompare.com/media/9350712/dft.png",
+    "NMR": "https://www.cryptocompare.com/media/1383655/nmr.png",
+    "XID": "https://www.cryptocompare.com/media/1383898/xid.jpg",
+    "EBST": "https://www.cryptocompare.com/media/14913431/ebst.png",
+    "XBY": "https://www.cryptocompare.com/media/1383439/xby1.png",
+    "POSW": "https://www.cryptocompare.com/media/1382902/posw.png",
+    "ODN": "https://www.cryptocompare.com/media/12318145/odn.png",
+    "ELM": "https://www.cryptocompare.com/media/12318308/elm.png",
+    "WAND": "https://www.cryptocompare.com/media/12318182/wandxlogo_new1.png",
+    "AUTH": "https://www.cryptocompare.com/media/1384019/auth.png",
+    "BCF": "https://www.cryptocompare.com/media/352189/btf.png",
+    "MEME": "https://www.cryptocompare.com/media/1383050/pepecoin-512.png",
+    "XHI": "https://www.cryptocompare.com/media/350892/xhi.png",
+    "SAFEX": "https://www.cryptocompare.com/media/1383986/safex.png",
+    "CFI": "https://www.cryptocompare.com/media/1383567/cfi.png",
+    "PPC": "https://www.cryptocompare.com/media/19864/peercoin-logo.png",
+    "BELA": "https://www.cryptocompare.com/media/351933/bela.jpg",
+    "IOC": "https://www.cryptocompare.com/media/20042/ioc.png",
+    "OAX": "https://www.cryptocompare.com/media/1383756/oax.png",
+    "NLC2": "https://www.cryptocompare.com/media/1383855/nlc21.png",
+    "LUN": "https://www.cryptocompare.com/media/1383112/lunyr-logo.png",
+    "KORE": "https://www.cryptocompare.com/media/14543972/kore.png",
+    "AMB": "https://www.cryptocompare.com/media/9350739/amb.png",
+    "SWIFT": "https://www.cryptocompare.com/media/20446/swift.png",
+    "VMC": "https://www.cryptocompare.com/media/19943/vmc.png",
+    "ADC": "https://www.cryptocompare.com/media/350880/adc.png",
+    "CRAVE": "https://www.cryptocompare.com/media/20242/crave.png",
+    "DP": "https://www.cryptocompare.com/media/1383772/dp.png",
+    "HOLD": "https://www.cryptocompare.com/media/14913647/hold.png",
+    "SMART": "https://www.cryptocompare.com/media/1383906/smart.png",
+    "CRDS": "https://www.cryptocompare.com/media/14913675/crds.png",
+    "DRXNE": "https://www.cryptocompare.com/media/14913608/drxne.png",
+    "xGOx": "https://www.cryptocompare.com/media/14913685/xgox.png",
+    "ONION": "https://www.cryptocompare.com/media/1383894/onion.png",
+    "NEBL": "https://www.cryptocompare.com/media/1384016/nebl.png",
+    "YOC": "https://www.cryptocompare.com/media/350957/yoc.png",
+    "RNS": "https://www.cryptocompare.com/media/1382859/rns.png",
+    "XMCC": "https://www.cryptocompare.com/media/1384017/mcc.png",
+    "DVC": "https://www.cryptocompare.com/media/20563/dvc.png",
+    "HUSH": "https://www.cryptocompare.com/media/1383138/thehush_300x300.png",
+    "MNZ": "https://www.cryptocompare.com/media/12318336/mnz.png",
+    "EXY": "https://www.cryptocompare.com/media/14913645/exy.png",
+    "QRK": "https://www.cryptocompare.com/media/19882/qrk.png",
+    "GVT": "https://www.cryptocompare.com/media/14913634/gvt.png",
+    "CLOAK": "https://www.cryptocompare.com/media/19994/cloak.png",
+    "XC": "https://www.cryptocompare.com/media/19956/xc.png",
+    "MGO": "https://www.cryptocompare.com/media/1382798/mgo.png",
+    "PLAY": "https://www.cryptocompare.com/media/14913441/play.png",
+    "TKR": "https://www.cryptocompare.com/media/14761909/tkr.png",
+    "WYR": "https://www.cryptocompare.com/media/12318413/wyr.png",
+    "SCT*": "https://www.cryptocompare.com/media/12318383/sct.png",
+    "CAG": "https://www.cryptocompare.com/media/12318346/cag.png",
+    "CND": "https://www.cryptocompare.com/media/12318283/cnd.png",
+    "NTO": "https://www.cryptocompare.com/media/12318293/nto.png",
+    "DAY": "https://www.cryptocompare.com/media/12318271/day.png",
+    "ELIX": "https://www.cryptocompare.com/media/12318172/elix.png",
+    "LRC": "https://www.cryptocompare.com/media/12318135/lrc.png",
+    "REX": "https://www.cryptocompare.com/media/12318086/rex.png",
+    "BLX": "https://www.cryptocompare.com/media/9350748/blx.png",
+    "MRV": "https://www.cryptocompare.com/media/1384009/mrv.png",
+    "IND": "https://www.cryptocompare.com/media/1383794/ind.png",
+    "IFT": "https://www.cryptocompare.com/media/12318127/ift.png",
+    "SAN": "https://www.cryptocompare.com/media/1383730/san.png",
+    "PBT": "https://www.cryptocompare.com/media/1383324/pbt.png",
+    "BET*": "https://www.cryptocompare.com/media/1383729/bet.png",
+    "DICE": "https://www.cryptocompare.com/media/1383361/dice.png",
+    "DGD": "https://www.cryptocompare.com/media/350851/dgd.png",
+    "INXT": "https://www.cryptocompare.com/media/12318355/inxt.png",
+    "ARN": "https://www.cryptocompare.com/media/12318261/arn.png",
+    "PRC": "https://www.cryptocompare.com/media/20393/prc.png",
+    "JVY": "https://www.cryptocompare.com/media/12318244/jvy.png",
+    "RIYA": "https://www.cryptocompare.com/media/9350737/riya.png",
+    "KICK": "https://www.cryptocompare.com/media/1383929/kick.png",
+    "POE": "https://www.cryptocompare.com/media/1383828/poe.png",
+    "MYST": "https://www.cryptocompare.com/media/1383561/myst.png",
+    "PTOY": "https://www.cryptocompare.com/media/1383547/ptoy.png",
+    "DCT": "https://www.cryptocompare.com/media/351389/dct.png",
+    "CRB": "https://www.cryptocompare.com/media/1382904/crbit1.png",
+    "KCS": "https://www.cryptocompare.com/media/12318389/kcs.png",
+    "TAAS": "https://www.cryptocompare.com/media/1383085/taas.png",
+    "ICE": "https://www.cryptocompare.com/media/1383896/46b-uaba_400x400.jpg",
+    "EBCH": "https://www.cryptocompare.com/media/14913464/ebch.png",
+    "QCN": "https://www.cryptocompare.com/media/19877/qcn.png",
+    "MCN": "https://www.cryptocompare.com/media/20346/mcn.png",
+    "EPY*": "https://www.cryptocompare.com/media/14913643/epy.png",
+    "2GIVE": "https://www.cryptocompare.com/media/350986/2give.png",
+    "RDD": "https://www.cryptocompare.com/media/19887/rdd.png",
+    "SWT": "https://www.cryptocompare.com/media/1382740/swt.jpg",
+    "XVC": "https://www.cryptocompare.com/media/350813/xvc.png",
+    "STRAT": "https://www.cryptocompare.com/media/351303/stratis-logo.png",
+    "MOD": "https://www.cryptocompare.com/media/12318362/mod.png",
+    "STC": "https://www.cryptocompare.com/media/15887405/sct.png",
+    "QSP": "https://www.cryptocompare.com/media/15887408/qsp.png",
+    "WEB": "https://www.cryptocompare.com/media/12318169/web.png",
+    "MTK": "https://www.cryptocompare.com/media/12318149/mtk.png",
+    "GBYTE": "https://www.cryptocompare.com/media/351835/bytes.png",
+    "ETBS": "https://www.cryptocompare.com/media/12318348/etbs.png",
+    "PAY": "https://www.cryptocompare.com/media/1383687/pay.png",
+    "NYC": "https://www.cryptocompare.com/media/9350762/nyc.png",
+    "BTG": "https://www.cryptocompare.com/media/12318377/btg.png",
+    "EGC": "https://www.cryptocompare.com/media/350614/egc.png",
+    "BPL": "https://www.cryptocompare.com/media/14913604/bpl.png",
+    "CNT": "https://www.cryptocompare.com/media/1383150/cnt.png",
+    "NXT": "https://www.cryptocompare.com/media/20627/nxt.png",
+    "HSR": "https://www.cryptocompare.com/media/12318137/hsr.png",
+    "MAD": "https://www.cryptocompare.com/media/1383556/mad.png",
+    "CWXT": "https://www.cryptocompare.com/media/1382470/cwxt.png",
+    "OTX": "https://www.cryptocompare.com/media/1383817/1qrfuod6_400x400.jpg",
+    "START": "https://www.cryptocompare.com/media/19916/start.png",
+    "STEEM": "https://www.cryptocompare.com/media/350907/steem.png",
+    "DOT": "https://www.cryptocompare.com/media/350909/dot.png",
+    "GOLOS": "https://www.cryptocompare.com/media/1382246/golos.png",
+    "NVC": "https://www.cryptocompare.com/media/20713/nvc.png",
+    "REC": "https://www.cryptocompare.com/media/12318179/rec.png",
+    "XWC": "https://www.cryptocompare.com/media/350911/xwc_1.png",
+    "INFX": "https://www.cryptocompare.com/media/350919/infx.png",
+    "BLRY": "https://www.cryptocompare.com/media/350908/blry.png",
+    "PUT": "https://www.cryptocompare.com/media/1383668/put1.png",
+    "KNC*": "https://www.cryptocompare.com/media/350895/knc.png",
+    "TCR": "https://www.cryptocompare.com/media/350918/tcr.png",
+    "GSY": "https://www.cryptocompare.com/media/351103/gsy.png",
+    "LOC": "https://www.cryptocompare.com/media/1381971/loc.png",
+    "GUESS": "https://www.cryptocompare.com/media/12318217/guess.png",
+    "XTZ": "https://www.cryptocompare.com/media/1383651/xbt.png",
+    "DRA": "https://www.cryptocompare.com/media/1382095/dra.png",
+    "PART": "https://www.cryptocompare.com/media/1383838/part.png",
+    "BIOS": "https://www.cryptocompare.com/media/350894/bios.png",
+    "TAP": "https://www.cryptocompare.com/media/1383283/tap.png",
+    "SCR": "https://www.cryptocompare.com/media/14913681/scr.png",
+    "WISH": "https://www.cryptocompare.com/media/12317980/wish.png",
+    "LEV": "https://www.cryptocompare.com/media/12318249/lev.png",
+    "GBX": "https://www.cryptocompare.com/media/15887411/gbx.png",
+    "SHIFT": "https://www.cryptocompare.com/media/1382125/shift.png",
+    "LUX": "https://www.cryptocompare.com/media/12318422/lux.png",
+    "OXY": "https://www.cryptocompare.com/media/9350753/oxy.png",
+    "RISE": "https://www.cryptocompare.com/media/351059/rise.png",
+    "XDN": "https://www.cryptocompare.com/media/19957/xdn.jpg",
+    "CAPP": "https://www.cryptocompare.com/media/15887416/capp.png",
+    "YOYOW": "https://www.cryptocompare.com/media/12318178/yoyow.png",
+    "FUEL": "https://www.cryptocompare.com/media/11999072/fuel.png",
+    "CDT": "https://www.cryptocompare.com/media/1383699/cdt.png",
+    "FRST": "https://www.cryptocompare.com/media/1382654/first.png",
+    "ATB": "https://www.cryptocompare.com/media/1383689/atb.png",
+    "PAC": "https://www.cryptocompare.com/media/1382605/pac.png",
+    "DIME": "https://www.cryptocompare.com/media/351012/dime.png",
+    "STU": "https://www.cryptocompare.com/media/1383785/stu.png",
+    "BAC": "https://www.cryptocompare.com/media/350913/bac.png",
+    "XID*": "https://www.cryptocompare.com/media/350916/xid.png",
+    "FIRST": "https://www.cryptocompare.com/media/352116/first.png",
+    "TER": "https://www.cryptocompare.com/media/12318324/ter.png",
+    "ASAFE2": "https://www.cryptocompare.com/media/1382096/allsafe.jpg",
+    "CRE": "https://www.cryptocompare.com/media/20683/cre.png",
+    "LINDA": "https://www.cryptocompare.com/media/1383860/linda.png",
+    "ECO": "https://www.cryptocompare.com/media/1382993/eco.png",
+    "BUZZ": "https://www.cryptocompare.com/media/15887419/buzz.png",
+    "SMT": "https://www.cryptocompare.com/media/12318350/smt.png",
+    "REE": "https://www.cryptocompare.com/media/351096/ree.png",
+    "PURE": "https://www.cryptocompare.com/media/14913451/pure.png",
+    "BBT*": "https://www.cryptocompare.com/media/15887410/bbt.png",
+    "BBT": "https://www.cryptocompare.com/media/1383883/bbt.png",
+    "PAK": "https://www.cryptocompare.com/media/350788/pak.png",
+    "BTZ": "https://www.cryptocompare.com/media/1382433/btz.png",
+    "BTCZ": "https://www.cryptocompare.com/media/12318408/btcz.png",
+    "LDOGE": "https://www.cryptocompare.com/media/20332/ldoge.png",
+    "BSTAR": "https://www.cryptocompare.com/media/352250/bstar.png",
+    "ARCO": "https://www.cryptocompare.com/media/352134/arco.png",
+    "XLR": "https://www.cryptocompare.com/media/1382994/xlr.png",
+    "VOLT": "https://www.cryptocompare.com/media/1382794/volt.png",
+    "ETHS": "https://www.cryptocompare.com/media/350910/eths.png",
+    "HPC": "https://www.cryptocompare.com/media/1383046/hpc.png",
+    "SCL": "https://www.cryptocompare.com/media/9350788/scl.png",
+    "ICC": "https://www.cryptocompare.com/media/15887424/icc.png",
+    "DBTC": "https://www.cryptocompare.com/media/350953/dbtc.png",
+    "VPRC": "https://www.cryptocompare.com/media/350951/vpc.png",
+    "BTA": "https://www.cryptocompare.com/media/1383113/bta1.png",
+    "KURT": "https://www.cryptocompare.com/media/352155/kurt.png",
+    "BHC*": "https://www.cryptocompare.com/media/14913434/bhc.png",
+    "UMC": "https://www.cryptocompare.com/media/1383983/umb.png",
+    "ADL": "https://www.cryptocompare.com/media/1383544/adl.png",
+    "SDP": "https://www.cryptocompare.com/media/351709/sdp.jpg",
+    "FLLW": "https://www.cryptocompare.com/media/12318412/fllw.png",
+    "MBT": "https://www.cryptocompare.com/media/12318238/mbt.png",
+    "GAT": "https://www.cryptocompare.com/media/12318390/gat.png",
+    "BTDX": "https://www.cryptocompare.com/media/14761939/btdx.png",
+    "ABT": "https://www.cryptocompare.com/media/14913683/abt.png",
+    "NPX": "https://www.cryptocompare.com/media/12318066/npx.png",
+    "VIP": "https://www.cryptocompare.com/media/351069/vip.png",
+    "MND": "https://www.cryptocompare.com/media/350616/mnd.png",
+    "CCRB": "https://www.cryptocompare.com/media/352294/ccrb.png",
+    "CSTL": "https://www.cryptocompare.com/media/15887421/cstl.png",
+    "MNX": "https://www.cryptocompare.com/media/14913648/mnx.png",
+    "LEA": "https://www.cryptocompare.com/media/351729/lea.png",
+    "MCRN": "https://www.cryptocompare.com/media/1383111/mcrn.png",
+    "XGB": "https://www.cryptocompare.com/media/1382372/xgb.png",
+    "SYNX": "https://www.cryptocompare.com/media/15887426/synx.png",
+    "RADI": "https://www.cryptocompare.com/media/1382239/rad.png",
+    "HXX": "https://www.cryptocompare.com/media/1382348/hexx.jpg",
+    "SKR": "https://www.cryptocompare.com/media/14913631/skr.png",
+    "8BT": "https://www.cryptocompare.com/media/1383698/8bt.png",
+    "RCN*": "https://www.cryptocompare.com/media/351634/rcn.png",
+    "SKR*": "https://www.cryptocompare.com/media/12318013/skr.png",
+    "ENT": "https://www.cryptocompare.com/media/352157/ent.jpg",
+    "BASH": "https://www.cryptocompare.com/media/352004/bash.png",
+    "AMS": "https://www.cryptocompare.com/media/350562/ams.png",
+    "JNT": "https://www.cryptocompare.com/media/15887422/jnt.jpg",
+    "KOBO": "https://www.cryptocompare.com/media/20329/kobo.png",
+    "OPAL": "https://www.cryptocompare.com/media/20050/opal.png",
+    "FRN": "https://www.cryptocompare.com/media/350992/frn.png",
+    "HODL": "https://www.cryptocompare.com/media/350840/hodl.png",
+    "NDC": "https://www.cryptocompare.com/media/1383827/ndc.png",
+    "DRT": "https://www.cryptocompare.com/media/12318099/drt.png",
+    "PKB": "https://www.cryptocompare.com/media/20694/pkb.png",
+    "ZET": "https://www.cryptocompare.com/media/19993/zet.png",
+    "IXT": "https://www.cryptocompare.com/media/1383612/ixt.png",
+    "SNRG": "https://www.cryptocompare.com/media/20700/snrg.png",
+    "LOAN*": "https://www.cryptocompare.com/media/14761940/loan.png",
+    "BDL": "https://www.cryptocompare.com/media/14913539/bdl.png",
+    "CAT*": "https://www.cryptocompare.com/media/1383791/cat1.png",
+    "HMP": "https://www.cryptocompare.com/media/350941/hmp.png",
+    "HMQ": "https://www.cryptocompare.com/media/1383174/hmq.png",
+    "TAJ": "https://www.cryptocompare.com/media/1382867/taj.png",
+    "SXC": "https://www.cryptocompare.com/media/19924/sxc.png",
+    "GAME": "https://www.cryptocompare.com/media/350887/game.png",
+    "SMLY": "https://www.cryptocompare.com/media/20429/smly.png",
+    "CBX": "https://www.cryptocompare.com/media/20697/cbx.png",
+    "RIPT": "https://www.cryptocompare.com/media/15887409/ript.png",
+    "GEO": "https://www.cryptocompare.com/media/20292/geo.png",
+    "ALQO": "https://www.cryptocompare.com/media/16404849/alqo.png",
+    "KNC**": "https://www.cryptocompare.com/media/16404850/knc.png",
+    "QASH": "https://www.cryptocompare.com/media/15887431/qash.png",
+    "BQX": "https://www.cryptocompare.com/media/16404851/ethos.png",
+    "XBC": "https://www.cryptocompare.com/media/20488/xbc.png",
+    "POT": "https://www.cryptocompare.com/media/19865/pot.png",
+    "MAG*": "https://www.cryptocompare.com/media/9350711/mag.png",
+    "MAG": "https://www.cryptocompare.com/media/16404853/mag.png",
+    "STEX": "https://www.cryptocompare.com/media/16404854/stex.png",
+    "UFR": "https://www.cryptocompare.com/media/16404855/ufr.png",
+    "LOCI": "https://www.cryptocompare.com/media/16404856/loci.png",
+    "LAB*": "https://www.cryptocompare.com/media/20040/lab.png",
+    "LMC": "https://www.cryptocompare.com/media/1383139/lmc.png",
+    "ROK": "https://www.cryptocompare.com/media/12318268/rok.png",
+    "AVE": "https://www.cryptocompare.com/media/14761937/ave.png",
+    "CZC": "https://www.cryptocompare.com/media/12318215/czc.png",
+    "BNK": "https://www.cryptocompare.com/media/14913602/bnk.png",
+    "AXT": "https://www.cryptocompare.com/media/14913467/axt.png",
+    "KEY*": "https://www.cryptocompare.com/media/14761912/key.png",
+    "DEB": "https://www.cryptocompare.com/media/16404861/deb.png",
+    "TRIA": "https://www.cryptocompare.com/media/16404852/tria.png",
+    "FLIXX": "https://www.cryptocompare.com/media/16404862/flixx.png",
+    "PBL": "https://www.cryptocompare.com/media/16404866/pbl.png",
+    "PFR": "https://www.cryptocompare.com/media/16404867/pfr.png",
+    "ECA": "https://www.cryptocompare.com/media/16404869/eca.png",
+    "LAB": "https://www.cryptocompare.com/media/16404858/lab.png",
+    "TAU": "https://www.cryptocompare.com/media/16404857/lamden.png",
+    "TOA": "https://www.cryptocompare.com/media/12318334/toacoin.png",
+    "LDM": "https://www.cryptocompare.com/media/16404870/ldm.png",
+    "DTR": "https://www.cryptocompare.com/media/14761903/dtr.png",
+    "LTG": "https://www.cryptocompare.com/media/16404871/ltg.png",
+    "BCD": "https://www.cryptocompare.com/media/16404872/bcd.png",
+    "DMT": "https://www.cryptocompare.com/media/1383841/dmarket.png",
+    "BON*": "https://www.cryptocompare.com/media/12318368/bon.png",
+    "DAT": "https://www.cryptocompare.com/media/12318265/dat.png",
+    "MDL": "https://www.cryptocompare.com/media/14913435/mdl-ico.png",
+    "STP": "https://www.cryptocompare.com/media/16404874/stp.png",
+    "NEU*": "https://www.cryptocompare.com/media/14913483/neu.png",
+    "CLOUT": "https://www.cryptocompare.com/media/12318329/clout.png",
+    "MAT": "https://www.cryptocompare.com/media/12318162/mat.png",
+    "PTC*": "https://www.cryptocompare.com/media/14913426/ptc.png",
+    "OPP": "https://www.cryptocompare.com/media/12318188/opp.png",
+    "REA": "https://www.cryptocompare.com/media/14761934/rea.png",
+    "CAN*": "https://www.cryptocompare.com/media/12318218/canya.png",
+    "BKX": "https://www.cryptocompare.com/media/14913571/bkx.png",
+    "GLA": "https://www.cryptocompare.com/media/12318141/gla.png",
+    "CABS*": "https://www.cryptocompare.com/media/14761917/ctst.png",
+    "GES": "https://www.cryptocompare.com/media/14913547/ges.png",
+    "DBR": "https://www.cryptocompare.com/media/14913687/dbr.png",
+    "SPANK": "https://www.cryptocompare.com/media/16404890/spank.png",
+    "EOS": "https://www.cryptocompare.com/media/1383652/eos_1.png",
+    "WISH*": "https://www.cryptocompare.com/media/16404892/wish.png",
+    "AERM": "https://www.cryptocompare.com/media/16404893/aerm.png",
+    "PLX": "https://www.cryptocompare.com/media/16404895/plx.png",
+    "NIO": "https://www.cryptocompare.com/media/16404894/nio.png",
+    "ETHB": "https://www.cryptocompare.com/media/16746424/ethb.png",
+    "XLM": "https://www.cryptocompare.com/media/20696/str.png",
+    "CAV": "https://www.cryptocompare.com/media/12318328/cav.png",
+    "CDX*": "https://www.cryptocompare.com/media/16746425/cdx.png",
+    "FOOD": "https://www.cryptocompare.com/media/16746427/food.png",
+    "WRC": "https://www.cryptocompare.com/media/11999078/wrc.png",
+    "XSB": "https://www.cryptocompare.com/media/14761953/xbs.png",
+    "PYN": "https://www.cryptocompare.com/media/12318033/pyn.png",
+    "PKT": "https://www.cryptocompare.com/media/12318349/playkey.png",
+    "ERT": "https://www.cryptocompare.com/media/12318226/ert.png",
+    "SNOV": "https://www.cryptocompare.com/media/12318100/snov.png",
+    "C20": "https://www.cryptocompare.com/media/12318302/c20.png",
+    "VZT": "https://www.cryptocompare.com/media/12318414/vzt.png",
+    "ST": "https://www.cryptocompare.com/media/14913437/st.png",
+    "WIZ": "https://www.cryptocompare.com/media/12318081/wiz.png",
+    "CAS": "https://www.cryptocompare.com/media/12318148/cas.png",
+    "SHP": "https://www.cryptocompare.com/media/14761950/shp.png",
+    "TIO": "https://www.cryptocompare.com/media/14913488/tio.png",
+    "ATKN": "https://www.cryptocompare.com/media/12318083/atkn.png",
+    "COV": "https://www.cryptocompare.com/media/12318288/cov.png",
+    "EARTH": "https://www.cryptocompare.com/media/12318190/earth.png",
+    "ILCT": "https://www.cryptocompare.com/media/12318299/ilct.png",
+    "ROCK*": "https://www.cryptocompare.com/media/14913607/rock1.png",
+    "WAX": "https://www.cryptocompare.com/media/12318290/wax.png"
+};

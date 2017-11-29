@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Left, Right, Button, Icon, H2 } from 'native-base';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Left, Right, Button, Icon, H2, Spinner } from 'native-base';
 import {StyleSheet} from 'react-native';
 import { getCoinList} from '../Request/Coinmarket';
-import { coinListObj} from '../Request/Cryptocompare';
+import CoinList from '../Components/CoinMarket/CoinList';
 export default class CoinmarketList extends Component {
     // noinspection JSAnnotator
     constructor (props) {
@@ -10,17 +10,10 @@ export default class CoinmarketList extends Component {
 
         this.state = {
             coinMarketCoinList: [],
-            cryptoCompareCoinObj: {},
             percenSortOption: false,
             totalSortOption: false
         };
-        coinListObj()
-            .then(obj => {
-                this.setState(prev => {
-                    prev.cryptoCompareCoinObj = obj;
-                    return prev;
-                });
-            });
+
         getCoinList()
             .then(arr => {
                 this.setState(prev => {
@@ -31,38 +24,24 @@ export default class CoinmarketList extends Component {
 
         this.coinItemView = this.coinItemView.bind(this);
         this.sortCoinList = this.sortCoinList.bind(this);
-        this.totalSortCoinList = this.totalSortCoinList.bind(this);
     }
-    sortCoinList() {
-        let arr = this.state.coinMarketCoinList;
-        if (this.state.percenSortOption) {
-            arr = arr.sort((i,j) => {return parseFloat(i.percent_change_24h) > parseFloat(j.percent_change_24h) ? 1 : -1;} );
-        } else {
-            arr.sort((i,j) => {return parseFloat(j.percent_change_24h) - parseFloat(i.percent_change_24h);} );
-        }
-        this.setState((prev => {return {
-            coinMarketCoinList: arr,
-            percenSortOption: !prev.percenSortOption
-        }}));
-    }
-    totalSortCoinList() {
-        let arr = this.state.coinMarketCoinList;
-        if (this.state.totalSortOption) {
-            arr = arr.sort((i,j) => {return parseFloat(i.price_usd) - parseFloat(j.price_usd);} );
-        } else {
-            arr.sort((i,j) => {return parseFloat(j.price_usd) - parseFloat(i.price_usd);} );
-        }
-        this.setState((prev => {return {
-            coinMarketCoinList: arr,
-            totalSortOption: !prev.totalSortOption
-        }}));
+    sortCoinList(sortOption, sortField) {
+        let arr = this.state.coinMarketCoinList.sort((i,j) => {
+            return sortOption
+                ? parseFloat(i[sortField]) - parseFloat(j[sortField])
+                : parseFloat(j[sortField]) - parseFloat(i[sortField]);
+        });
+        this.setState((prev => {
+            prev['coinMarketCoinList'] = arr;
+            prev[sortOption] = !prev[sortOption];
+            return prev;
+        }));
     }
     coinItemView = function (coin) {
-        let imgUrl = this.state.cryptoCompareCoinObj[coin.symbol] ? this.state.cryptoCompareCoinObj[coin.symbol] : 'https://www.cryptocompare.com/media/19782/ltc.png';
         return (
             <ListItem avatar key={coin.id}>
                 <Left>
-                    <Thumbnail source={{ uri: imgUrl}} />
+                    <Thumbnail source={{ uri: coin.imgUrl}} />
                 </Left>
                 <Body>
                     <Text>{coin.name}</Text>
@@ -81,36 +60,29 @@ export default class CoinmarketList extends Component {
         return (
             <Container>
                 <Header>
-                    <Left></Left>
+                    <Left />
                     <Body>
-
-                            <Button iconRight transparent info onPress={this.totalSortCoinList}>
+                            <Button iconRight transparent info onPress={(() => {this.sortCoinList('totalSortOption', 'price_usd')})}>
                                 <Text>Coins info</Text>
                                 { this.state.totalSortOption
                                     ?  <Icon name='arrow-round-up' />
                                     :  <Icon name='arrow-round-down' />
-
-
                                 }
                             </Button>
                     </Body>
 
                     <Right>
-                        <Button iconRight transparent info onPress={this.sortCoinList}>
+                        <Button iconRight transparent info onPress={(() => {this.sortCoinList('percenSortOption','percent_change_24h')})}>
                             { this.state.percenSortOption
                                 ?  <Icon name='arrow-up' />
                                 :  <Icon name='arrow-down' />
-
-
                             }
                         </Button>
 
                     </Right>
                 </Header>
                 <Content>
-                    <List>
-                        {this.state.coinMarketCoinList.map(this.coinItemView)}
-                    </List>
+                    <CoinList coinList={this.state.coinMarketCoinList}/>
                 </Content>
             </Container>
         );
