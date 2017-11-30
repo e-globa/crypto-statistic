@@ -1,44 +1,74 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Button, Left, Right, Body, Icon, Content, Text, Footer, FooterTab, Item, Input } from 'native-base';
-import {price, priceMulti,coinList} from 'cryptocompare';
-import CoinmarketList from './Screens/CoinmarketList';
+import { Root, View } from 'native-base';
+import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import CoinMarketList from './Screens/CoinMarket/CoinMarketList';
+import About from "./Screens/About/About";
+import Drawer from "./Components/Drawer";
+import CoinDetails from "./Screens/CoinMarket/CoinDetails";
+
+const CoinMarketNavigator  = StackNavigator({
+    CoinMarketList: {
+        screen: CoinMarketList,
+    },
+    CoinDetails: {
+        screen: CoinDetails
+    }
+}, {
+    initialRouteName: "CoinMarketList",
+    headerMode: "none"
+});
+const AboutNavigator = StackNavigator({
+    About: {screen: About}
+}, {
+    initialRouteName: "About",
+    headerMode: "none"
+});
+
+const AppNavigator = DrawerNavigator({
+    CoinMarketModule: {screen: CoinMarketNavigator},
+    AboutModule: {screen: AboutNavigator},
+}, {
+    initialRouteName: "CoinMarketModule",
+    contentComponent: Drawer,
+    backBehavior: "none"
+});
 export default class App extends Component {
   render() {
     return (
-        <Container>
-            <Header>
-                <Left>
-                    <Button transparent>
-                        <Icon name='menu' />
-                    </Button>
-                </Left>
-                {/*<Body searchBar rounded>
-                    <Item>
-                        <Icon name="ios-search" />
-                        <Input placeholder="Search" />
-                        <Icon name="ios-people" />
-                    </Item>
-                    <Button transparent>
-                        <Text>Search</Text>
-                    </Button>
-                </Body>*/}
-            </Header>
-            <Content>
-                <CoinmarketList/>
-            </Content>
-            <Footer>
-                <FooterTab>
-                    <Button vertical active>
-                        <Icon name="list" active/>
-                        <Text>All</Text>
-                    </Button>
-                    <Button vertical>
-                        <Icon name="ios-star-outline" />
-                        <Text>Favorites</Text>
-                    </Button>
-                </FooterTab>
-            </Footer>
-        </Container>
+        <Root>
+            <View
+                style={{
+                    height: 24,
+                    backgroundColor: "#DFE2DB",
+                }}
+            />
+            <AppNavigator/>
+        </Root>
+
     );
   }
 }
+/*<Container>
+           <Header style={{height:48}}>
+               <Left>
+                   <Button transparent>
+                       <Icon name='menu' />
+                   </Button>
+               </Left>
+           </Header>
+           <Content>
+
+           </Content>
+           <Footer>
+               <FooterTab>
+                   <Button vertical active>
+                       <Icon name="list" active/>
+                       <Text>All</Text>
+                   </Button>
+                   <Button vertical>
+                       <Icon name="ios-star-outline" />
+                       <Text>Favorites</Text>
+                   </Button>
+               </FooterTab>
+           </Footer>
+       </Container>*/

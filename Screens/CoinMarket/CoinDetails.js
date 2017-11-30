@@ -3,13 +3,21 @@ import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTa
 
 export default class CoinDetails extends React.Component {
     render() {
-        let coin = this.props.hero;
-        let navigate = this.props.navigate;
-
-        if (!coin) return <Spinner />;
+        let coin = this.props.navigation.state.params.coin;
 
         return (
-            <Content style={{flex: 0}}>
+            <Content style={{flex: 0}} button onPress={() => {this.props.navigation.goBack()}}>
+                <Header>
+                    <Left>
+                        <Button transparent onPress={onBackPres}>
+                            <Icon name="arrow-back" />
+                        </Button>
+                    </Left>
+                    <Body>
+                    <Title>Item overview</Title>
+                    </Body>
+                    <Right />
+                </Header>
                 <CoinTitle coin={coin}/>
             </Content>
         );
@@ -34,7 +42,6 @@ class CoinTitle extends React.Component {
                 <PercentageInfo coin={coin}/>
                 <Prices coin={coin}/>
             </Card>
-
         );
     }
 }
@@ -61,7 +68,6 @@ class PercentageInfo extends React.Component {
             <Card>
                 <H3 style={{paddingLeft: 15, paddingTop: 10}}>Percentage info:</H3>
                 {rates.map(cardItemView)}
-
             </Card>
         );
     }

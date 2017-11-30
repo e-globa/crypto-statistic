@@ -5,11 +5,10 @@ export default class CoinList extends Component {
 
     render() {
         let coins = this.props.coinList;
-        let navigate = this.props.navigate;
-
+        let onItemPres = this.props.onItemPres;
         if (!coins.length) return <Spinner />;
 
-        let coinsView = coins.map((coin) => <CoinItem navigate={navigate} key={coin.id} coin={coin} />);
+        let coinsView = coins.map((coin) => <CoinItem key={coin.id} coin={coin} onItemPres={onItemPres} />);
         return (
             <List>
                 {coinsView}
@@ -20,10 +19,10 @@ export default class CoinList extends Component {
 class CoinItem extends React.Component {
     render () {
         let coin = this.props.coin;
-        let navigate = this.props.navigate;
+        let onItemPres = this.props.onItemPres;
 
         return (
-            <ListItem avatar key={coin.id} navigate={navigate}>
+            <ListItem button onPress={onItemPres} avatar key={coin.id} >
                 <Left>
                     <Thumbnail source={{ uri: coin.imgUrl}} />
                 </Left>
