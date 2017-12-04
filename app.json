@@ -1,5 +1,17 @@
 {
   "expo": {
-    "sdkVersion": "22.0.0"
+    "name": "Crypto-statistics",
+    "slug": "Crypto-statistics",
+    "version": "0.0.0",
+    "icon": "./logo.png",
+    "sdkVersion": "22.0.0",
+    "ios": {
+      "bundleIdentifier": "com.yhloba.cryptoStatistic"
+    },
+    "android": {
+      "package": "com.yhloba.cryptoStatistic",
+      "versionCode": 4,
+      "permissions": []
+    }
   }
 }

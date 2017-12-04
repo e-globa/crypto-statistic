@@ -1,24 +1,45 @@
 import React from 'react';
-import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTab, Grid, H1, H3, Header, Icon, Input, Item, Left, List, ListItem, Right, Spinner, Text, Thumbnail, View } from "native-base";
-
+import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTab, Grid, H1, H3, Header, Icon, Input, Item, Left, List, ListItem, Right, Spinner, Text, Thumbnail, View,Title } from "native-base";
+import {StyleSheet, Image} from 'react-native';
+import {getPrices} from '../../Request/Coinmarket';
 export default class CoinDetails extends React.Component {
+    constructor(props) {
+        super(props);
+        let coin = this.props.navigation.state.params.coin;
+        this.state = {
+            prices: []
+        };
+
+        let pricesArr = getPrices(coin.id);
+        pricesArr.forEach(promise => {
+            promise.then(obj => {
+                this.setState(prev => {
+                    prev.prices.push(obj);
+                    return prev;
+                });
+
+            });
+        });
+    }
+
     render() {
         let coin = this.props.navigation.state.params.coin;
-
         return (
-            <Content style={{flex: 0}} button onPress={() => {this.props.navigation.goBack()}}>
+            <Content style={{flex: 0}}>
                 <Header>
                     <Left>
-                        <Button transparent onPress={onBackPres}>
+                        <Button transparent  onPress={() => {this.props.navigation.goBack()}}>
                             <Icon name="arrow-back" />
                         </Button>
                     </Left>
                     <Body>
-                    <Title>Item overview</Title>
+                        <Title>Coin overview</Title>
                     </Body>
                     <Right />
                 </Header>
                 <CoinTitle coin={coin}/>
+                <PercentageInfo coin={coin}/>
+                <Prices coin={coin} prices={this.state.prices}/>
             </Content>
         );
     }
@@ -27,20 +48,17 @@ export default class CoinDetails extends React.Component {
 class CoinTitle extends React.Component {
     render () {
         let coin = this.props.coin;
-
         return (
-            <Card>
+            <Card style={styles.centredCard}>
                 <CardItem>
-                    <Left>
-                        <Thumbnail source={{uri: coin.imgUrl }}/>
-                        <Body>
-                        <Text>{coin.name}</Text>
-                        <Text note>{coin.symbol}</Text>
-                        </Body>
-                    </Left>
+                        <Image style={styles.icon} source={{uri: coin.imgUrl }}/>
                 </CardItem>
-                <PercentageInfo coin={coin}/>
-                <Prices coin={coin}/>
+                <CardItem>
+                    <Text style={styles.textLabel}>{coin.name}</Text>
+                </CardItem>
+                <CardItem style={{marginTop: -13}}>
+                    <Text note style={styles.textLabel}>{coin.symbol}</Text>
+                </CardItem>
             </Card>
         );
     }
@@ -55,12 +73,15 @@ class PercentageInfo extends React.Component {
             {title: "1 week", rate: coin.percent_change_7d}
         ];
         let cardItemView = ((rate) =>
-            <CardItem key={rate.title}>
+            <CardItem style={{paddingLeft: 15, paddingTop: 10, paddingRight: 15}} key={rate.title}>
                 <Body>
-                <Text>{rate.title}</Text>
+                    <Text>{rate.title}</Text>
                 </Body>
                 <Right>
-                    <Text>{rate.rate}</Text>
+                    { (rate.rate > 0)
+                        ?  <Text style={styles.coinRise} note>{rate.rate} %</Text>
+                        :  <Text style={styles.coinDown} note>{rate.rate} %</Text>
+                    }
                 </Right>
             </CardItem>);
 
@@ -77,19 +98,24 @@ class PercentageInfo extends React.Component {
 class Prices extends React.Component {
     render () {
         let coin = this.props.coin;
+        let prices = this.props.prices;
         let rates = [
-            {title: "BTC", rate: coin.price_usd},
-            {title: "USD", rate: coin.price_btc}
+            {title: "USD", rate: coin.price_usd},
+            {title: "BTC", rate: coin.price_btc},
+            ...prices
         ];
+
         let cardItemView = ((rate) =>
-            <CardItem key={rate.title}>
+            <CardItem style={{paddingLeft: 15, paddingTop: 10, paddingRight: 15}} key={rate.title}>
                 <Body>
-                <Text>{rate.rate}</Text>
+                    <Text style={styles.price}>{rate.title}</Text>
                 </Body>
                 <Right>
-                    <Text>{rate.title}</Text>
+                    <Text style={styles.price}>{parseFloat(rate.rate).toLocaleString('en-EN',{ style: 'currency', currency: rate.title,minimumFractionDigits: 3, maximumFractionDigits: 3 })}</Text>
                 </Right>
             </CardItem>);
+
+        if (!prices.length) return <Spinner />;
 
         return (
             <Card>
@@ -99,3 +125,26 @@ class Prices extends React.Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    coinRise: {
+        color: 'green'
+    },
+    coinDown: {
+        color: 'red'
+    },
+    price: {
+        color: '#67BCDB'
+    },
+    textLabel: {
+        color: '#67BCDB'
+    },
+    icon: {
+        width: 75,
+        height: 75
+    },
+    centredCard: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+});

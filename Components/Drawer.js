@@ -29,9 +29,11 @@ export default class Drawer extends React.Component {
             <View>
                 <Header style={{backgroundColor: 'white'}}>
                     <Left>
-                        <Image name='menu'  style={{width: 76, height: 74}} />
+                        <Icon name='menu'/>
                     </Left>
-                    <Body />
+                    <Body>
+                        <H1>Menu</H1>
+                    </Body>
                 </Header>
                 <List>
                     <ListItem itemDivider={this.state.selectedModule === 'CoinMarketModule'} button noBorder onPress={() => this.setModule('CoinMarketModule')}>
@@ -45,7 +47,7 @@ export default class Drawer extends React.Component {
 
                     <ListItem itemDivider={this.state.selectedModule === 'AboutModule'} button noBorder onPress={() => this.setModule('AboutModule')}>
                         <Left>
-                            <Icon name="question" />
+                            <Icon name="md-search" />
                             <Body>
                             <Text>About</Text>
                             </Body>

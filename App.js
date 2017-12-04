@@ -33,42 +33,35 @@ const AppNavigator = DrawerNavigator({
     backBehavior: "none"
 });
 export default class App extends Component {
-  render() {
-    return (
-        <Root>
-            <View
-                style={{
-                    height: 24,
-                    backgroundColor: "#DFE2DB",
-                }}
-            />
-            <AppNavigator/>
-        </Root>
+    constructor(props) {
+        super(props);
+        this.state = {
+            fontsLoaded: false,
+        };
+    }
 
-    );
+    async componentWillMount() {
+        await Expo.Font.loadAsync({
+            'Roboto': require('native-base/Fonts/Roboto.ttf'),
+            'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+        });
+        this.setState(prevState => {
+            prevState.fontsLoaded = true;
+            return prevState;
+        })
+    }
+  render() {
+      return this.state.fontsLoaded
+          ?
+            <Root>
+                <View
+                    style={{
+                        height: 24,
+                        backgroundColor: "#6DBDD6",
+                    }}
+                />
+                <AppNavigator/>
+            </Root>
+          : null;
   }
 }
-/*<Container>
-           <Header style={{height:48}}>
-               <Left>
-                   <Button transparent>
-                       <Icon name='menu' />
-                   </Button>
-               </Left>
-           </Header>
-           <Content>
-
-           </Content>
-           <Footer>
-               <FooterTab>
-                   <Button vertical active>
-                       <Icon name="list" active/>
-                       <Text>All</Text>
-                   </Button>
-                   <Button vertical>
-                       <Icon name="ios-star-outline" />
-                       <Text>Favorites</Text>
-                   </Button>
-               </FooterTab>
-           </Footer>
-       </Container>*/

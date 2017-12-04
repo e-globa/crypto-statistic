@@ -1,5 +1,6 @@
 module.exports = {
-    getCoinList
+    getCoinList,
+    getPrices
 };
 
 
@@ -11,6 +12,24 @@ function fetchJSON (url) {
             return body
         })
 }
+function getPrices(id) {
+    let res = [];
+    // let urls = currencies.map(i => 'https://api.coinmarketcap.com/v1/ticker/'+ id + '/?convert=' + i);
+    currencies.forEach( (currency) => {
+        currency = currency.toLowerCase();
+        res.push(
+        fetchJSON('https://api.coinmarketcap.com/v1/ticker/'+ id + '/?convert=' + currency)
+            .then(obj => {
+               return {
+                   title: currency.toUpperCase(),
+                   rate: obj[0]['price_'+ currency]
+               };
+            }));
+        });
+    return res;
+
+}
+
 
 function getCoinList() {
     /*{
@@ -32,8 +51,6 @@ function getCoinList() {
         "img": asdfjasdjfi
     }*/
 
-    // https://www.cryptocompare.com/media/20646/eth_logo.png
-    //?start=0&limit=100
     return fetchJSON('https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100')
         .then(arr => {
             return arr.map(i => {
@@ -43,7 +60,8 @@ function getCoinList() {
             })
         });
 }
-
+const currencies =
+    ["AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"];
 
 const IMGS = {
     "42": "https://www.cryptocompare.com/media/12318415/42.png",

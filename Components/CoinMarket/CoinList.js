@@ -10,9 +10,11 @@ export default class CoinList extends Component {
 
         let coinsView = coins.map((coin) => <CoinItem key={coin.id} coin={coin} onItemPres={onItemPres} />);
         return (
-            <List>
-                {coinsView}
-            </List>
+            <Container>
+                <List>
+                    {coinsView}
+                </List>
+            </Container>
         );
     }
 }
@@ -20,9 +22,8 @@ class CoinItem extends React.Component {
     render () {
         let coin = this.props.coin;
         let onItemPres = this.props.onItemPres;
-
         return (
-            <ListItem button onPress={onItemPres} avatar key={coin.id} >
+            <ListItem style={styles.coinList} button onPress={() => { onItemPres(coin);}} avatar key={coin.id} >
                 <Left>
                     <Thumbnail source={{ uri: coin.imgUrl}} />
                 </Left>
@@ -46,5 +47,11 @@ const styles = StyleSheet.create({
     },
     coinDown: {
         color: 'red'
+    },
+    coinList: {
+        paddingLeft: 15,
+        paddingRight: 10,
+        paddingTop: 15,
+        marginLeft: 0
     }
 });
