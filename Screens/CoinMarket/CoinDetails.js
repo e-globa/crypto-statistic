@@ -1,6 +1,6 @@
 import React from 'react';
 import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTab, Grid, H1, H3, Header, Icon, Input, Item, Left, List, ListItem, Right, Spinner, Text, Thumbnail, View,Title } from "native-base";
-import {StyleSheet, Image} from 'react-native';
+import { Platform, StyleSheet, Image} from 'react-native';
 import {getPrices} from '../../Request/Coinmarket';
 export default class CoinDetails extends React.Component {
     constructor(props) {
@@ -26,10 +26,10 @@ export default class CoinDetails extends React.Component {
         let coin = this.props.navigation.state.params.coin;
         return (
             <Content style={{flex: 0}}>
-                <Header>
+                <Header style={{height: 50, marginTop: (Platform.OS === 'ios') ? -15 : 0}}>
                     <Left>
                         <Button transparent  onPress={() => {this.props.navigation.goBack()}}>
-                            <Icon name="arrow-back" />
+                            <Icon style={{textAlign: 'center'}} name="arrow-back" />
                         </Button>
                     </Left>
                     <Body>

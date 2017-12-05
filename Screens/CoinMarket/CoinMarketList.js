@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Left, Right, Button, Icon, Input, H2, Spinner,Item, Footer, FooterTab} from 'native-base';
-import {StyleSheet} from 'react-native';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Left, Right, Button, Icon, Input, H2, Spinner,Item, Footer, FooterTab, Title} from 'native-base';
+import { Platform,StyleSheet} from 'react-native';
 import CoinList from '../../Components/CoinMarket/CoinList';
 import {getCoinList} from '../../Request/Coinmarket';
 
@@ -30,7 +30,6 @@ export default class CoinMarketList extends Component {
     }
 
     sortCoinList(sortOption, sortField) {
-
         this.setState((prev => {
             prev.coinMarketCoinList = prev.coinMarketCoinList.sort((i, j) => {
                 return prev[sortOption]
@@ -66,55 +65,58 @@ export default class CoinMarketList extends Component {
         const {navigate} = this.props.navigation;
         let onItemPres = (coin) => navigate('CoinDetails', {coin: coin});
         let priceUp = (
-                <Item>
-                    <Icon name='ios-arrow-dropup-circle-outline' />
-                    <Text>Price up</Text>
-                </Item>);
+                <Button full style={styles.sortBtn} onPress={(() => { this.sortCoinList('totalSortOption', 'price_usd')})}>
+                    <Icon name='ios-arrow-dropup-circle-outline' style={styles.sortIcon} />
+                    <Text style={styles.sortText}>Price up</Text>
+                </Button>);
         let priceDown = (
-                <Item>
-                    <Icon name='ios-arrow-dropdown-circle-outline' />
-                    <Text>Price down</Text>
-                </Item>);
+                <Button full style={styles.sortBtn} onPress={(() => { this.sortCoinList('totalSortOption', 'price_usd')})}>
+                    <Icon name='ios-arrow-dropdown-circle-outline' style={styles.sortIcon} />
+                    <Text style={styles.sortText}>Price down</Text>
+                </Button>);
         let percentageUp = (
-                <Item>
-                    <Icon name='ios-arrow-dropup-circle-outline' />
-                    <Text>Percentage up</Text>
-                </Item>);
+                <Button full style={styles.sortBtn} onPress={(() => { this.sortCoinList('percenSortOption', 'percent_change_24h')})}>
+                    <Icon name='ios-arrow-dropup-circle-outline'  style={styles.sortIcon} />
+                    <Text style={styles.sortText}>Percentage up</Text>
+                </Button>);
         let percentageDown = (
-                <Item>
-                    <Icon name='ios-arrow-dropdown-circle-outline' />
-                    <Text>Percentage down</Text>
-                </Item>);
+                <Button full style={styles.sortBtn} onPress={(() => { this.sortCoinList('percenSortOption', 'percent_change_24h')})}>
+                    <Icon name='ios-arrow-dropdown-circle-outline' style={styles.sortIcon} />
+                    <Text style={styles.sortText}>Percentage down</Text>
+                </Button>);
         return (
             <Container>
-
-                {/*{
-                    this.state.isSorting
-                    ? <Spinner/>
-                    : */}<Header  style={styles.header} transparent searchBar>
-                            <Item style={{backgroundColor: '#6DBDD6'}}>
-                                <Icon name="ios-search" />
-                                <Input placeholder="Search" value={this.state.queryString} onChangeText={this.queryStringUpdate} />
-                                <Icon name="ios-people" />
-                            </Item>
-                            <Button transparent onPress={this.clearSearch}>
-                                <Text>Cancel</Text>
-                            </Button>
-                        </Header>
-                // }
-                <CoinList onItemPres={onItemPres} coinList={this.state.coinMarketCoinList}/>
-                <Footer style={styles.header}>
-                    <FooterTab>
-                        <Button full onPress={(() => { this.sortCoinList('totalSortOption', 'price_usd')})}>
-                            {this.state.totalSortOption  ? priceUp : priceDown }
+                <Header style={styles.header} transparent>
+                    <Left>
+                        <Button transparent onPress={() => {navigate('DrawerOpen')}}>
+                            <Icon style={{textAlign: 'center'}} name='menu'/>
                         </Button>
+                    </Left>
+                    <Body>
+                        <Title>Coins list</Title>
+                    </Body>
+                    <Right/>
+                </Header>
+                <Item style={styles.container}>
+                    <Icon name="ios-search" style={{marginLeft: 15}} />
+                    <Input bordered placeholder="Search" value={this.state.queryString} onChangeText={this.queryStringUpdate} />
+                    <Button transparent onPress={this.clearSearch}>
+                        <Icon name="ios-close-circle-outline" />
+                    </Button>
+                </Item>
+                <Content>
+
+                    <CoinList onItemPres={onItemPres} coinList={this.state.coinMarketCoinList}/>
+                </Content>
+                <Footer style={styles.footer}>
+                    <FooterTab>
+                        {this.state.totalSortOption ? priceUp : priceDown}
                     </FooterTab>
                     <FooterTab>
-                        <Button full onPress={(() => { this.sortCoinList('percenSortOption', 'percent_change_24h')})}>
-                            {this.state.percenSortOption  ? percentageUp : percentageDown }
-                        </Button>
+                        {this.state.percenSortOption ? percentageUp : percentageDown }
                     </FooterTab>
                 </Footer>
+
             </Container>
         );
     }
@@ -128,7 +130,21 @@ const styles = StyleSheet.create({
         color: 'red'
     },
     header: {
-        backgroundColor: '#c8eac4',
+        height: 50,
+        marginTop: (Platform.OS === 'ios') ? -15 : 0
+    },
+    footer: {
         height: 48
-    }
+    },
+    sortText: {
+        fontSize: 12
+    },
+    sortIcon: {
+        width: 30,
+        height: 30
+    },
+    sortBtn: {
+        paddingBottom: 15
+    },
+    container: { borderRadius: 4, borderWidth: 0.5, borderColor: '#d6d7da' }
 });

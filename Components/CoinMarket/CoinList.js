@@ -10,11 +10,9 @@ export default class CoinList extends Component {
 
         let coinsView = coins.map((coin) => <CoinItem key={coin.id} coin={coin} onItemPres={onItemPres} />);
         return (
-            <Container>
-                <List>
-                    {coinsView}
-                </List>
-            </Container>
+            <List>
+                {coinsView}
+            </List>
         );
     }
 }
@@ -28,8 +26,8 @@ class CoinItem extends React.Component {
                     <Thumbnail source={{ uri: coin.imgUrl}} />
                 </Left>
                 <Body>
-                <Text>{coin.name}</Text>
-                <Text note>{coin.price_usd} $</Text>
+                    <Text>{coin.name}</Text>
+                    <Text note>{coin.price_usd} $</Text>
                 </Body>
                 <Right>
                     { (coin.percent_change_24h > 0)

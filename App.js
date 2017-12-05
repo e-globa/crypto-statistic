@@ -56,8 +56,7 @@ export default class App extends Component {
             <Root>
                 <View
                     style={{
-                        height: 24,
-                        backgroundColor: "#6DBDD6",
+                        height: 24
                     }}
                 />
                 <AppNavigator/>

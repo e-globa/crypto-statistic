@@ -55,6 +55,7 @@ function getCoinList() {
         .then(arr => {
             return arr.map(i => {
                 i["imgUrl"] = i.symbol ? IMGS[i.symbol] : "";
+                i["key"] = i.id;
                 i["isFavorite"] = false;
                 return i;
             })
