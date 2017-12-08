@@ -2,6 +2,9 @@ import React from 'react';
 import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTab, Grid, H1, H3, Header, Icon, Input, Item, Left, List, ListItem, Right, Spinner, Text, Thumbnail, View,Title } from "native-base";
 import { Platform, StyleSheet, Image} from 'react-native';
 import {getPrices} from '../../Request/Coinmarket';
+import { AdMobBanner } from 'expo';
+import AdMobBannerComponent from '../../Components/AdMobBannerComponent';
+
 export default class CoinDetails extends React.Component {
     constructor(props) {
         super(props);
@@ -26,7 +29,7 @@ export default class CoinDetails extends React.Component {
         let coin = this.props.navigation.state.params.coin;
         return (
             <Content style={{flex: 0}}>
-                <Header style={{height: 50, marginTop: (Platform.OS === 'ios') ? -15 : 0}}>
+                <Header style={{height: 50, marginTop: (Platform.OS === 'ios') ? -15 : 0,  backgroundColor: '#3B3738'}}>
                     <Left>
                         <Button transparent  onPress={() => {this.props.navigation.goBack()}}>
                             <Icon style={{textAlign: 'center'}} name="arrow-back" />
@@ -39,6 +42,7 @@ export default class CoinDetails extends React.Component {
                 </Header>
                 <CoinTitle coin={coin}/>
                 <PercentageInfo coin={coin}/>
+                <AdMobBannerComponent/>
                 <Prices coin={coin} prices={this.state.prices}/>
             </Content>
         );
@@ -146,5 +150,12 @@ const styles = StyleSheet.create({
     centredCard: {
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    header: {height: 50, marginTop: (Platform.OS === 'ios') ? -15 : 0,  backgroundColor: '#3B3738'},
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        marginTop: 30
     }
 });

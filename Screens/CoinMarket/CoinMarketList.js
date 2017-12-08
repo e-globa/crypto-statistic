@@ -105,14 +105,13 @@ export default class CoinMarketList extends Component {
                     </Button>
                 </Item>
                 <Content>
-
                     <CoinList onItemPres={onItemPres} coinList={this.state.coinMarketCoinList}/>
                 </Content>
                 <Footer style={styles.footer}>
-                    <FooterTab>
+                    <FooterTab style={{ backgroundColor: '#3B3738'}}>
                         {this.state.totalSortOption ? priceUp : priceDown}
                     </FooterTab>
-                    <FooterTab>
+                    <FooterTab style={{ backgroundColor: '#3B3738'}}>
                         {this.state.percenSortOption ? percentageUp : percentageDown }
                     </FooterTab>
                 </Footer>
@@ -131,17 +130,21 @@ const styles = StyleSheet.create({
     },
     header: {
         height: 50,
-        marginTop: (Platform.OS === 'ios') ? -15 : 0
+        marginTop: (Platform.OS === 'ios') ? -15 : 0,
+        backgroundColor: '#3B3738'
     },
     footer: {
-        height: 48
+        height: 48,
+        backgroundColor: '#3B3738'
     },
     sortText: {
-        fontSize: 12
+        fontSize: 12,
+        color: '#FFFFFF'
     },
     sortIcon: {
         width: 30,
-        height: 30
+        height: 30,
+        color: '#FFFFFF'
     },
     sortBtn: {
         paddingBottom: 15

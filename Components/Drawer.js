@@ -1,6 +1,6 @@
 import React from 'react';
-import { Body, Button, Card, CardItem, Col, Container, Content, Footer, FooterTab, Grid, H1, H3, Header, Icon, Input, Item, Left, List, ListItem, Right, Spinner, Text, Thumbnail, View, Title } from "native-base";
-import {Image} from 'react-native';
+import { Body, H1, Header, Icon, Left, List, ListItem,  Text, View } from "native-base";
+import { StyleSheet } from 'react-native';
 
 export default class Drawer extends React.Component {
     constructor(props) {
@@ -27,12 +27,12 @@ export default class Drawer extends React.Component {
     render() {
         return (
             <View>
-                <Header style={{backgroundColor: 'white'}}>
+                <Header style={styles.header}>
                     <Left>
-                        <Icon name='menu'/>
+                        <Icon style={styles.textColor} name='menu'/>
                     </Left>
                     <Body>
-                        <H1>Menu</H1>
+                        <H1 style={styles.textColor}>Menu</H1>
                     </Body>
                 </Header>
                 <List>
@@ -58,3 +58,18 @@ export default class Drawer extends React.Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        marginTop: 30
+    },
+    header: {
+        backgroundColor: '#3B3738'
+    },
+    textColor: {
+        color: '#FFFFFF'
+    }
+});

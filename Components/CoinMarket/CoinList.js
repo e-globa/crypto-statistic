@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Left, Right, Button, Icon, H2, Spinner } from 'native-base';
 import {StyleSheet} from 'react-native';
+
 export default class CoinList extends Component {
 
     render() {
@@ -39,6 +40,7 @@ class CoinItem extends React.Component {
         );
     }
 }
+
 const styles = StyleSheet.create({
     coinRise: {
         color: 'green'
